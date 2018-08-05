@@ -1,7 +1,0 @@
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_BLL.dll
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_BLL.pdb
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_DAL.dll
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_DAL.pdb
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csprojResolveAssemblyReference.cache
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.dll
-C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.pdb
