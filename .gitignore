@@ -8,7 +8,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-App.config
+ProyectoProgra3/ProyectoProgra3/Proyecto_Progra3_PL/App.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
