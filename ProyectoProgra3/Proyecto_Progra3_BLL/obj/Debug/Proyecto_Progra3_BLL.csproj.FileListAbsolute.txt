@@ -5,3 +5,12 @@ C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\bin\D
 C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csprojResolveAssemblyReference.cache
 C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.dll
 C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_BLL.dll
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_BLL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_DAL.dll
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_DAL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csprojAssemblyReference.cache
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csproj.CoreCompileInputs.cache
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csproj.CopyComplete
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.dll
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.pdb
