@@ -1,0 +1,4 @@
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe.config
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csprojResolveAssemblyReference.cache
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.Cache
