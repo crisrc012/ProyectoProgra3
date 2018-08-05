@@ -1,0 +1,19 @@
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe.config
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csprojResolveAssemblyReference.cache
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
+C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.Cache
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csprojAssemblyReference.cache
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Catagolos_PL.resources
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.cache
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.CoreCompileInputs.cache
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe.config
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_BLL.dll
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_DAL.dll
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_BLL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_DAL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.CopyComplete
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.exe
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.pdb
