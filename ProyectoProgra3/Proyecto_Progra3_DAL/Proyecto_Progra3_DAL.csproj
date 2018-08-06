@@ -40,12 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\Cls_bd_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Activos\Cls_activos_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Caso_Detalle\Cls_casodetalle_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Caso_Encabezado\Cls_casoencabezado_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Departamento\Cls_departamento_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Estados\Cls_estados_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Marca_Activo\Cls_marcactivo_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Operadores\Cls_operadores_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Semaforo_Casos\Cls_semaforo_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Tipo_Activo\Cls_tipoactivo_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Turnos\Cls_turnos_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BD\" />
-    <Folder Include="Catalogos_Mantenimientos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

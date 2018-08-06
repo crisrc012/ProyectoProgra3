@@ -40,11 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos_Mantenimientos\Activos\Cls_activos_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Caso_Detalle\Cls_casodetalle_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Caso_Encabezado\Cls_casoencabezado_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Departamento\Cls_departamento_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Estados\Cls_estados_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Marca_Activo\Cls_marcactivo_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Operadores\Cls_operadores_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Semaforo_Casos\Cls_semaforo_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Tipo_Activo\Cls_tipoactivo_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Turnos\Cls_turnos_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BD\" />
-    <Folder Include="Catalogos_Mantenimientos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
