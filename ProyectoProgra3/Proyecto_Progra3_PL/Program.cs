@@ -16,7 +16,7 @@ namespace Proyecto_Progra3_PL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Catagolos_PL());
+            Application.Run(new frm_Activos_PL());
         }
     }
 }
