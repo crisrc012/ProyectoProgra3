@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\Cls_bd_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Activos\Cls_activos_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Caso_Detalle\Cls_casodetalle_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Caso_Encabezado\Cls_casoencabezado_BLL.cs" />
@@ -53,9 +54,7 @@
     <Compile Include="Catalogos_Mantenimientos\Turnos\Cls_turnos_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BD\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Proyecto_Progra3_DAL\Proyecto_Progra3_DAL.csproj">
       <Project>{a5be67c1-f211-4091-8f80-aecc13de37a0}</Project>
