@@ -11,16 +11,13 @@ namespace Proyecto_Progra3_BLL.BD
 {
     public class Cls_bd_BLL
     {
-        private void Conexion(ref Cls_bd_DAL Obj_bd_DAL)
-        {
-            Obj_bd_DAL.scadena = ConfigurationManager.ConnectionStrings["Win_Aut"].ToString().Trim();
-            Obj_bd_DAL.Obj_sql_conexion = new SqlConnection(Obj_bd_DAL.scadena);
-        }
-
+       
         public void Ejecutar_adapter(ref Cls_bd_DAL Obj_bd_DAL)
         {
             try
             {
+                Obj_bd_DAL.scadena = ConfigurationManager.ConnectionStrings["Win_Aut"].ToString().Trim();
+                Obj_bd_DAL.Obj_sql_conexion = new SqlConnection(Obj_bd_DAL.scadena);
                 if (Obj_bd_DAL.Obj_sql_conexion.State == System.Data.ConnectionState.Closed)
                 {
                     Obj_bd_DAL.Obj_sql_conexion.Open();

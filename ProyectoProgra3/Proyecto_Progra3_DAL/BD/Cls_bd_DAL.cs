@@ -72,6 +72,7 @@ namespace Proyecto_Progra3_DAL.BD
         public SqlCommand Obj_sql_cmd;
         public SqlDataAdapter Obj_sql_adap;
         public System.Data.DataSet Data_set = new System.Data.DataSet();
+        public System.Data.DataTable Obj_DTParametros = new System.Data.DataTable("PARAMETROS");
         #endregion
     }
 }
