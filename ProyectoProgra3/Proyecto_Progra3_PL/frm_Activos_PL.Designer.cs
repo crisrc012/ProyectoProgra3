@@ -43,9 +43,9 @@
             this.dgv_Activos_PL.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Activos_PL.BackgroundColor = System.Drawing.Color.SeaGreen;
             this.dgv_Activos_PL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Activos_PL.Location = new System.Drawing.Point(27, 46);
+            this.dgv_Activos_PL.Location = new System.Drawing.Point(25, 39);
             this.dgv_Activos_PL.Name = "dgv_Activos_PL";
-            this.dgv_Activos_PL.Size = new System.Drawing.Size(578, 245);
+            this.dgv_Activos_PL.Size = new System.Drawing.Size(578, 104);
             this.dgv_Activos_PL.TabIndex = 0;
             // 
             // toolStrip1
@@ -62,20 +62,21 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(88, 22);
-            this.toolStripLabel1.Text = "Filtrar Catalogo";
+            this.toolStripLabel1.Size = new System.Drawing.Size(72, 22);
+            this.toolStripLabel1.Text = "Placa Activo";
             // 
             // tstxt_FiltrarActivos_PL
             // 
             this.tstxt_FiltrarActivos_PL.Name = "tstxt_FiltrarActivos_PL";
             this.tstxt_FiltrarActivos_PL.Size = new System.Drawing.Size(100, 25);
+            this.tstxt_FiltrarActivos_PL.TextChanged += new System.EventHandler(this.tstxt_FiltrarActivos_PL_TextChanged);
             // 
             // frm_Activos_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(640, 365);
+            this.ClientSize = new System.Drawing.Size(640, 493);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgv_Activos_PL);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

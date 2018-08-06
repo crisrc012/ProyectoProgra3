@@ -21,19 +21,45 @@ namespace Proyecto_Progra3_PL
 
         private void frm_Activos_PL_Load(object sender, EventArgs e)
         {
-            Cls_activos_BLL OBJ_Activos_BLL = new Cls_activos_BLL();
-            Cls_activos_DAL OBJ_Activos_DAL = new Cls_activos_DAL();
-            OBJ_Activos_BLL.listar_activos(ref OBJ_Activos_DAL);
-            if (OBJ_Activos_DAL.sMsjError== string.Empty)
+            Cls_activos_BLL Obj_Activos_BLL = new Cls_activos_BLL();
+            Cls_activos_DAL Obj_Activos_DAL = new Cls_activos_DAL();
+            Obj_Activos_BLL.listar_activos(ref Obj_Activos_DAL);
+            if (Obj_Activos_DAL.sMsjError== string.Empty)
             {
                 dgv_Activos_PL.DataSource = null;
-                dgv_Activos_PL.DataSource = OBJ_Activos_DAL.Obj_DS.Tables[0];
+                dgv_Activos_PL.DataSource = Obj_Activos_DAL.Obj_DS.Tables[0];
             }
             else
             {
                 dgv_Activos_PL.DataSource = null;
                 MessageBox.Show("Se ha producido un error en tablas categorias \n\n Error: "+
-                                OBJ_Activos_DAL.sMsjError,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                                Obj_Activos_DAL.sMsjError,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void tstxt_FiltrarActivos_PL_TextChanged(object sender, EventArgs e)
+        {
+            Cls_activos_DAL Obj_Activos_DAL = new Cls_activos_DAL();
+            Cls_activos_BLL Obj_Activos_BLL = new Cls_activos_BLL();
+
+            if (tstxt_FiltrarActivos_PL.Text == string.Empty)
+            {
+                Obj_Activos_BLL.listar_activos(ref Obj_Activos_DAL);
+            }
+            else
+            {
+                Obj_Activos_BLL.filtrar_activos(ref Obj_Activos_DAL, tstxt_FiltrarActivos_PL.Text.Trim());
+            }
+            if (Obj_Activos_DAL.sMsjError == string.Empty)
+            {
+                dgv_Activos_PL.DataSource = null;
+                dgv_Activos_PL.DataSource = Obj_Activos_DAL.Obj_DS.Tables[0];
+            }
+            else
+            {
+                dgv_Activos_PL.DataSource = null;
+                MessageBox.Show("Se ha producido un error en tablas categorias \n\n Error: " +
+                                Obj_Activos_DAL.sMsjError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -22,6 +22,25 @@ namespace Proyecto_Progra3_BLL.BD
                 {
                     Obj_bd_DAL.Obj_sql_conexion.Open();
                     Obj_bd_DAL.Obj_sql_adap = new SqlDataAdapter(Obj_bd_DAL.ssentencia, Obj_bd_DAL.Obj_sql_conexion);
+                    if (Obj_bd_DAL.Obj_DTParametros.Rows.Count >= 1)
+                    {
+                        System.Data.SqlDbType Obj_TipoDato = System.Data.SqlDbType.NVarChar;
+                        foreach (System.Data.DataRow dr in Obj_bd_DAL.Obj_DTParametros.Rows)
+                        {
+                            switch (dr[1].ToString())
+                            {
+                                case "1":
+                                    Obj_TipoDato = System.Data.SqlDbType.NVarChar;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            Obj_bd_DAL.Obj_sql_adap.SelectCommand.Parameters.Add(dr[0].ToString(), Obj_TipoDato).Value = 
+                                dr[2].ToString();
+                        }
+                    }
+
+
                     Obj_bd_DAL.Obj_sql_adap.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
                     Obj_bd_DAL.Obj_sql_adap.Fill(Obj_bd_DAL.Data_set, Obj_bd_DAL.snombretabla);
@@ -46,5 +65,11 @@ namespace Proyecto_Progra3_BLL.BD
           
         }
 
+        public void Crear_DT_Parametros(ref Cls_bd_DAL Obj_Conexion_DAL)
+        {
+            Obj_Conexion_DAL.Obj_DTParametros.Columns.Add("NombreParam");
+            Obj_Conexion_DAL.Obj_DTParametros.Columns.Add("TipoDatoParam");
+            Obj_Conexion_DAL.Obj_DTParametros.Columns.Add("ValorParam");
+        }
     }
 }
