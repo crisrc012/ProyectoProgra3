@@ -44,15 +44,16 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_SEMAFOROCASOS
 AS
-SELECT [Id_Estado_SemaforoCaso]
-      ,[Desc_Estado_SemaforoCaso]
+SELECT [Id_Estado_SemaforoCaso] AS ID
+      ,[Desc_Estado_SemaforoCaso] AS "Descripción"
       ,[Color]
-      ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
-  FROM [dbo].[Tbl_SemaforoCasos]
+      ,te.[Desc_Estado] AS Estado
+      ,tsc.[FecCreacion] AS "Fecha de Creación"
+      ,tsc.[UsuCreacion] AS "Creado por"
+      ,tsc.[FecModificacion] AS "Fecha de Modificación"
+      ,tsc.[UsuModificacion] AS "Modificado por"
+  FROM [dbo].[Tbl_SemaforoCasos] tsc
+  INNER JOIN [dbo].[Tbl_Estados] te ON tsc.Id_Estado = te.Id_Estado
 GO
 
 -- Filtrar
@@ -61,15 +62,16 @@ CREATE PROCEDURE SP_FILTRAR_SEMAFOROCASOS
 	@Desc_Estado_SemaforoCaso varchar(65)
 )
 AS
-SELECT [Id_Estado_SemaforoCaso]
-      ,[Desc_Estado_SemaforoCaso]
+SELECT [Id_Estado_SemaforoCaso] AS ID
+      ,[Desc_Estado_SemaforoCaso] AS "Descripción"
       ,[Color]
-      ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
-  FROM [dbo].[Tbl_SemaforoCasos]
+      ,te.[Desc_Estado] AS Estado
+      ,tsc.[FecCreacion] AS "Fecha de Creación"
+      ,tsc.[UsuCreacion] AS "Creado por"
+      ,tsc.[FecModificacion] AS "Fecha de Modificación"
+      ,tsc.[UsuModificacion] AS "Modificado por"
+  FROM [dbo].[Tbl_SemaforoCasos] tsc
+  INNER JOIN [dbo].[Tbl_Estados] te ON tsc.Id_Estado = te.Id_Estado
   WHERE [Desc_Estado_SemaforoCaso] LIKE '%' + @Desc_Estado_SemaforoCaso + '%'
 GO
 
@@ -87,10 +89,10 @@ AS
 SELECT [Id_TipoActivo]
       ,[Desc_TipoActivo]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_TipoActivo]
 GO
 
@@ -103,10 +105,10 @@ AS
 SELECT [Id_TipoActivo]
       ,[Desc_TipoActivo]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_TipoActivo]
   WHERE [Desc_TipoActivo] LIKE '%' + @Desc_TipoActivo + '%'
 GO
@@ -125,10 +127,10 @@ AS
 SELECT [Id_MarcaActivo]
       ,[Desc_MarcaActivo]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_MarcaActivo]
 GO
 
@@ -141,10 +143,10 @@ AS
 SELECT [Id_MarcaActivo]
       ,[Desc_MarcaActivo]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_MarcaActivo]
   WHERE [Desc_MarcaActivo] LIKE '%' + @Desc_MarcaActivo + '%'
 GO
@@ -163,10 +165,10 @@ AS
 SELECT [Id_Departamento]
       ,[Desc_Departamento]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Departamentos]
 GO
 
@@ -179,10 +181,10 @@ AS
 SELECT [Id_Departamento]
       ,[Desc_Departamento]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Departamentos]
   WHERE [Desc_Departamento] LIKE '%' + @Desc_Departamento + '%'
 GO
@@ -205,10 +207,10 @@ SELECT [Placa_Activo]
       ,[Id_Departamento_Responsable]
       ,[Prioridad_SLA]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Activos]
 GO
 
@@ -225,10 +227,10 @@ SELECT [Placa_Activo]
       ,[Id_Departamento_Responsable]
       ,[Prioridad_SLA]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Activos]
   WHERE [Desc_Activo] LIKE '%' + @Desc_Activo + '%'
 GO
@@ -250,10 +252,10 @@ SELECT [Id_Turno]
       ,[HoraEntrada]
       ,[HoraSalida]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Turnos]
 GO
 
@@ -269,10 +271,10 @@ SELECT [Id_Turno]
       ,[HoraEntrada]
       ,[HoraSalida]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Turnos]
   WHERE [Desc_Turno] LIKE '%' + @Desc_Turno + '%'
 GO
@@ -295,10 +297,10 @@ SELECT [Id_Operador]
       ,[Id_Turno]
       ,[Nivel]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Operadores]
 GO
 
@@ -315,10 +317,10 @@ SELECT [Id_Operador]
       ,[Id_Turno]
       ,[Nivel]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Operadores]
   WHERE [Id_Operador] LIKE '%' + @Id_Operador + '%'
 GO
@@ -340,10 +342,10 @@ SELECT [Id_Caso_Enc]
       ,[ComentariosReporte]
       ,[Id_Estado_SemaforoCaso]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Caso_Encabezado]
 GO
 
@@ -359,10 +361,10 @@ SELECT [Id_Caso_Enc]
       ,[ComentariosReporte]
       ,[Id_Estado_SemaforoCaso]
       ,[Id_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Caso_Encabezado]
   WHERE [ComentariosReporte] LIKE '%' + @ComentariosReporte + '%'
 GO
@@ -382,10 +384,10 @@ SELECT [Id_Caso_Det]
       ,[Id_Caso_Enc]
       ,[Placa_Activo]
       ,[Observaciones]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Caso_Detalle]
 GO
 
@@ -399,10 +401,10 @@ SELECT [Id_Caso_Det]
       ,[Id_Caso_Enc]
       ,[Placa_Activo]
       ,[Observaciones]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Caso_Detalle]
   WHERE [Observaciones] LIKE '%' + @Observaciones + '%'
 GO
