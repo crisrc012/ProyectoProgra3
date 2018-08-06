@@ -49,6 +49,7 @@
             this.dgv_Cat_Man.MultiSelect = false;
             this.dgv_Cat_Man.Name = "dgv_Cat_Man";
             this.dgv_Cat_Man.ReadOnly = true;
+            this.dgv_Cat_Man.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Cat_Man.Size = new System.Drawing.Size(616, 453);
             this.dgv_Cat_Man.TabIndex = 0;
             // 
