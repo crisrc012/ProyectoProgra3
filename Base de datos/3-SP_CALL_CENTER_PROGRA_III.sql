@@ -8,12 +8,12 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_ESTADOS
 AS
-SELECT [Id_Estado]
-      ,[Desc_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+SELECT [Id_Estado] AS ID
+      ,[Desc_Estado] AS "Descripción"
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Estados]
 GO
 
@@ -23,12 +23,12 @@ CREATE PROCEDURE SP_FILTRAR_ESTADOS
 	@Desc_Estado varchar(65)
 )
 AS
-SELECT [Id_Estado]
-      ,[Desc_Estado]
-      ,[FecCreacion]
-      ,[UsuCreacion]
-      ,[FecModificacion]
-      ,[UsuModificacion]
+SELECT [Id_Estado] AS ID
+      ,[Desc_Estado] AS "Descripción"
+      ,[FecCreacion] AS "Fecha de Creación"
+      ,[UsuCreacion] AS "Creado por"
+      ,[FecModificacion] AS "Fecha de Modificación"
+      ,[UsuModificacion] AS "Modificado por"
   FROM [dbo].[Tbl_Estados]
   WHERE [Desc_Estado] LIKE '%' + @Desc_Estado + '%'
 GO
