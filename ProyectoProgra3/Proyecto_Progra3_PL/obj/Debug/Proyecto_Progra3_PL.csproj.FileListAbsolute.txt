@@ -17,3 +17,17 @@ C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progr
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.exe
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.pdb
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Activos_PL.resources
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe.config
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.pdb
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_BLL.dll
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_DAL.dll
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_BLL.pdb
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_DAL.pdb
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csprojResolveAssemblyReference.cache
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Cat_Man_PL.resources
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Menu.resources
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.Cache
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.exe
+C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.pdb
