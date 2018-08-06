@@ -8,7 +8,7 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_ESTADOS
 AS
-SELECT [Id_Estado] AS ID
+SELECT [Id_Estado] AS "Código"
       ,[Desc_Estado] AS "Descripción"
       ,[FecCreacion] AS "Fecha de Creación"
       ,[UsuCreacion] AS "Creado por"
@@ -23,7 +23,7 @@ CREATE PROCEDURE SP_FILTRAR_ESTADOS
 	@Desc_Estado varchar(65)
 )
 AS
-SELECT [Id_Estado] AS ID
+SELECT [Id_Estado] AS "Código"
       ,[Desc_Estado] AS "Descripción"
       ,[FecCreacion] AS "Fecha de Creación"
       ,[UsuCreacion] AS "Creado por"
@@ -44,7 +44,7 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_SEMAFOROCASOS
 AS
-SELECT [Id_Estado_SemaforoCaso] AS ID
+SELECT [Id_Estado_SemaforoCaso] AS "Código"
       ,[Desc_Estado_SemaforoCaso] AS "Descripción"
       ,[Color]
       ,te.[Desc_Estado] AS Estado
@@ -62,7 +62,7 @@ CREATE PROCEDURE SP_FILTRAR_SEMAFOROCASOS
 	@Desc_Estado_SemaforoCaso varchar(65)
 )
 AS
-SELECT [Id_Estado_SemaforoCaso] AS ID
+SELECT [Id_Estado_SemaforoCaso] AS "Código"
       ,[Desc_Estado_SemaforoCaso] AS "Descripción"
       ,[Color]
       ,te.[Desc_Estado] AS Estado
@@ -86,7 +86,7 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_TIPOACTIVO
 AS
-SELECT [Id_TipoActivo] AS ID
+SELECT [Id_TipoActivo] AS "Código"
       ,[Desc_TipoActivo] AS "Descripción"
       ,tta.[Id_Estado] AS Estado
       ,tta.[FecCreacion] AS "Fecha de Creación"
@@ -103,7 +103,7 @@ CREATE PROCEDURE SP_FILTRAR_TIPOACTIVO
 	@Desc_TipoActivo varchar(65)
 )
 AS
-SELECT [Id_TipoActivo] AS ID
+SELECT [Id_TipoActivo] AS "Código"
       ,[Desc_TipoActivo] AS "Descripción"
       ,tta.[Id_Estado] AS Estado
       ,tta.[FecCreacion] AS "Fecha de Creación"
@@ -126,7 +126,7 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_MARCAACTIVO
 AS
-SELECT [Id_MarcaActivo] AS ID
+SELECT [Id_MarcaActivo] AS "Código"
       ,[Desc_MarcaActivo] AS "Descripción"
       ,tma.[Id_Estado] AS Estado
       ,tma.[FecCreacion] AS "Fecha de Creación"
@@ -143,7 +143,7 @@ CREATE PROCEDURE SP_FILTRAR_MARCAACTIVO
 	@Desc_MarcaActivo varchar(65)
 )
 AS
-SELECT [Id_MarcaActivo] AS ID
+SELECT [Id_MarcaActivo] AS "Código"
       ,[Desc_MarcaActivo] AS "Descripción"
       ,tma.[Id_Estado] AS Estado
       ,tma.[FecCreacion] AS "Fecha de Creación"
@@ -166,7 +166,7 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_DEPARTAMENTOS
 AS
-SELECT [Id_Departamento] AS ID
+SELECT [Id_Departamento] AS "Código"
       ,[Desc_Departamento] AS "Descripción"
       ,td.[Id_Estado] AS Estado
       ,td.[FecCreacion] AS "Fecha de Creación"
@@ -183,7 +183,7 @@ CREATE PROCEDURE SP_FILTRAR_DEPARTAMENTOS
 	@Desc_Departamento varchar(65)
 )
 AS
-SELECT [Id_Departamento] AS ID
+SELECT [Id_Departamento] AS "Código"
       ,[Desc_Departamento] AS "Descripción"
       ,td.[Id_Estado] AS Estado
       ,td.[FecCreacion] AS "Fecha de Creación"
@@ -260,7 +260,7 @@ GO
 -- Consultar
 CREATE PROCEDURE SP_LISTAR_TURNOS
 AS
-SELECT [Id_Turno] AS ID
+SELECT [Id_Turno] AS "Código"
       ,[Desc_Turno] AS "Descripción"
       ,[Cant_Horas] AS "Cantidad de horas"
       ,[HoraEntrada] AS "Hora de Entrada"
@@ -280,7 +280,7 @@ CREATE PROCEDURE SP_FILTRAR_TURNOS
 	@Desc_Turno varchar(65)
 )
 AS
-SELECT [Id_Turno] AS ID
+SELECT [Id_Turno] AS "Código"
       ,[Desc_Turno] AS "Descripción"
       ,[Cant_Horas] AS "Cantidad de horas"
       ,[HoraEntrada] AS "Hora de Entrada"
