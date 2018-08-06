@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_Cat_Man_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Cat_Man_PL.Designer.cs">
+      <DependentUpon>frm_Cat_Man_PL.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Activos_PL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Activos_PL.Designer.cs">
       <DependentUpon>frm_Activos_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_Cat_Man_PL.resx">
+      <DependentUpon>frm_Cat_Man_PL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Activos_PL.resx">
       <DependentUpon>frm_Activos_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
