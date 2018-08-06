@@ -3,7 +3,6 @@ C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\De
 C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
 C:\Users\jorge\Desktop\Proyecto Final\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.Cache
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csprojAssemblyReference.cache
-C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Catagolos_PL.resources
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.cache
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.CoreCompileInputs.cache
@@ -17,3 +16,4 @@ C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progr
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.CopyComplete
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.exe
 C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.pdb
+C:\Users\Adrian Araya Aguilar\OneDrive - Universidad Americana Uam SRL\UAM\Progra III\GIDHUB\ProyectoFinal\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Activos_PL.resources
