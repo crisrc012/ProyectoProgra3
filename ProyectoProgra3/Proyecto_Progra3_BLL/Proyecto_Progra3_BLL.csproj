@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BD\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proyecto_Progra3_DAL\Proyecto_Progra3_DAL.csproj">
+      <Project>{a5be67c1-f211-4091-8f80-aecc13de37a0}</Project>
+      <Name>Proyecto_Progra3_DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

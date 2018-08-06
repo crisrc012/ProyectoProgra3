@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Turnos
 {
-    class Cls_turnos_DAL
+    public class Cls_turnos_DAL
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Semaforo_Casos
 {
-    class Cls_semaforo_DAL
+    public class Cls_semaforo_DAL
     {
     }
 }

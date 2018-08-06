@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Marca_Activo
 {
-    class Cls_marcactivo_DAL
+    public class Cls_marcactivo_DAL
     {
     }
 }

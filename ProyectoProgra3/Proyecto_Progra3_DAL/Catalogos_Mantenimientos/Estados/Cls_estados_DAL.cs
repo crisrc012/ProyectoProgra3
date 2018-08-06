@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Estados
 {
-    class Cls_estados_DAL
+    public class Cls_estados_DAL
     {
     }
 }

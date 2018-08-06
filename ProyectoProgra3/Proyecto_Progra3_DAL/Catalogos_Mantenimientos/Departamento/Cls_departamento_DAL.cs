@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Departamento
 {
-    class Cls_departamento_DAL
+    public class Cls_departamento_DAL
     {
     }
 }

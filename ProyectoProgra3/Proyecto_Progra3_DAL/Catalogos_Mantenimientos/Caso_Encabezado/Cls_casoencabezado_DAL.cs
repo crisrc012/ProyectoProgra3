@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Caso_Encabezado
 {
-    class Cls_casoencabezado_DAL
+    public class Cls_casoencabezado_DAL
     {
     }
 }

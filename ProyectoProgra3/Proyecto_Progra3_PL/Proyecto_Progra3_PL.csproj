@@ -70,6 +70,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proyecto_Progra3_BLL\Proyecto_Progra3_BLL.csproj">
+      <Project>{1e0118d8-5b66-43f6-8a88-ebf9d297dc05}</Project>
+      <Name>Proyecto_Progra3_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proyecto_Progra3_DAL\Proyecto_Progra3_DAL.csproj">
+      <Project>{a5be67c1-f211-4091-8f80-aecc13de37a0}</Project>
+      <Name>Proyecto_Progra3_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

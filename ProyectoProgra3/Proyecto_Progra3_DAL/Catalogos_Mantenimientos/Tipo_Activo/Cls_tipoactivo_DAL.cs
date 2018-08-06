@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Progra3_DAL.Catalogos_Mantenimientos.Tipo_Activo
 {
-    class Cls_tipoactivo_DAL
+    public class Cls_tipoactivo_DAL
     {
     }
 }
