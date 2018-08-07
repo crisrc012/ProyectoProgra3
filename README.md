@@ -1,6 +1,6 @@
 # Proyecto de Programación 3 - UAM
 
-Integrantes:
+## Integrantes:
 * Adrian Araya
 * Jorge Lefebre
 * Wilberth Martínez
