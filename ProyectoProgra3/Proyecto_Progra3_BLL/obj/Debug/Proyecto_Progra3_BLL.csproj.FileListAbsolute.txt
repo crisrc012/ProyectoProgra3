@@ -21,3 +21,10 @@ C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_
 C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csprojResolveAssemblyReference.cache
 C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.dll
 C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.pdb
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_BLL.dll
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_BLL.pdb
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_DAL.dll
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\bin\Debug\Proyecto_Progra3_DAL.pdb
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.csprojResolveAssemblyReference.cache
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.dll
+C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_BLL\obj\Debug\Proyecto_Progra3_BLL.pdb
