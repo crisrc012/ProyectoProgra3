@@ -31,17 +31,3 @@ C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_
 C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.Cache
 C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.exe
 C:\Users\crisr\Documents\Repos\ProyectoProgra3\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.pdb
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe.config
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.exe
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.pdb
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.exe
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_PL.pdb
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_BLL.dll
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_DAL.dll
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_BLL.pdb
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\bin\Debug\Proyecto_Progra3_DAL.pdb
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csprojResolveAssemblyReference.cache
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Cat_Man_PL.resources
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.frm_Menu.resources
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.Properties.Resources.resources
-C:\Sources\Universidad\Programacion3\Proyecto\ProyectoProgra3\Proyecto_Progra3_PL\obj\Debug\Proyecto_Progra3_PL.csproj.GenerateResource.Cache
