@@ -18,7 +18,7 @@ namespace Proyecto_call_PL.Formularios
         Cls_operadores_DAL Obj_Operadores_DAL = new Cls_operadores_DAL();
         Cls_operadores_BLL Obj_Operadores_BLL = new Cls_operadores_BLL();
         #endregion
-        public frm_operadores_PL(string sTabla)
+        public frm_operadores_PL()
         {
             InitializeComponent();
         }

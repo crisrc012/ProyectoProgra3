@@ -34,7 +34,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             }
         }
 
-            public void Filtrar_Operadores(ref Cls_operadores_DAL Obj_operadores_DAL, string sfiltro)
+        public void Filtrar_Operadores(ref Cls_operadores_DAL Obj_operadores_DAL, string sfiltro)
             {
                 Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
                 Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();

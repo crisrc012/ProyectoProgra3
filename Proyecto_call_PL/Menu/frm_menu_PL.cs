@@ -36,12 +36,19 @@ namespace Proyecto_call_PL.Menu
             frm_caso_detalle_PL activos = new frm_caso_detalle_PL();
             activos.ShowDialog();
         }
-
-        #region "Operadores"
+        #region Operadores
         private void tsm_ver_operadores_Click(object sender, EventArgs e)
         {
-            frm_operadores_PL Operadores_PL = new frm_operadores_PL("Tbl_Operadores");
+            frm_operadores_PL Operadores_PL = new frm_operadores_PL();
             Operadores_PL.ShowDialog();
+        }
+        #endregion
+
+        #region Semaforo
+        private void tsm_ver_semaforo_Click(object sender, EventArgs e)
+        {
+            frm_Semaforo_PL Semaforo_PL  = new frm_Semaforo_PL();
+            Semaforo_PL.ShowDialog();
         }
         #endregion
     }

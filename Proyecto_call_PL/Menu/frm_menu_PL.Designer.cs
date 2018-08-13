@@ -136,6 +136,7 @@
             this.tsm_ver_semaforo.Name = "tsm_ver_semaforo";
             this.tsm_ver_semaforo.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_semaforo.Text = "Semaforo";
+            this.tsm_ver_semaforo.Click += new System.EventHandler(this.tsm_ver_semaforo_Click);
             // 
             // tsm_ver_tipoactivo
             // 
