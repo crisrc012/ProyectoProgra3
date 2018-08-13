@@ -83,69 +83,70 @@
             this.tsm_ver_tipoactivo,
             this.tsm_ver_turnos});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.menuToolStripMenuItem.Text = "Ver tablas";
             // 
             // tsm_ver_activo
             // 
             this.tsm_ver_activo.Name = "tsm_ver_activo";
-            this.tsm_ver_activo.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_activo.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_activo.Text = "Activos";
             this.tsm_ver_activo.Click += new System.EventHandler(this.tsm_ver_activo_Click);
             // 
             // tsm_ver_casodetalle
             // 
             this.tsm_ver_casodetalle.Name = "tsm_ver_casodetalle";
-            this.tsm_ver_casodetalle.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_casodetalle.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_casodetalle.Text = "Casos detalle";
             this.tsm_ver_casodetalle.Click += new System.EventHandler(this.tsm_ver_casodetalle_Click);
             // 
             // tsm_ver_casoencabezado
             // 
             this.tsm_ver_casoencabezado.Name = "tsm_ver_casoencabezado";
-            this.tsm_ver_casoencabezado.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_casoencabezado.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_casoencabezado.Text = "Casos encabezado";
             // 
             // tsm_ver_departamento
             // 
             this.tsm_ver_departamento.Name = "tsm_ver_departamento";
-            this.tsm_ver_departamento.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_departamento.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_departamento.Text = "Departamento";
             // 
             // tsm_ver_estado
             // 
             this.tsm_ver_estado.Name = "tsm_ver_estado";
-            this.tsm_ver_estado.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_estado.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_estado.Text = "Estados";
             // 
             // tsm_ver_marcactivo
             // 
             this.tsm_ver_marcactivo.Name = "tsm_ver_marcactivo";
-            this.tsm_ver_marcactivo.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_marcactivo.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_marcactivo.Text = "Marca de activo";
             // 
             // tsm_ver_operadores
             // 
             this.tsm_ver_operadores.Name = "tsm_ver_operadores";
-            this.tsm_ver_operadores.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_operadores.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_operadores.Text = "Operadores";
+            this.tsm_ver_operadores.Click += new System.EventHandler(this.tsm_ver_operadores_Click);
             // 
             // tsm_ver_semaforo
             // 
             this.tsm_ver_semaforo.Name = "tsm_ver_semaforo";
-            this.tsm_ver_semaforo.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_semaforo.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_semaforo.Text = "Semaforo";
             // 
             // tsm_ver_tipoactivo
             // 
             this.tsm_ver_tipoactivo.Name = "tsm_ver_tipoactivo";
-            this.tsm_ver_tipoactivo.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_tipoactivo.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_tipoactivo.Text = "Tipo de activo";
             // 
             // tsm_ver_turnos
             // 
             this.tsm_ver_turnos.Name = "tsm_ver_turnos";
-            this.tsm_ver_turnos.Size = new System.Drawing.Size(171, 22);
+            this.tsm_ver_turnos.Size = new System.Drawing.Size(180, 22);
             this.tsm_ver_turnos.Text = "Turnos";
             // 
             // modificarTablasToolStripMenuItem

@@ -11,6 +11,7 @@ using Proyecto_call_BLL.Catalogos_Mantenimientos;
 using Proyecto_call_DAL.Catalogos_Mantenimientos;
 using Proyecto_call_PL.Activos;
 using Proyecto_call_PL.Caso_Detalle;
+using Proyecto_call_PL.Formularios;
 
 namespace Proyecto_call_PL.Menu
 {
@@ -36,5 +37,12 @@ namespace Proyecto_call_PL.Menu
             activos.ShowDialog();
         }
 
+        #region "Operadores"
+        private void tsm_ver_operadores_Click(object sender, EventArgs e)
+        {
+            frm_operadores_PL Operadores_PL = new frm_operadores_PL("Tbl_Operadores");
+            Operadores_PL.ShowDialog();
+        }
+        #endregion
     }
 }
