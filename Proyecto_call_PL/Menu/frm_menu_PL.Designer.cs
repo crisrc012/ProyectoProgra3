@@ -83,7 +83,7 @@
             this.tsm_ver_tipoactivo,
             this.tsm_ver_turnos});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.menuToolStripMenuItem.Text = "Ver tablas";
             // 
             // tsm_ver_activo
@@ -117,6 +117,7 @@
             this.tsm_ver_estado.Name = "tsm_ver_estado";
             this.tsm_ver_estado.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_estado.Text = "Estados";
+            this.tsm_ver_estado.Click += new System.EventHandler(this.tsm_ver_estado_Click);
             // 
             // tsm_ver_marcactivo
             // 

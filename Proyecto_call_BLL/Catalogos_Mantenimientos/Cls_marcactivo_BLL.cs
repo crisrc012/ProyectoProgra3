@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 {
-    class Cls_marcactivo_BLL
+    public class Cls_marcactivo_BLL
     {
     }
 }
