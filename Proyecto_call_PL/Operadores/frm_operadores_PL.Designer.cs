@@ -124,14 +124,19 @@
             this.tsb_btn_eliminar.Name = "tsb_btn_eliminar";
             this.tsb_btn_eliminar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_eliminar.Text = "Eliminar";
+            this.tsb_btn_eliminar.Click += new System.EventHandler(this.tsb_btn_eliminar_Click);
             // 
             // dtg_desplegar
             // 
+            this.dtg_desplegar.AllowUserToAddRows = false;
             this.dtg_desplegar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_desplegar.Location = new System.Drawing.Point(12, 43);
             this.dtg_desplegar.Name = "dtg_desplegar";
+            this.dtg_desplegar.ReadOnly = true;
+            this.dtg_desplegar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_desplegar.Size = new System.Drawing.Size(612, 192);
             this.dtg_desplegar.TabIndex = 2;
+            this.dtg_desplegar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_desplegar_CellClick);
             // 
             // frm_operadores_PL
             // 

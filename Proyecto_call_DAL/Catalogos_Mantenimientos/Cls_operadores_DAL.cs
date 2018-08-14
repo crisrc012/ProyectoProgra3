@@ -10,11 +10,13 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
     {
         #region Variables
 
-        private string _sId_Operador, _sNombre_Operador, _sApellidos_Operador, _sNickNameOperador, _sNivel, _sUsuCreacion, _sUsuModificacion, _smsjError;
+        private string _sId_Operador, _sNombre_Operador, _sApellidos_Operador, _sNickNameOperador, _sNivel, _sUsuCreacion, _sUsuModificacion, _smsjError, _sAx;
         private char _cId_Estado, _cAxn, _cId_Turno;
         private DateTime _dFecCreacion, _dFecModificacion;
         private bool _bbandera;
+        #endregion
 
+        #region Definiciones
         public string sId_Operador
         {
             get
@@ -194,6 +196,19 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
             set
             {
                 _bbandera = value;
+            }
+        }
+
+        public string sAx
+        {
+            get
+            {
+                return _sAx;
+            }
+
+            set
+            {
+                _sAx = value;
             }
         }
         #endregion

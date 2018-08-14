@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_operadores_PL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Semaforo_PL));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tstxt_valor_filtrar = new System.Windows.Forms.ToolStripTextBox();
@@ -124,16 +124,21 @@
             this.tsb_btn_eliminar.Name = "tsb_btn_eliminar";
             this.tsb_btn_eliminar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_eliminar.Text = "Eliminar";
+            this.tsb_btn_eliminar.Click += new System.EventHandler(this.tsb_btn_eliminar_Click);
             // 
             // dtg_desplegar
             // 
+            this.dtg_desplegar.AllowUserToAddRows = false;
             this.dtg_desplegar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_desplegar.Location = new System.Drawing.Point(12, 43);
             this.dtg_desplegar.Name = "dtg_desplegar";
+            this.dtg_desplegar.ReadOnly = true;
+            this.dtg_desplegar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_desplegar.Size = new System.Drawing.Size(612, 192);
             this.dtg_desplegar.TabIndex = 2;
+            this.dtg_desplegar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_desplegar_CellClick);
             // 
-            // frm_operadores_PL
+            // frm_Semaforo_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +148,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_operadores_PL";
+            this.Name = "frm_Semaforo_PL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caso Detalle";
             this.Load += new System.EventHandler(this.frm_caso_detalle_PL_Load);

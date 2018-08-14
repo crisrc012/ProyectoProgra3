@@ -17,6 +17,7 @@ namespace Proyecto_call_PL.Formularios
         #region Globales
         Cls_semaforo_DAL Obj_Semaforo_DAL = new Cls_semaforo_DAL();
         Cls_semaforo_BLL Obj_Semaforo_BLL = new Cls_semaforo_BLL();
+        Int16 i16Fila;
         #endregion
         public frm_Semaforo_PL()
         {
@@ -74,5 +75,35 @@ namespace Proyecto_call_PL.Formularios
                 filtrar();
             }
         }
+
+
+
+        private void tsb_btn_eliminar_Click(object sender, EventArgs e)
+        {
+            
+            if (dtg_desplegar.Rows.Count==0)
+            {
+                MessageBox.Show("No hay registros para eliminar","Eliminar",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (MessageBox.Show("Seguro que desea eliminar el registro " +
+                Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[0].Value)
+                , "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Obj_Semaforo_DAL.cId_Estado_SemaforoCaso = Convert.ToChar(dtg_desplegar.Rows[i16Fila].Cells[0].Value);
+                    Obj_Semaforo_BLL.Eliminar_Semaforo(ref Obj_Semaforo_DAL);
+                    listar();
+                }
+            }
+            
+        }
+
+        private void dtg_desplegar_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            i16Fila = Convert.ToInt16(e.RowIndex);
+        }
+
+        
     }
 }
