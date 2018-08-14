@@ -54,11 +54,9 @@ namespace Proyecto_call_PL.Menu
 
         private void tsmi_salir_Click(object sender, EventArgs e)
         {
-            DialogResult resultado  = MessageBox.Show("Esta seguro que desea salir", "Alerta", MessageBoxButtons.YesNo);
-
-            if (resultado.Equals("Yes"))
+            if (MessageBox.Show("Esta seguro que desea salir", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.Close();
+                Close();
             }
         }
     }
