@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_call_BLL.Catalogos_Mantenimientos;
-using Proyecto_call_DAL.Catalogos_Mantenimientos;
 using Proyecto_call_PL.Activos;
 using Proyecto_call_PL.Caso_Detalle;
 using Proyecto_call_PL.Formularios;
+using Proyecto_call_PL.Estados;
 
 namespace Proyecto_call_PL.Menu
 {
@@ -51,5 +43,19 @@ namespace Proyecto_call_PL.Menu
             Semaforo_PL.ShowDialog();
         }
         #endregion
+
+        private void tsmi_salir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void tsm_ver_estado_Click(object sender, EventArgs e)
+        {
+            frm_estados_PL estados = new frm_estados_PL();
+            estados.ShowDialog();
+        }
     }
 }

@@ -16,8 +16,6 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
         private DateTime _dFecCreacion, _dFecModificacion;
         private bool _bbandera;
 
-        
-
         public string iDesc_MarcaActivo
         {
             get
