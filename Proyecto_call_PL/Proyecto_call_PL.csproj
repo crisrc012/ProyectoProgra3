@@ -53,11 +53,23 @@
     <Compile Include="Activos\frm_activos_PL.Designer.cs">
       <DependentUpon>frm_activos_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activos\frm_editar_activos_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activos\frm_editar_activos_PL.Designer.cs">
+      <DependentUpon>frm_editar_activos_PL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Caso_Detalle\frm_caso_detalle_PL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Caso_Detalle\frm_caso_detalle_PL.Designer.cs">
       <DependentUpon>frm_caso_detalle_PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caso_Detalle\frm_editar_caso_detalle_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caso_Detalle\frm_editar_caso_detalle_PL.Designer.cs">
+      <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
     </Compile>
     <Compile Include="Operadores\frm_operadores_PL.cs">
       <SubType>Form</SubType>
@@ -82,8 +94,14 @@
     <EmbeddedResource Include="Activos\frm_activos_PL.resx">
       <DependentUpon>frm_activos_PL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Activos\frm_editar_activos_PL.resx">
+      <DependentUpon>frm_editar_activos_PL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Caso_Detalle\frm_caso_detalle_PL.resx">
       <DependentUpon>frm_caso_detalle_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caso_Detalle\frm_editar_caso_detalle_PL.resx">
+      <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operadores\frm_operadores_PL.resx">
       <DependentUpon>frm_operadores_PL.cs</DependentUpon>
