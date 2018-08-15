@@ -77,6 +77,12 @@
     <Compile Include="Estados\frm_estados_PL.Designer.cs">
       <DependentUpon>frm_estados_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Operadores\frm_InsertUpdate_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operadores\frm_InsertUpdate_PL.Designer.cs">
+      <DependentUpon>frm_InsertUpdate_PL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operadores\frm_operadores_PL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estados\frm_estados_PL.resx">
       <DependentUpon>frm_estados_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operadores\frm_InsertUpdate_PL.resx">
+      <DependentUpon>frm_InsertUpdate_PL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operadores\frm_operadores_PL.resx">
       <DependentUpon>frm_operadores_PL.cs</DependentUpon>

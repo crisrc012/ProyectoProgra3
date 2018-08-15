@@ -10,6 +10,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
         {
             Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
             Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
+
             Obj_bd_DAL.snombretabla = "estados";
             Obj_bd_DAL.ssentencia = "SP_LISTAR_ESTADOS";
             Obj_bd_BLL.Adapt(ref Obj_bd_DAL);
