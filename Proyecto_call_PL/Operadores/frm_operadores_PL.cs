@@ -101,9 +101,7 @@ namespace Proyecto_call_PL.Formularios
 
         private void dtg_desplegar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             i16Fila= Convert.ToInt16(e.RowIndex);
-
         }
     }
 }
