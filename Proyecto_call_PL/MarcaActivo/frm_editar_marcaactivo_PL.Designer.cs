@@ -31,7 +31,7 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.txtDescripción = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnAccion = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -57,18 +57,19 @@
             // 
             // cmbEstado
             // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(80, 61);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(174, 21);
             this.cmbEstado.TabIndex = 2;
             // 
-            // txtDescripción
+            // txtDescripcion
             // 
-            this.txtDescripción.Location = new System.Drawing.Point(80, 29);
-            this.txtDescripción.Name = "txtDescripción";
-            this.txtDescripción.Size = new System.Drawing.Size(174, 20);
-            this.txtDescripción.TabIndex = 3;
+            this.txtDescripcion.Location = new System.Drawing.Point(80, 29);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(174, 20);
+            this.txtDescripcion.TabIndex = 3;
             // 
             // btnAccion
             // 
@@ -82,7 +83,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtDescripción);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.lblDescripcion);
             this.groupBox1.Controls.Add(this.lblEstado);
             this.groupBox1.Controls.Add(this.cmbEstado);
@@ -101,6 +102,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAccion);
             this.Name = "frm_editar_marcaactivo_PL";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acción Marca Activo";
             this.Load += new System.EventHandler(this.frm_editar_marcaactivo_PL_Load);
@@ -115,7 +117,7 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.TextBox txtDescripción;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnAccion;
         private System.Windows.Forms.GroupBox groupBox1;
     }

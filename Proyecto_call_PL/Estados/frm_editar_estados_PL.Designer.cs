@@ -80,7 +80,10 @@
             this.ClientSize = new System.Drawing.Size(284, 133);
             this.Controls.Add(this.btnAccion);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_editar_estados_PL";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acción Estado";
             this.groupBox1.ResumeLayout(false);

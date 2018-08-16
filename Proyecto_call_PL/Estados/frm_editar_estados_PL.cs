@@ -29,10 +29,23 @@ namespace Proyecto_call_PL.Estados
                 txtDescripcion.Text = Obj_estados_DAL.sDesc_Estado;
             }
             this.Obj_estados_DAL = Obj_estados_DAL;
+            Text = btnAccion.Text + " Estado";
         }
 
         private void btnAccion_Click(object sender, EventArgs e)
         {
+            if (Obj_estados_DAL.sDesc_Estado == txtDescripcion.Text.Trim())
+            {
+                MessageBox.Show("No ha cambiado ningún valor", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtDescripcion.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("La descripción no puede ser vacía", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Obj_estados_DAL.sDesc_Estado = txtDescripcion.Text.Trim();
             if (insert)
             {
