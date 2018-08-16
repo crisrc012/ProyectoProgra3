@@ -71,11 +71,75 @@ namespace Proyecto_call_PL.Estados
                 Obj_estados_DAL = new Cls_estados_DAL();
                 Obj_estados_DAL.cId_Estado = Convert.ToChar(dtg_desplegar.SelectedRows[0].Cells[0].Value);
                 Obj_estados_BLL.eliminar_estados(ref Obj_estados_DAL);
+                if (Obj_estados_DAL.bbandera)
+                {
+                    MessageBox.Show("Se ha eliminado correctamente", "Eliminado correcto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listar();
+                }
+                else
+                {
+                    MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
                 MessageBox.Show("Por favor selecciones una fila.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tsb_btn_agregar_Click(object sender, EventArgs e)
+        {
+            Obj_estados_DAL = new Cls_estados_DAL();
+            frm_editar_estados_PL frm_agregar_estado = new frm_editar_estados_PL(ref Obj_estados_DAL);
+            frm_agregar_estado.ShowDialog(this);
+            if (Obj_estados_DAL.bbandera)
+            {
+                MessageBox.Show("Se ha agregado correctamente", "Agregado correcto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listar();
+            }
+            else
+            {
+                MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsb_btn_modificar_Click(object sender, EventArgs e)
+        {
+            if (dtg_desplegar.SelectedRows.Count == 1)
+            {
+                Obj_estados_DAL = new Cls_estados_DAL();
+                // Se obtinenen los datos del DataGridView
+                Obj_estados_DAL.cId_Estado = Convert.ToChar(dtg_desplegar.SelectedRows[0].Cells[0].Value);
+                Obj_estados_DAL.sDesc_Estado = dtg_desplegar.SelectedRows[0].Cells[1].Value.ToString();
+                // Se abre la ventana de modificación
+                frm_editar_estados_PL frm_editar_estado = new frm_editar_estados_PL(ref Obj_estados_DAL);
+                frm_editar_estado.ShowDialog(this);
+                // Se evalua el resultado de la operación y se muestra el mensaje de error o de operación realizada
+                if (Obj_estados_DAL.bbandera)
+                {
+                    MessageBox.Show("Se ha modificado correctamente", "Modificado correcto",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listar();
+                }
+                else
+                {
+                    MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor selecciones una fila.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsb_btn_actualizar_Click(object sender, EventArgs e)
+        {
+            listar();
         }
     }
 }
