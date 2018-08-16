@@ -48,6 +48,7 @@
             // 
             // cmb_Estado
             // 
+            this.cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Estado.FormattingEnabled = true;
             this.cmb_Estado.Location = new System.Drawing.Point(351, 37);
             this.cmb_Estado.Name = "cmb_Estado";
@@ -56,6 +57,7 @@
             // 
             // cmb_Turno
             // 
+            this.cmb_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Turno.FormattingEnabled = true;
             this.cmb_Turno.Location = new System.Drawing.Point(351, 92);
             this.cmb_Turno.Name = "cmb_Turno";
@@ -202,6 +204,7 @@
             this.MinimizeBox = false;
             this.Name = "frm_InsertUpdate_PL";
             this.Text = "frm_InsertUpdate_PL";
+            this.Load += new System.EventHandler(this.frm_InsertUpdate_PL_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
