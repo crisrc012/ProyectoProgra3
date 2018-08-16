@@ -121,6 +121,18 @@
     <Compile Include="Semaforo\frm_Semaforo_PL.Designer.cs">
       <DependentUpon>frm_Semaforo_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Turnos\frm_editar_turnos_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\frm_editar_turnos_PL.Designer.cs">
+      <DependentUpon>frm_editar_turnos_PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnos\frm_turnos_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnos\frm_turnos_PL.Designer.cs">
+      <DependentUpon>frm_turnos_PL.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Activos\frm_activos_PL.resx">
       <DependentUpon>frm_activos_PL.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +178,12 @@
     <EmbeddedResource Include="Semaforo\frm_Semaforo_PL.resx">
       <DependentUpon>frm_Semaforo_PL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\frm_editar_turnos_PL.resx">
+      <DependentUpon>frm_editar_turnos_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnos\frm_turnos_PL.resx">
+      <DependentUpon>frm_turnos_PL.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -191,6 +209,7 @@
       <Name>Proyecto_call_DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

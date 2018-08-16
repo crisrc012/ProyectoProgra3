@@ -151,6 +151,7 @@
             this.tsm_ver_turnos.Name = "tsm_ver_turnos";
             this.tsm_ver_turnos.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_turnos.Text = "Turnos";
+            this.tsm_ver_turnos.Click += new System.EventHandler(this.tsm_ver_turnos_Click);
             // 
             // tsmi_salir
             // 

@@ -5,6 +5,7 @@ using Proyecto_call_PL.Caso_Detalle;
 using Proyecto_call_PL.Formularios;
 using Proyecto_call_PL.Estados;
 using Proyecto_call_PL.MarcaActivo;
+using Proyecto_call_PL.Turnos;
 
 namespace Proyecto_call_PL.Menu
 {
@@ -64,5 +65,13 @@ namespace Proyecto_call_PL.Menu
             frm_marcaactivo_PL marcaactivo = new frm_marcaactivo_PL();
             marcaactivo.ShowDialog();
         }
+
+        #region Turnos
+        private void tsm_ver_turnos_Click(object sender, EventArgs e)
+        {
+            frm_turnos_PL estados = new frm_turnos_PL();
+            estados.ShowDialog();
+        }
+        #endregion
     }
 }
