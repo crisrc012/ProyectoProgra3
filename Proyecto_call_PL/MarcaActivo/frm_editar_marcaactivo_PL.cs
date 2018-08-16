@@ -31,12 +31,18 @@ namespace Proyecto_call_PL.MarcaActivo
             {
                 cmbEstado.DisplayMember = "Descripción";
                 cmbEstado.ValueMember = "Código";
+                cmbEstado.DataSource = Obj_estados_DAL.Ds.Tables[0];
             }
             else
             {
                 MessageBox.Show(" Se presento el siguiente error " + Obj_estados_DAL.smsjError, "Error", MessageBoxButtons.OK);
             }
             #endregion
+        }
+
+        private void btnAccion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -78,6 +78,7 @@
             this.btnAccion.TabIndex = 4;
             this.btnAccion.Text = "Acción";
             this.btnAccion.UseVisualStyleBackColor = true;
+            this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
             // 
             // groupBox1
             // 
@@ -100,6 +101,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAccion);
             this.Name = "frm_editar_marcaactivo_PL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acción Marca Activo";
             this.Load += new System.EventHandler(this.frm_editar_marcaactivo_PL_Load);
             this.groupBox1.ResumeLayout(false);
