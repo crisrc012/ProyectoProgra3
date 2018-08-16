@@ -124,6 +124,7 @@
             this.tsm_ver_marcactivo.Name = "tsm_ver_marcactivo";
             this.tsm_ver_marcactivo.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_marcactivo.Text = "Marca de activo";
+            this.tsm_ver_marcactivo.Click += new System.EventHandler(this.tsm_ver_marcactivo_Click);
             // 
             // tsm_ver_operadores
             // 

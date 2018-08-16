@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_call_DAL.Catalogos_Mantenimientos
 {
-    public class Cls_marcactivo_DAL
+    public class Cls_marcaactivo_DAL
     {
         #region Variables
 

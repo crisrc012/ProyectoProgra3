@@ -1,6 +1,6 @@
-﻿namespace Proyecto_call_PL.Estados
+﻿namespace Proyecto_call_PL.MarcaActivo
 {
-    partial class frm_estados_PL
+    partial class frm_marcaactivo_PL
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_estados_PL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_marcaactivo_PL));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tstxt_valor_filtrar = new System.Windows.Forms.ToolStripTextBox();
@@ -87,7 +87,6 @@
             this.tsb_btn_actualizar.Name = "tsb_btn_actualizar";
             this.tsb_btn_actualizar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_actualizar.Text = "Actualizar";
-            this.tsb_btn_actualizar.Click += new System.EventHandler(this.tsb_btn_actualizar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -141,7 +140,7 @@
             this.dtg_desplegar.Size = new System.Drawing.Size(612, 192);
             this.dtg_desplegar.TabIndex = 2;
             // 
-            // frm_estados_PL
+            // frm_marcaactivo_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,10 +150,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frm_estados_PL";
+            this.Name = "frm_marcaactivo_PL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estados";
-            this.Load += new System.EventHandler(this.frm_estados_PL_Load);
+            this.Load += new System.EventHandler(this.frm_marcaactivo_PL_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_desplegar)).EndInit();

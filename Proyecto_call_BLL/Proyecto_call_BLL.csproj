@@ -47,7 +47,7 @@
     <Compile Include="Catalogos_Mantenimientos\Cls_casoencabezado_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_departamentos_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_estados_BLL.cs" />
-    <Compile Include="Catalogos_Mantenimientos\Cls_marcactivo_BLL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Cls_marcaactivo_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_operadores_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_semaforo_BLL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_tipoactivo_BLL.cs" />
