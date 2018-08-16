@@ -81,11 +81,10 @@
             // 
             // tsb_btn_actualizar
             // 
-            this.tsb_btn_actualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsb_btn_actualizar.Image = ((System.Drawing.Image)(resources.GetObject("tsb_btn_actualizar.Image")));
             this.tsb_btn_actualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_btn_actualizar.Name = "tsb_btn_actualizar";
-            this.tsb_btn_actualizar.Size = new System.Drawing.Size(23, 22);
+            this.tsb_btn_actualizar.Size = new System.Drawing.Size(79, 22);
             this.tsb_btn_actualizar.Text = "Actualizar";
             this.tsb_btn_actualizar.Click += new System.EventHandler(this.tsb_btn_actualizar_Click);
             // 
@@ -96,11 +95,10 @@
             // 
             // tsb_btn_agregar
             // 
-            this.tsb_btn_agregar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsb_btn_agregar.Image = ((System.Drawing.Image)(resources.GetObject("tsb_btn_agregar.Image")));
             this.tsb_btn_agregar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_btn_agregar.Name = "tsb_btn_agregar";
-            this.tsb_btn_agregar.Size = new System.Drawing.Size(23, 22);
+            this.tsb_btn_agregar.Size = new System.Drawing.Size(69, 22);
             this.tsb_btn_agregar.Text = "Agregar";
             this.tsb_btn_agregar.Click += new System.EventHandler(this.tsb_btn_agregar_Click);
             // 
@@ -111,21 +109,19 @@
             // 
             // tsb_btn_modificar
             // 
-            this.tsb_btn_modificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsb_btn_modificar.Image = ((System.Drawing.Image)(resources.GetObject("tsb_btn_modificar.Image")));
             this.tsb_btn_modificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_btn_modificar.Name = "tsb_btn_modificar";
-            this.tsb_btn_modificar.Size = new System.Drawing.Size(23, 22);
+            this.tsb_btn_modificar.Size = new System.Drawing.Size(78, 22);
             this.tsb_btn_modificar.Text = "Modificar";
             this.tsb_btn_modificar.Click += new System.EventHandler(this.tsb_btn_modificar_Click);
             // 
             // tsb_btn_eliminar
             // 
-            this.tsb_btn_eliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tsb_btn_eliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsb_btn_eliminar.Image")));
             this.tsb_btn_eliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsb_btn_eliminar.Name = "tsb_btn_eliminar";
-            this.tsb_btn_eliminar.Size = new System.Drawing.Size(23, 22);
+            this.tsb_btn_eliminar.Size = new System.Drawing.Size(70, 22);
             this.tsb_btn_eliminar.Text = "Eliminar";
             this.tsb_btn_eliminar.Click += new System.EventHandler(this.tsb_btn_eliminar_Click);
             // 
@@ -152,6 +148,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_estados_PL";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estados";
             this.Load += new System.EventHandler(this.frm_estados_PL_Load);

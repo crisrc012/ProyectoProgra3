@@ -54,7 +54,7 @@ namespace Proyecto_call_PL.Estados
 
         private void tstxt_valor_filtrar_TextChanged(object sender, EventArgs e)
         {
-            if (tstxt_valor_filtrar.Text.ToString().Trim() == "")
+            if (tstxt_valor_filtrar.Text.ToString().Trim() == string.Empty)
             {
                 listar();
             }
@@ -68,19 +68,28 @@ namespace Proyecto_call_PL.Estados
         {
             if (dtg_desplegar.SelectedRows.Count == 1)
             {
-                Obj_estados_DAL = new Cls_estados_DAL();
-                Obj_estados_DAL.cId_Estado = Convert.ToChar(dtg_desplegar.SelectedRows[0].Cells[0].Value);
-                Obj_estados_BLL.eliminar_estados(ref Obj_estados_DAL);
-                if (Obj_estados_DAL.bbandera)
+                if (MessageBox.Show("¿Realmente desea eliminar la fila seleccionada?","Confirmar eliminar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Se ha eliminado correctamente", "Eliminado correcto",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    listar();
+                    Obj_estados_DAL = new Cls_estados_DAL();
+                    Obj_estados_DAL.cId_Estado = Convert.ToChar(dtg_desplegar.SelectedRows[0].Cells[0].Value);
+                    Obj_estados_BLL.eliminar_estados(ref Obj_estados_DAL);
+                    if (Obj_estados_DAL.bbandera)
+                    {
+                        MessageBox.Show("Se ha eliminado correctamente", "Eliminado correcto",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        listar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se ha eliminado ningún dato", "Eliminar cancelado",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -102,8 +111,11 @@ namespace Proyecto_call_PL.Estados
             }
             else
             {
-                MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
+                if (Obj_estados_DAL.smsjError != null)
+                {
+                    MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -127,8 +139,11 @@ namespace Proyecto_call_PL.Estados
                 }
                 else
                 {
-                    MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
+                    if (Obj_estados_DAL.smsjError != null)
+                    {
+                        MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_estados_DAL.smsjError, "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
