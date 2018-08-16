@@ -35,7 +35,7 @@
             this.txt_Apellido = new System.Windows.Forms.TextBox();
             this.txt_Nick = new System.Windows.Forms.TextBox();
             this.cmb_Nivel = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAccion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -99,16 +99,17 @@
             this.cmb_Nivel.Size = new System.Drawing.Size(152, 28);
             this.cmb_Nivel.TabIndex = 0;
             // 
-            // button1
+            // btnAccion
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(394, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 50);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAccion.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccion.BackgroundImage")));
+            this.btnAccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAccion.Location = new System.Drawing.Point(394, 176);
+            this.btnAccion.Name = "btnAccion";
+            this.btnAccion.Size = new System.Drawing.Size(52, 50);
+            this.btnAccion.TabIndex = 2;
+            this.btnAccion.UseVisualStyleBackColor = false;
+            this.btnAccion.Click += new System.EventHandler(this.btnAccion_Click);
             // 
             // label1
             // 
@@ -195,7 +196,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(464, 238);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAccion);
             this.Controls.Add(this.cmb_Turno);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -220,7 +221,7 @@
         public System.Windows.Forms.TextBox txt_Apellido;
         public System.Windows.Forms.TextBox txt_Nick;
         public System.Windows.Forms.ComboBox cmb_Nivel;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnAccion;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.Label label4;

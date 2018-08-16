@@ -115,35 +115,35 @@ namespace Proyecto_call_PL.Formularios
             }
             else
             {
-                frm_InsertUpdate_PL frm_Modificar = new frm_InsertUpdate_PL("Modificar", Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[0].Value));
+                frm_InsertUpdate_PL frm_Modificar = new frm_InsertUpdate_PL
+                    (ref Obj_Operadores_DAL, null,"Modificar", Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[0].Value));
 
-               
                 frm_Modificar.txt_Nombre.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[1].Value);
                 frm_Modificar.txt_Apellido.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[2].Value);
                 frm_Modificar.txt_Nick.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[3].Value);
                 frm_Modificar.cmb_Nivel.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[5].Value);
+                frm_Modificar.ShowDialog(this);
+            }
+        }
 
-                //Llama al listar de estados y los agrega al combo
-                    
-                    Cls_estados_DAL Obj_Estados_DAL = new Cls_estados_DAL();
-                    Cls_estados_BLL Obj_Estados_BLL = new Cls_estados_BLL();
-
-
-                    Obj_Estados_BLL.listar_estados(ref Obj_Estados_DAL);
-                    int contador = 0;
-                    foreach (DataRow row in Obj_Estados_DAL.Ds.Tables["estados"].Rows)
-                    {
-                        frm_Modificar.cmb_Estado.Items.Add(Obj_Estados_DAL.Ds.Tables["estados"].Rows[contador][1].ToString());
-                        frm_Modificar.cmb_Estado.ValueMember = Obj_Estados_DAL.Ds.Tables["estados"].Rows[contador][0].ToString();
-                        MessageBox.Show(Obj_Estados_DAL.Ds.Tables["estados"].Rows[contador][0].ToString());
-                    contador++;
-                    }
-
-                //Llama al listar de Turnos y los agrega al combo
-
-
-
-                frm_Modificar.ShowDialog();
+        private void tsb_btn_agregar_Click(object sender, EventArgs e)
+        {
+            Obj_Operadores_DAL = new Cls_operadores_DAL();
+            frm_InsertUpdate_PL frm_InsertUpdate_PL = new frm_InsertUpdate_PL(ref Obj_Operadores_DAL, null,"Insertar");
+            frm_InsertUpdate_PL.ShowDialog(this);
+            if (Obj_Operadores_DAL.bbandera)
+            {
+                MessageBox.Show("Se ha agregado correctamente", "Agregado correcto",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listar();
+            }
+            else
+            {
+                if (Obj_Operadores_DAL.smsjError != null)
+                {
+                    MessageBox.Show("Ha un ocurrido un error.\n\nDetalle: " + Obj_Operadores_DAL.smsjError, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
