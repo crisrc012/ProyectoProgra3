@@ -4,6 +4,7 @@ using Proyecto_call_PL.Activos;
 using Proyecto_call_PL.Caso_Detalle;
 using Proyecto_call_PL.Formularios;
 using Proyecto_call_PL.Estados;
+using Proyecto_call_PL.MarcaActivo;
 
 namespace Proyecto_call_PL.Menu
 {
@@ -56,6 +57,12 @@ namespace Proyecto_call_PL.Menu
         {
             frm_estados_PL estados = new frm_estados_PL();
             estados.ShowDialog();
+        }
+
+        private void tsm_ver_marcactivo_Click(object sender, EventArgs e)
+        {
+            frm_marcaactivo_PL marcaactivo = new frm_marcaactivo_PL();
+            marcaactivo.ShowDialog();
         }
     }
 }

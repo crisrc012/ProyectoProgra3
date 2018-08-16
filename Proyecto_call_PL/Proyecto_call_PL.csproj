@@ -71,11 +71,29 @@
     <Compile Include="Caso_Detalle\frm_editar_caso_detalle_PL.Designer.cs">
       <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estados\frm_editar_estados_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estados\frm_editar_estados_PL.Designer.cs">
+      <DependentUpon>frm_editar_estados_PL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estados\frm_estados_PL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estados\frm_estados_PL.Designer.cs">
       <DependentUpon>frm_estados_PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarcaActivo\frm_editar_marcaactivo_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcaActivo\frm_editar_marcaactivo_PL.Designer.cs">
+      <DependentUpon>frm_editar_marcaactivo_PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarcaActivo\frm_marcaactivo_PL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarcaActivo\frm_marcaactivo_PL.Designer.cs">
+      <DependentUpon>frm_marcaactivo_PL.cs</DependentUpon>
     </Compile>
     <Compile Include="Operadores\frm_operadores_PL.cs">
       <SubType>Form</SubType>
@@ -109,8 +127,17 @@
     <EmbeddedResource Include="Caso_Detalle\frm_editar_caso_detalle_PL.resx">
       <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estados\frm_editar_estados_PL.resx">
+      <DependentUpon>frm_editar_estados_PL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estados\frm_estados_PL.resx">
       <DependentUpon>frm_estados_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcaActivo\frm_editar_marcaactivo_PL.resx">
+      <DependentUpon>frm_editar_marcaactivo_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarcaActivo\frm_marcaactivo_PL.resx">
+      <DependentUpon>frm_marcaactivo_PL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operadores\frm_operadores_PL.resx">
       <DependentUpon>frm_operadores_PL.cs</DependentUpon>

@@ -48,7 +48,7 @@
     <Compile Include="Catalogos_Mantenimientos\Cls_casoencabezado_DAL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_departamentos_DAL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_estados_DAL.cs" />
-    <Compile Include="Catalogos_Mantenimientos\Cls_marcactivo_DAL.cs" />
+    <Compile Include="Catalogos_Mantenimientos\Cls_marcaactivo_DAL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_operadores_DAL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_semaforo_DAL.cs" />
     <Compile Include="Catalogos_Mantenimientos\Cls_tipoactivo_DAL.cs" />

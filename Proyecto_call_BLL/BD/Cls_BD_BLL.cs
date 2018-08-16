@@ -31,18 +31,24 @@ namespace Proyecto_call_BLL.BD
 
                     if (Obj_bd_DAL.Obj_dtparam.Rows.Count >= 1)
                     {
-                        System.Data.SqlDbType Obj_tipodato = System.Data.SqlDbType.NVarChar;
+                        System.Data.SqlDbType Obj_tipo_dato = System.Data.SqlDbType.NVarChar;
                         foreach (System.Data.DataRow dr in Obj_bd_DAL.Obj_dtparam.Rows)
                         {
                             switch (dr[1].ToString())
                             {
                                 case "1":
-                                    Obj_tipodato = System.Data.SqlDbType.NVarChar;
-                                break;
+                                    Obj_tipo_dato = System.Data.SqlDbType.NVarChar;
+                                    break;
+                                case "2":
+                                    Obj_tipo_dato = System.Data.SqlDbType.Char;
+                                    break;
+                                case "3":
+                                    Obj_tipo_dato = System.Data.SqlDbType.Int;
+                                    break;
                                 default:
                                     break;
                             }
-                            Obj_bd_DAL.Obj_adpt.SelectCommand.Parameters.Add(dr[0].ToString(), Obj_tipodato).Value = dr[2].ToString();
+                            Obj_bd_DAL.Obj_adpt.SelectCommand.Parameters.Add(dr[0].ToString(), Obj_tipo_dato).Value = dr[2].ToString();
                         }
                     }
 
