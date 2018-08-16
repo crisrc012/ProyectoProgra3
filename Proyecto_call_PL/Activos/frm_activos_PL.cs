@@ -82,6 +82,7 @@ namespace Proyecto_call_PL.Activos
                     string _svalor = dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString();
                     Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, _svalor);
                     MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
+                    listar();
                 }
                 else
                 {
