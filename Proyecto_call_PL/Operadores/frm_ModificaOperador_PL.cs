@@ -13,7 +13,7 @@ using Proyecto_call_DAL.Catalogos_Mantenimientos;
 
 namespace Proyecto_call_PL.Operadores
 {
-    public partial class frm_InsertUpdate_PL : Form
+    public partial class frm_ModificaOperador_PL : Form
     {
         #region Globales
         Cls_operadores_DAL Obj_Operadores_DAL = new Cls_operadores_DAL();
@@ -27,7 +27,7 @@ namespace Proyecto_call_PL.Operadores
 
         public object Operadores_PL { get; }
         #endregion
-        public frm_InsertUpdate_PL(ref Cls_operadores_DAL Obj_Operadores_DAL, string sEstado, string sTipo, string sOperador="")
+        public frm_ModificaOperador_PL(ref Cls_operadores_DAL Obj_Operadores_DAL, string sEstado, string sTipo, string sOperador="")
         {
             
             InitializeComponent();

@@ -111,15 +111,13 @@ namespace Proyecto_call_PL.Formularios
 
         private void tsb_btn_modificar_Click(object sender, EventArgs e)
         {
-            
-
             if (dtg_desplegar.Rows.Count == 0)
             {
                 MessageBox.Show("No hay registros para eliminar", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                frm_InsertUpdate_PL frm_Modificar = new frm_InsertUpdate_PL
+                frm_ModificaOperador_PL frm_Modificar = new frm_ModificaOperador_PL
                     (ref Obj_Operadores_DAL, null,"Modificar", Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[0].Value));
 
                 #region Cargar combobox 
@@ -167,7 +165,7 @@ namespace Proyecto_call_PL.Formularios
         private void tsb_btn_agregar_Click(object sender, EventArgs e)
         {
             Obj_Operadores_DAL = new Cls_operadores_DAL();
-            frm_InsertUpdate_PL frm_InsertUpdate_PL = new frm_InsertUpdate_PL(ref Obj_Operadores_DAL, null,"Insertar");
+            frm_ModificaOperador_PL frm_InsertUpdate_PL = new frm_ModificaOperador_PL(ref Obj_Operadores_DAL, null,"Insertar");
             frm_InsertUpdate_PL.ShowDialog(this);
             if (Obj_Operadores_DAL.bbandera)
             {

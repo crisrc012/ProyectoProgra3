@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_call_PL.Operadores
 {
-    partial class frm_InsertUpdate_PL
+    partial class frm_ModificaOperador_PL
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_InsertUpdate_PL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ModificaOperador_PL));
             cmb_Estado = new System.Windows.Forms.ComboBox();
             cmb_Turno = new System.Windows.Forms.ComboBox();
             txt_Nombre = new System.Windows.Forms.TextBox();
