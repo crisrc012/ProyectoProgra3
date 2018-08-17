@@ -73,5 +73,24 @@ namespace Proyecto_call_PL.Caso_Detalle
                 filtrar();
             }
         }
+
+        private void tsb_btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if (Obj_casodetalle_DAL.smsjError == string.Empty)
+            {
+                if (dtg_desplegar.RowCount >=1)
+                {
+                    int _ivalor = Convert.ToInt32( dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString());
+                    Obj_casodetalle_BLL.eliminar_casodetalle(ref Obj_casodetalle_DAL,_ivalor);
+                    MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
+                    listar();
+                }
+                else
+                {
+                    dtg_desplegar.DataSource = null;
+                    MessageBox.Show(" Se presento el siguiente error " + Obj_casodetalle_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                }
+            }
+        }
     }
 }

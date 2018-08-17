@@ -84,11 +84,13 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
             if (Obj_bd_DAL.smsjerror == string.Empty)
             {
+                Obj_activos_DAL.bandera = true;
                 Obj_activos_DAL.smsjError = string.Empty;
                 Obj_activos_DAL.Ds = Obj_bd_DAL.dst;
             }
             else
             {
+                Obj_activos_DAL.bandera = false;
                 Obj_activos_DAL.smsjError = Obj_bd_DAL.smsjerror;
                 Obj_activos_DAL.Ds = null;
             }
