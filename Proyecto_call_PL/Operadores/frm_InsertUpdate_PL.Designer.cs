@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_InsertUpdate_PL));
-            this.cmb_Estado = new System.Windows.Forms.ComboBox();
-            this.cmb_Turno = new System.Windows.Forms.ComboBox();
-            this.txt_Nombre = new System.Windows.Forms.TextBox();
-            this.txt_Apellido = new System.Windows.Forms.TextBox();
-            this.txt_Nick = new System.Windows.Forms.TextBox();
-            this.cmb_Nivel = new System.Windows.Forms.ComboBox();
-            this.btnAccion = new System.Windows.Forms.Button();
+            cmb_Estado = new System.Windows.Forms.ComboBox();
+            cmb_Turno = new System.Windows.Forms.ComboBox();
+            txt_Nombre = new System.Windows.Forms.TextBox();
+            txt_Apellido = new System.Windows.Forms.TextBox();
+            txt_Nick = new System.Windows.Forms.TextBox();
+            cmb_Nivel = new System.Windows.Forms.ComboBox();
+            btnAccion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,56 +48,59 @@
             // 
             // cmb_Estado
             // 
-            this.cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Estado.FormattingEnabled = true;
-            this.cmb_Estado.Location = new System.Drawing.Point(351, 37);
-            this.cmb_Estado.Name = "cmb_Estado";
-            this.cmb_Estado.Size = new System.Drawing.Size(95, 21);
-            this.cmb_Estado.TabIndex = 0;
+            cmb_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cmb_Estado.FormattingEnabled = true;
+            cmb_Estado.Location = new System.Drawing.Point(351, 37);
+            cmb_Estado.Name = "cmb_Estado";
+            cmb_Estado.Size = new System.Drawing.Size(95, 21);
+            cmb_Estado.TabIndex = 0;
             // 
             // cmb_Turno
             // 
-            this.cmb_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Turno.FormattingEnabled = true;
-            this.cmb_Turno.Location = new System.Drawing.Point(351, 92);
-            this.cmb_Turno.Name = "cmb_Turno";
-            this.cmb_Turno.Size = new System.Drawing.Size(95, 21);
-            this.cmb_Turno.TabIndex = 0;
+            cmb_Turno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cmb_Turno.FormattingEnabled = true;
+            cmb_Turno.Location = new System.Drawing.Point(351, 92);
+            cmb_Turno.Name = "cmb_Turno";
+            cmb_Turno.Size = new System.Drawing.Size(95, 21);
+            cmb_Turno.TabIndex = 0;
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(98, 25);
-            this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(152, 26);
-            this.txt_Nombre.TabIndex = 1;
+            txt_Nombre.Location = new System.Drawing.Point(98, 25);
+            txt_Nombre.MaxLength = 45;
+            txt_Nombre.Name = "txt_Nombre";
+            txt_Nombre.Size = new System.Drawing.Size(152, 26);
+            txt_Nombre.TabIndex = 1;
             // 
             // txt_Apellido
             // 
-            this.txt_Apellido.Location = new System.Drawing.Point(98, 57);
-            this.txt_Apellido.Name = "txt_Apellido";
-            this.txt_Apellido.Size = new System.Drawing.Size(152, 26);
-            this.txt_Apellido.TabIndex = 1;
+            txt_Apellido.Location = new System.Drawing.Point(98, 57);
+            txt_Apellido.MaxLength = 140;
+            txt_Apellido.Name = "txt_Apellido";
+            txt_Apellido.Size = new System.Drawing.Size(152, 26);
+            txt_Apellido.TabIndex = 1;
             // 
             // txt_Nick
             // 
-            this.txt_Nick.Location = new System.Drawing.Point(98, 91);
-            this.txt_Nick.Name = "txt_Nick";
-            this.txt_Nick.Size = new System.Drawing.Size(152, 26);
-            this.txt_Nick.TabIndex = 1;
+            txt_Nick.Location = new System.Drawing.Point(98, 91);
+            txt_Nick.MaxLength = 10;
+            txt_Nick.Name = "txt_Nick";
+            txt_Nick.Size = new System.Drawing.Size(152, 26);
+            txt_Nick.TabIndex = 1;
             // 
             // cmb_Nivel
             // 
-            this.cmb_Nivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Nivel.FormattingEnabled = true;
-            this.cmb_Nivel.Items.AddRange(new object[] {
+            cmb_Nivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cmb_Nivel.FormattingEnabled = true;
+            cmb_Nivel.Items.AddRange(new object[] {
             "Nivel 0",
             "Nivel 1",
             "Nivel 2",
             "Nivel 3"});
-            this.cmb_Nivel.Location = new System.Drawing.Point(98, 123);
-            this.cmb_Nivel.Name = "cmb_Nivel";
-            this.cmb_Nivel.Size = new System.Drawing.Size(152, 28);
-            this.cmb_Nivel.TabIndex = 0;
+            cmb_Nivel.Location = new System.Drawing.Point(98, 123);
+            cmb_Nivel.Name = "cmb_Nivel";
+            cmb_Nivel.Size = new System.Drawing.Size(152, 28);
+            cmb_Nivel.TabIndex = 0;
             // 
             // btnAccion
             // 
@@ -123,14 +126,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cmb_Nivel);
+            this.groupBox1.Controls.Add(cmb_Nivel);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txt_Nombre);
-            this.groupBox1.Controls.Add(this.txt_Apellido);
-            this.groupBox1.Controls.Add(this.txt_Nick);
+            this.groupBox1.Controls.Add(txt_Nombre);
+            this.groupBox1.Controls.Add(txt_Apellido);
+            this.groupBox1.Controls.Add(txt_Nick);
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -197,10 +200,10 @@
             this.ClientSize = new System.Drawing.Size(464, 238);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAccion);
-            this.Controls.Add(this.cmb_Turno);
+            this.Controls.Add(cmb_Turno);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cmb_Estado);
+            this.Controls.Add(cmb_Estado);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_InsertUpdate_PL";
@@ -215,19 +218,19 @@
 
         #endregion
 
-        public System.Windows.Forms.ComboBox cmb_Estado;
-        public System.Windows.Forms.ComboBox cmb_Turno;
-        public System.Windows.Forms.TextBox txt_Nombre;
-        public System.Windows.Forms.TextBox txt_Apellido;
-        public System.Windows.Forms.TextBox txt_Nick;
-        public System.Windows.Forms.ComboBox cmb_Nivel;
-        public System.Windows.Forms.Button btnAccion;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label label6;
+        public  System.Windows.Forms.ComboBox cmb_Estado;
+        public  System.Windows.Forms.ComboBox cmb_Turno;
+        public  System.Windows.Forms.TextBox txt_Nombre;
+        public  System.Windows.Forms.TextBox txt_Apellido;
+        public  System.Windows.Forms.TextBox txt_Nick;
+        public  System.Windows.Forms.ComboBox cmb_Nivel;
+        public  System.Windows.Forms.Button btnAccion;
+        public  System.Windows.Forms.Label label1;
+        public  System.Windows.Forms.GroupBox groupBox1;
+        public  System.Windows.Forms.Label label4;
+        public  System.Windows.Forms.Label label3;
+        public  System.Windows.Forms.Label label2;
+        public  System.Windows.Forms.Label label5;
+        public  System.Windows.Forms.Label label6;
     }
 }

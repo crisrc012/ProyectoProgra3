@@ -18,6 +18,10 @@ namespace Proyecto_call_PL.Formularios
         #region Globales
         Cls_operadores_DAL Obj_Operadores_DAL = new Cls_operadores_DAL();
         Cls_operadores_BLL Obj_Operadores_BLL = new Cls_operadores_BLL();
+        Cls_estados_DAL Obj_estados_DAL = new Cls_estados_DAL();
+        Cls_estados_BLL Obj_estados_BLL = new Cls_estados_BLL();
+        Cls_turnos_DAL Obj_turnos_DAL = new Cls_turnos_DAL();
+        Cls_turnos_BLL Obj_turnos_BLL = new Cls_turnos_BLL();
         Int16 i16Fila;
         #endregion
         public frm_operadores_PL()
@@ -118,11 +122,45 @@ namespace Proyecto_call_PL.Formularios
                 frm_InsertUpdate_PL frm_Modificar = new frm_InsertUpdate_PL
                     (ref Obj_Operadores_DAL, null,"Modificar", Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[0].Value));
 
+                #region Cargar combobox 
+                Obj_estados_BLL.listar_estados(ref Obj_estados_DAL);
+                if (Obj_estados_DAL.smsjError == string.Empty)
+                {
+                    frm_Modificar.cmb_Estado.DisplayMember = "Descripción";
+                    frm_Modificar.cmb_Estado.ValueMember = "Código";
+                    frm_Modificar.cmb_Estado.DataSource = Obj_estados_DAL.Ds.Tables[0];
+                }
+
+                else
+                {
+                    MessageBox.Show(" Se presento el siguiente error " + Obj_estados_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                }
+
+                Obj_turnos_BLL.listar_turnos(ref Obj_turnos_DAL);
+                if (Obj_estados_DAL.smsjError == string.Empty)
+                {
+                    frm_Modificar.cmb_Turno.DisplayMember = "Descripción";
+                    frm_Modificar.cmb_Turno.ValueMember = "Código";
+                    frm_Modificar.cmb_Turno.DataSource = Obj_turnos_DAL.Ds.Tables[0];
+                }
+                else
+                {
+                    MessageBox.Show(" Se presento el siguiente error " + Obj_turnos_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                }
+
+
+                #endregion
+
+                Obj_turnos_BLL.listar_turnos(ref Obj_turnos_DAL);
+                Obj_estados_BLL.listar_estados(ref Obj_estados_DAL);
                 frm_Modificar.txt_Nombre.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[1].Value);
                 frm_Modificar.txt_Apellido.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[2].Value);
                 frm_Modificar.txt_Nick.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[3].Value);
                 frm_Modificar.cmb_Nivel.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[5].Value);
+                frm_Modificar.cmb_Turno.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[4].Value);
+                frm_Modificar.cmb_Estado.Text = Convert.ToString(dtg_desplegar.Rows[i16Fila].Cells[6].Value);
                 frm_Modificar.ShowDialog(this);
+                listar();
             }
         }
 
@@ -145,6 +183,11 @@ namespace Proyecto_call_PL.Formularios
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void tsb_btn_actualizar_Click(object sender, EventArgs e)
+        {
+            listar();
         }
     }
 }

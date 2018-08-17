@@ -87,6 +87,7 @@
             this.tsb_btn_actualizar.Name = "tsb_btn_actualizar";
             this.tsb_btn_actualizar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_actualizar.Text = "Actualizar";
+            this.tsb_btn_actualizar.Click += new System.EventHandler(this.tsb_btn_actualizar_Click);
             // 
             // toolStripSeparator2
             // 
@@ -174,6 +175,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton tsb_btn_modificar;
         private System.Windows.Forms.ToolStripButton tsb_btn_eliminar;
-        private System.Windows.Forms.DataGridView dtg_desplegar;
+        public  System.Windows.Forms.DataGridView dtg_desplegar;
     }
 }

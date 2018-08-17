@@ -11,7 +11,7 @@ namespace Proyecto_call_PL.Menu
 {
     public partial class frm_menu_PL : Form
     {
-       
+        public static frm_operadores_PL Operadores_PL=new frm_operadores_PL();
         public frm_menu_PL()
         {
             InitializeComponent();
@@ -33,7 +33,6 @@ namespace Proyecto_call_PL.Menu
         #region Operadores
         private void tsm_ver_operadores_Click(object sender, EventArgs e)
         {
-            frm_operadores_PL Operadores_PL = new frm_operadores_PL();
             Operadores_PL.ShowDialog();
         }
         #endregion

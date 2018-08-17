@@ -66,11 +66,11 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_BD_DAL.snombretabla = "Tbl_Operadores";
             Obj_BD_DAL.ssentencia = "SP_INSERTAR_OPERADOR";
             Obj_BD_BLL.crear_tabla(ref Obj_BD_DAL);
-            Obj_BD_DAL.Obj_dtparam.Rows.Add("@Id_Operador", 1, Obj_Operadores_DAL.sId_Operador);
             Obj_BD_DAL.Obj_dtparam.Rows.Add("@Nombre", 1, Obj_Operadores_DAL.sNombre_Operador);
             Obj_BD_DAL.Obj_dtparam.Rows.Add("@Apellidos", 1, Obj_Operadores_DAL.sApellidos_Operador);
             Obj_BD_DAL.Obj_dtparam.Rows.Add("@NickName", 1, Obj_Operadores_DAL.sNickNameOperador);
             Obj_BD_DAL.Obj_dtparam.Rows.Add("@Nivel", 1, Obj_Operadores_DAL.sNivel);
+            Obj_BD_DAL.Obj_dtparam.Rows.Add("@Id_Turno", 2, Obj_Operadores_DAL.cId_Turno);
             Obj_BD_DAL.Obj_dtparam.Rows.Add("@Id_Estado", 2, Obj_Operadores_DAL.cId_Estado);
 
             Obj_BD_BLL.Exe_NonQuery(ref Obj_BD_DAL);
@@ -90,7 +90,33 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
         public void Modificar_Operadores(ref Cls_operadores_DAL Obj_Operadores_DAL)
         {
-
+            Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
+            Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
+            Obj_bd_DAL.snombretabla = "Tbl_Operadores";
+            Obj_bd_DAL.ssentencia = "SP_MODIFICAR_OPERADORES";
+            Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Operador", 1, Obj_Operadores_DAL.sId_Operador);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Nombre", 1, Obj_Operadores_DAL.sNombre_Operador);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Apellidos", 1, Obj_Operadores_DAL.sApellidos_Operador);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@NickName", 1, Obj_Operadores_DAL.sNickNameOperador);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Nivel", 1, Obj_Operadores_DAL.sNivel);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Turno", 2, Obj_Operadores_DAL.cId_Turno);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", 2, Obj_Operadores_DAL.cId_Estado);
+            Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
+            if (Obj_bd_DAL.smsjerror == string.Empty)
+            {
+                Obj_Operadores_DAL.bbandera = true;
+                Obj_Operadores_DAL.smsjError = string.Empty;
+                Obj_Operadores_DAL.Ds = Obj_bd_DAL.dst;
+                Obj_Operadores_DAL.cAxn = 'U';
+            }
+            else
+            {
+                Obj_Operadores_DAL.bbandera = false;
+                Obj_Operadores_DAL.smsjError = Obj_bd_DAL.smsjerror;
+                Obj_Operadores_DAL.Ds = null;
+                Obj_Operadores_DAL.cAxn = 'I';
+            }
         }
 
         public void Eliminar_Operadores(ref Cls_operadores_DAL Obj_operadores_DAL)
