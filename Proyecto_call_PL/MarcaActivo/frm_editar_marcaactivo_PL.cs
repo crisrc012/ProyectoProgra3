@@ -73,6 +73,7 @@ namespace Proyecto_call_PL.MarcaActivo
             }
             if (txtDescripcion.Text.Trim() == string.Empty)
             {
+                
                 MessageBox.Show("La descripción no puede ser vacía", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

@@ -26,7 +26,7 @@ namespace Proyecto_call_PL.Semaforo
 
         public object Operadores_PL { get; }
         #endregion
-        public frm_ModificaSemaforo_PL(ref Cls_semaforo_DAL Obj_Semaforo_DAL, string sEstado, string sTipo, char cId_Semaforo = '0')
+        public frm_ModificaSemaforo_PL(ref Cls_semaforo_DAL Obj_Semaforo_DAL, string sEstado, string sTipo, char cId_Semaforo = '-')
         {
             InitializeComponent();
             if (sTipo == "Insertar")
@@ -76,7 +76,7 @@ namespace Proyecto_call_PL.Semaforo
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            
             Obj_Semaforo_DAL.sColor = txt_Color.Text.Trim();
             Obj_Semaforo_DAL.sDesc_Estado_SemaforoCaso = txt_Descripcion.Text.Trim();
             Obj_Semaforo_DAL.cId_Estado = Convert.ToChar(cmb_Estado.SelectedValue);
@@ -95,7 +95,11 @@ namespace Proyecto_call_PL.Semaforo
                 else
                 {
                     Obj_Semaforo_BLL.Modificar_Semaforo(ref Obj_Semaforo_DAL);
-                    MessageBox.Show(" Se presento el siguiente error " + Obj_Semaforo_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                    if (Obj_Semaforo_DAL.smsjError!= string.Empty)
+                    {
+                        MessageBox.Show(" Se presento el siguiente error " + Obj_Semaforo_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                    }
+                    
                 }
                 Close();
             }
