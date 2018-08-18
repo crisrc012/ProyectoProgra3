@@ -135,7 +135,7 @@ namespace Proyecto_call_PL.Formularios
         {
             if (dtg_desplegar.Rows.Count == 0)
             {
-                MessageBox.Show("No hay registros para eliminar", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay registros para mModificar", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

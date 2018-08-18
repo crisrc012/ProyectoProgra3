@@ -112,10 +112,10 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
         {
             Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
             Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
-            Obj_bd_DAL.snombretabla = "Tbl_Operadores";
-            Obj_bd_DAL.ssentencia = "SP_MODIFICAR_OPERADORES";
+            Obj_bd_DAL.snombretabla = "Tbl_SemaforoCasos";
+            Obj_bd_DAL.ssentencia = "SP_MODIFICAR_SEMAFORO";
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Semaforo", 1, Obj_semaforo_DAL.cId_Estado);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Semaforo", 2, Obj_semaforo_DAL.cId_Estado);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Des_Semaforo", 1, Obj_semaforo_DAL.sDesc_Estado_SemaforoCaso);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Color", 1, Obj_semaforo_DAL.sColor);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", 2, Obj_semaforo_DAL.cId_Estado);

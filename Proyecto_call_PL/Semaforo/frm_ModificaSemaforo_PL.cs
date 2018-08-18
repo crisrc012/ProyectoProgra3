@@ -69,41 +69,41 @@ namespace Proyecto_call_PL.Semaforo
 
         private void btnAccion_Click(object sender, EventArgs e)
         {
-
-            
             if (txt_Descripcion.Text.Trim() == string.Empty ||
                 txt_Color.Text.Trim() == string.Empty)
             {
                 MessageBox.Show("Debe llenar todos los datos", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            
-            if (txt_Descripcion.Text.Trim() == string.Empty ||
-                txt_Color.Text.Trim() == string.Empty)
-            {
-                MessageBox.Show("Debe llenar todos los datos", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             Obj_Semaforo_DAL.sColor = txt_Color.Text.Trim();
             Obj_Semaforo_DAL.sDesc_Estado_SemaforoCaso = txt_Descripcion.Text.Trim();
             Obj_Semaforo_DAL.cId_Estado = Convert.ToChar(cmb_Estado.SelectedValue);
+
             if (Obj_Semaforo_DAL.cId_Estado == '\0')
             {
                 Obj_Semaforo_DAL.cId_Estado = '1';
             }
-            if (insert)
+            if (Obj_Semaforo_DAL.smsjError==String.Empty)
             {
-                Obj_Semaforo_BLL.Insertar_Semaforo(ref Obj_Semaforo_DAL);
-                Obj_Semaforo_DAL.bbandera = true;//Revisar por que esto genera un error si no se pone
+                if (insert)
+                {
+                    Obj_Semaforo_BLL.Insertar_Semaforo(ref Obj_Semaforo_DAL);
+                    Obj_Semaforo_DAL.bbandera = true;
+                }
+                else
+                {
+                    Obj_Semaforo_BLL.Modificar_Semaforo(ref Obj_Semaforo_DAL);
+                    MessageBox.Show(" Se presento el siguiente error " + Obj_Semaforo_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                }
+                Close();
             }
             else
             {
-                Obj_Semaforo_BLL.Modificar_Semaforo(ref Obj_Semaforo_DAL);
+                MessageBox.Show(" Se presento el siguiente error " + Obj_Semaforo_DAL.smsjError, "Error", MessageBoxButtons.OK);
             }
-            Close();
+            
         }
     }
 }
