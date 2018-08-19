@@ -74,6 +74,18 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.ssentencia = "SP_INSERTAR_ACTIVO";
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
 
+            Obj_bd_BLL.Exe_Scalar(ref Obj_bd_DAL);
+
+            if (Obj_bd_DAL.smsjerror == string.Empty)
+            {
+                Obj_activos_DAL.smsjError = null;
+                Obj_activos_DAL.Ds = Obj_bd_DAL.dst;
+            }
+            else
+            {
+                Obj_activos_DAL.smsjError = Obj_bd_DAL.smsjerror;
+                Obj_bd_DAL.dst = null;
+            }
         }
 
         public void eliminar_activos(ref Cls_activos_DAL Obj_activos_DAL, string svalor)

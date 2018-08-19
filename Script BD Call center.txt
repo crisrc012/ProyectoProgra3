@@ -995,7 +995,42 @@ INSERT INTO [dbo].[Tbl_Activos]
 GO
 
 
+CREATE PROCEDURE SP_INSERTAR_CASO_DETALLE
+(
+	  @Id_Caso_Det INT,
+	  @Id_Caso_Enc INT,
+	  @Placa_Activo INT,
+	  @Observaciones VARCHAR(450),
+	  @FecCreacion DATETIME,
+	  @UsuCreacion VARCHAR(15),
+	  @FecModificacion DATETIME,
+	  @UsuModificacion VARCHAR(15)
+)
 
+AS
+
+INSERT INTO [dbo].[dbo].[Tbl_Caso_Detalle]
+
+		  ([Id_Caso_Det],
+		   [Id_Caso_Enc],
+		   [Placa_Activo],
+		   [Observaciones],
+		   [FecCreacion],
+		   [UsuCreacion],
+		   [FecModificacion],
+		   [UsuModificacion]
+		   )
+
+     VALUES
+           (@Placa_Activo,
+			@Id_Caso_Enc,
+			@Placa_Activo,
+			@Observaciones,
+			@FecCreacion,
+			@UsuCreacion,
+			@FecModificacion,
+			@UsuModificacion)
+GO
 
 
 

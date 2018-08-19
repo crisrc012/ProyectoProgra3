@@ -65,6 +65,12 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
         public void insertar_casodetalle(ref Cls_casodetalle_DAL Obj_casodetalle_DAL)
         {
+            Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
+            Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
+
+            Obj_bd_DAL.snombretabla = "Caso a detalle";
+            Obj_bd_DAL.ssentencia = "SP_INSERTAR_CASO_DETALLE";
+            Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
 
         }
 
