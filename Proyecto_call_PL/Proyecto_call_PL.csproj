@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.0\lib\net45\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +63,7 @@
     <Compile Include="Activos\frm_editar_activos_PL.Designer.cs">
       <DependentUpon>frm_editar_activos_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bootstrap.cs" />
     <Compile Include="Caso_Detalle\frm_caso_detalle_PL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +75,18 @@
     </Compile>
     <Compile Include="Caso_Detalle\frm_editar_caso_detalle_PL.Designer.cs">
       <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartamentoForms\EditarDepartamentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartamentoForms\EditarDepartamentoForm.Designer.cs">
+      <DependentUpon>EditarDepartamentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartamentoForms\VerDepartamentosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartamentoForms\VerDepartamentosForm.Designer.cs">
+      <DependentUpon>VerDepartamentosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Estados\frm_editar_estados_PL.cs">
       <SubType>Form</SubType>
@@ -151,6 +168,12 @@
     <EmbeddedResource Include="Caso_Detalle\frm_editar_caso_detalle_PL.resx">
       <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DepartamentoForms\EditarDepartamentoForm.resx">
+      <DependentUpon>EditarDepartamentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartamentoForms\VerDepartamentosForm.resx">
+      <DependentUpon>VerDepartamentosForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estados\frm_editar_estados_PL.resx">
       <DependentUpon>frm_editar_estados_PL.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +216,7 @@
     <EmbeddedResource Include="Turnos\frm_turnos_PL.resx">
       <DependentUpon>frm_turnos_PL.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -216,6 +240,10 @@
     <ProjectReference Include="..\Proyecto_call_DAL\Proyecto_call_DAL.csproj">
       <Project>{1eae1023-dc8c-4b8a-b5f5-cfab76ee67b2}</Project>
       <Name>Proyecto_call_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uam.Programacion.Proyecto.Models\Uam.Programacion.Proyecto.Models.csproj">
+      <Project>{A0D1E3BC-999E-4AA1-83D8-811B59F68669}</Project>
+      <Name>Uam.Programacion.Proyecto.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

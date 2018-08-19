@@ -111,6 +111,7 @@
             this.tsm_ver_departamento.Name = "tsm_ver_departamento";
             this.tsm_ver_departamento.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_departamento.Text = "Departamento";
+            this.tsm_ver_departamento.Click += new System.EventHandler(this.tsm_ver_departamento_Click);
             // 
             // tsm_ver_estado
             // 

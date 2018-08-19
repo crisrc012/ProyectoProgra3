@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_call_PL.Menu;
 
@@ -15,9 +12,10 @@ namespace Proyecto_call_PL
         [STAThread]
         static void Main()
         {
+            Bootstrap.Init();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_menu_PL ());
+            Application.Run(new frm_menu_PL());
         }
     }
 }
