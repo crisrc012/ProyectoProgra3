@@ -20,7 +20,6 @@ namespace Proyecto_call_PL.Activos
         Cls_estados_DAL Obj_estados_DAL = new Cls_estados_DAL();
         Cls_estados_BLL Obj_estados_BLL = new Cls_estados_BLL();
         Cls_departamentos_DAL Obj_departamento_DAL = new Cls_departamentos_DAL();
-        Cls_departamentos_BLL Obj_departamento_BLL = new Cls_departamentos_BLL();
         Cls_marcaactivo_DAL Obj_marcaactivo_DAL = new Cls_marcaactivo_DAL();
         Cls_marcaactivo_BLL Obj_marcaactivo_BLL = new Cls_marcaactivo_BLL();
         Cls_tipoactivo_DAL Obj_tipoactivo_DAL = new Cls_tipoactivo_DAL();

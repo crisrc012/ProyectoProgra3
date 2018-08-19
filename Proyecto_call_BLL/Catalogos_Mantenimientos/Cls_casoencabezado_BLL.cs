@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Proyecto_call_BLL.BD;
 using Proyecto_call_DAL.BD;
-using Proyecto_call_BLL.BD;
 using Proyecto_call_DAL.Catalogos_Mantenimientos;
 
 namespace Proyecto_call_BLL.Catalogos_Mantenimientos
