@@ -68,7 +68,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
         }
 
-        public void eliminar_casodetalle(ref Cls_casodetalle_DAL Obj_casodetalle_DAL, int valor)
+        public void eliminar_casodetalle(ref Cls_casodetalle_DAL Obj_casodetalle_DAL, string valor)
         {
             Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
             Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();

@@ -80,8 +80,8 @@ namespace Proyecto_call_PL.Caso_Detalle
             {
                 if (dtg_desplegar.RowCount >=1)
                 {
-                    int _ivalor = Convert.ToInt32( dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString());
-                    Obj_casodetalle_BLL.eliminar_casodetalle(ref Obj_casodetalle_DAL,_ivalor);
+                    string _svalor = dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString();
+                    Obj_casodetalle_BLL.eliminar_casodetalle(ref Obj_casodetalle_DAL,_svalor);
                     MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
                     listar();
                 }

@@ -68,9 +68,10 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
         public void insertar_activos(ref Cls_activos_DAL Obj_activos_DAL)
         {
 
+
         }
 
-        public void eliminar_activos(ref Cls_activos_DAL Obj_activos_DAL, string valor)
+        public void eliminar_activos(ref Cls_activos_DAL Obj_activos_DAL, int valor)
         {
             Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
             Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
@@ -84,13 +85,11 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
             if (Obj_bd_DAL.smsjerror == string.Empty)
             {
-                Obj_activos_DAL.bandera = true;
                 Obj_activos_DAL.smsjError = string.Empty;
                 Obj_activos_DAL.Ds = Obj_bd_DAL.dst;
             }
             else
             {
-                Obj_activos_DAL.bandera = false;
                 Obj_activos_DAL.smsjError = Obj_bd_DAL.smsjerror;
                 Obj_activos_DAL.Ds = null;
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 {
-    class Cls_departamentos_BLL
+    public class Cls_departamentos_BLL
     {
     }
 }

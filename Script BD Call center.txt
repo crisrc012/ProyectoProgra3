@@ -937,6 +937,13 @@ AS
 DELETE FROM [dbo].[Tbl_Activos] WHERE Placa_Activo = @Placa_Activo
 GO
 
+create procedure SP_ELIMINAR_CASO_DETALLE
+(
+	@Id_Caso_Det INT
+)
+AS
+DELETE FROM [dbo].[Tbl_Activos] WHERE Id_Caso_Det = @Id_Caso_Det
+GO
 
 
 

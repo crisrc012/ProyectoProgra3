@@ -79,16 +79,20 @@ namespace Proyecto_call_PL.Activos
             {
                 if (dtg_desplegar.Rows.Count >= 1)
                 {
-                    string _svalor = dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString();
-                    Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, _svalor);
-                    MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
-                    listar();
+
+                    if ((MessageBox.Show("Seguro que desea eliminar la fila seleccionada", "ADVERTENCIA",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes)
+                    {
+                        int _ivalor = Convert.ToInt32(dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString());
+                        Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, _ivalor);
+                        //listar();
+                    }
+                    else
+                    {
+                        dtg_desplegar.DataSource = null;
+                        MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                    }
                 }
-                else
-                {
-                    dtg_desplegar.DataSource = null;
-                    MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
-                }
+
             }
             
         }
@@ -97,6 +101,7 @@ namespace Proyecto_call_PL.Activos
         {
             frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL();
             Obj_activos_DAL.cAxn = Convert.ToChar("I");
+
 
 
             Obj_editar_activos.ShowDialog();
