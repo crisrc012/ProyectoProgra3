@@ -70,10 +70,10 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Turno", "2", Obj_turnos_DAL.cId_Turno);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Desc_Turno", "1", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Cant_Horas", "3", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraEntrada", "1", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraSalida", "1", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", "2", Obj_turnos_DAL.sDesc_Turno);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Cant_Horas", "3", Obj_turnos_DAL.iCant_Horas);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraEntrada", "1", Obj_turnos_DAL.sHoraEntrada);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraSalida", "1", Obj_turnos_DAL.sHoraSalida);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", "2", Obj_turnos_DAL.cId_Estado);
 
             Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
 
@@ -99,15 +99,15 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
 
             Obj_bd_DAL.snombretabla = "Turnos";
-            Obj_bd_DAL.ssentencia = "SP_MODIFICAR_TURNOS";
+            Obj_bd_DAL.ssentencia = "SP_INSERTAR_TURNOS";
 
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Turno", "2", Obj_turnos_DAL.cId_Turno);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Desc_Turno", "1", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Cant_Horas", "3", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraEntrada", "1", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraSalida", "1", Obj_turnos_DAL.sDesc_Turno);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", "2", Obj_turnos_DAL.sDesc_Turno);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Cant_Horas", "3", Obj_turnos_DAL.iCant_Horas);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraEntrada", "1", Obj_turnos_DAL.sHoraEntrada);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@HoraSalida", "1", Obj_turnos_DAL.sHoraSalida);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", "2", Obj_turnos_DAL.cId_Estado);
 
             Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
 
