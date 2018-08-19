@@ -54,8 +54,11 @@
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\EncabezadoRepository.cs" />
     <Compile Include="Repositories\EstadosRepository.cs" />
     <Compile Include="Repositories\DepartamentosRepository.cs" />
+    <Compile Include="Repositories\OperadoresRepository.cs" />
+    <Compile Include="Repositories\SemaforosRepository.cs" />
     <Compile Include="Utils\DataTableExtensions.cs" />
     <Compile Include="Utils\ReflectionHelper.cs" />
   </ItemGroup>

@@ -76,6 +76,18 @@
     <Compile Include="Caso_Detalle\frm_editar_caso_detalle_PL.Designer.cs">
       <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
     </Compile>
+    <Compile Include="CasoEncabezadoForms\EditarEncabezadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasoEncabezadoForms\EditarEncabezadoForm.Designer.cs">
+      <DependentUpon>EditarEncabezadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasoEncabezadoForms\VerEncabezadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasoEncabezadoForms\VerEncabezadoForm.Designer.cs">
+      <DependentUpon>VerEncabezadoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DepartamentoForms\EditarDepartamentoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Caso_Detalle\frm_editar_caso_detalle_PL.resx">
       <DependentUpon>frm_editar_caso_detalle_PL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasoEncabezadoForms\EditarEncabezadoForm.resx">
+      <DependentUpon>EditarEncabezadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasoEncabezadoForms\VerEncabezadoForm.resx">
+      <DependentUpon>VerEncabezadoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartamentoForms\EditarDepartamentoForm.resx">
       <DependentUpon>EditarDepartamentoForm.cs</DependentUpon>

@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Proyecto_call_BLL.Interfaces;
 using Proyecto_call_PL.Activos;
+using Proyecto_call_PL.CasoEncabezadoForms;
 using Proyecto_call_PL.Caso_Detalle;
 using Proyecto_call_PL.DepartamentoForms;
 using Proyecto_call_PL.Formularios;
@@ -13,6 +14,7 @@ using Proyecto_call_PL.Estados;
 using Proyecto_call_PL.MarcaActivo;
 using Proyecto_call_PL.Turnos;
 using StructureMap;
+using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.Menu
 {
@@ -85,6 +87,12 @@ namespace Proyecto_call_PL.Menu
         {
             var repository = Bootstrap.GetInstance<IRepository<Uam.Programacion.Proyecto.Models.Departamentos, int>>();
             new VerDepartamentosForm(repository).ShowDialog();
+        }
+
+        private void tsm_ver_casoencabezado_Click(object sender, EventArgs e)
+        {
+            var repository = Bootstrap.GetInstance<IRepository<Encabezado, int>>();
+            new VerEncabezadoForm(repository).ShowDialog();
         }
     }
 }

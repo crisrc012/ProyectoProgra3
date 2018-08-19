@@ -46,8 +46,11 @@
     <Compile Include="Attributes\InsertParameterAttribute.cs" />
     <Compile Include="Attributes\UpdateParameterAttribute.cs" />
     <Compile Include="Departamentos.cs" />
+    <Compile Include="Encabezado.cs" />
     <Compile Include="Estados.cs" />
+    <Compile Include="EstadosSemaforo.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Operadores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enums\Command.cs" />
   </ItemGroup>

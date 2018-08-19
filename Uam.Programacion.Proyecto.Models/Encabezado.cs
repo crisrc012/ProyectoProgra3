@@ -8,22 +8,38 @@ using Uam.Programacion.Proyecto.Models.Interfaces;
 
 namespace Uam.Programacion.Proyecto.Models
 {
-    public class Departamentos : IEntity<int>
+    public class Encabezado : IEntity<int>
     {
         [DeleteParameter(ParamName = "Id", Type = DbType.Int32)]
-        [SelectParameter(ParamName = "Id", Type = DbType.Int32)]
         [UpdateParameter(ParamName = "Id", Type = DbType.Int32)]
+        [SelectParameter(ParamName = "Id", Type = DbType.Int32)]
+        [DisplayName("ID Encabezado")]
         public int Id { get; set; }
 
-        [SelectParameter(ParamName = "Desc", Type = DbType.String)]
+        [InsertParameter(ParamName = "FechaCaso", Type = DbType.DateTime)]
+        [UpdateParameter(ParamName = "FechaCaso", Type = DbType.DateTime)]
+        [DisplayName("Fecha Caso")]
+        public DateTime? FechaCaso { get; set; }
+
         [InsertParameter(ParamName = "Descripcion", Type = DbType.String)]
         [UpdateParameter(ParamName = "Descripcion", Type = DbType.String)]
-        [DisplayName("Descripción")]
-        public string Descripcion { get; set; }
+        [SelectParameter(ParamName = "Desc", Type = DbType.String)]
+        [DisplayName("Comentarios Reporte")]
+        public string Comentarios { get; set; }
+
+        [InsertParameter(ParamName = "IdOperador", Type = DbType.String)]
+        [UpdateParameter(ParamName = "IdOperador", Type = DbType.String)]
+        [DisplayName("ID Operador")]
+        public string Operador { get; set; }
+
+        [InsertParameter(ParamName = "IdSemaforo", Type = DbType.String)]
+        [UpdateParameter(ParamName = "IdSemaforo", Type = DbType.String)]
+        [DisplayName("ID Estado Semáforo")]
+        public string EstadoSemaforo { get; set; }
 
         [InsertParameter(ParamName = "IdEstado", Type = DbType.String)]
         [UpdateParameter(ParamName = "IdEstado", Type = DbType.String)]
-        [DisplayName("ID del Estado")]
+        [DisplayName("ID Estado")]
         public string Estado { get; set; }
 
         [DisplayName("Creado Por Usuario")]
@@ -43,10 +59,10 @@ namespace Uam.Programacion.Proyecto.Models
         [Browsable(false)]
         public Dictionary<Command, string> Mappings => new Dictionary<Command, string>
         {
-            { Command.Select, "SP_LISTAR_DEPARTAMENTOS" },
-            { Command.Update, "SP_MODIFICAR_DEPARTAMENTO" },
-            { Command.Insert, "SP_INSERTAR_DEPARTAMENTO" },
-            { Command.Delete, "SP_BORRAR_DEPARTAMENTOS" }
+            { Command.Select, "SP_LISTAR_ENCABEZADO" },
+            { Command.Update, "SP_MODIFICAR_ENCABEZADOS" },
+            { Command.Insert, "SP_INSERTAR_ENCABEZADOS" },
+            { Command.Delete, "SP_BORRAR_ENCABEZADOS" }
         };
     }
 }

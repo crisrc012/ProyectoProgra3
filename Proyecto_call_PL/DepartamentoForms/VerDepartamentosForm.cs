@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using Proyecto_call_BLL.Interfaces;
+using Proyecto_call_PL.CasoEncabezadoForms;
 using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.DepartamentoForms
