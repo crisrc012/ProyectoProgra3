@@ -71,7 +71,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
         }
 
-        public void eliminar_activos(ref Cls_activos_DAL Obj_activos_DAL, int valor)
+        public void eliminar_activos(ref Cls_activos_DAL Obj_activos_DAL, string svalor)
         {
             Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
             Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
@@ -79,7 +79,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.snombretabla = "Activos";
             Obj_bd_DAL.ssentencia = "SP_ELIMINAR_ACTIVOS";
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo","3", valor);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo","3",svalor);
 
             Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
 

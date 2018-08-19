@@ -77,7 +77,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.ssentencia = "SP_ELIMINAR_CASO_DETALLE";
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
 
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Caso_Det INT", 3, Obj_casodetalle_DAL.iId_Caso_Det,valor);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Caso_Det", 3, valor);
             Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
 
             if (Obj_bd_DAL.smsjerror == string.Empty)

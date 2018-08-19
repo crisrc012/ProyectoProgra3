@@ -75,26 +75,23 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (Obj_activos_DAL.smsjError == string.Empty)
-            {
-                if (dtg_desplegar.Rows.Count >= 1)
-                {
-
-                    if ((MessageBox.Show("Seguro que desea eliminar la fila seleccionada", "ADVERTENCIA",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes)
-                    {
-                        int _ivalor = Convert.ToInt32(dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString());
-                        Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, _ivalor);
-                        //listar();
+             if (dtg_desplegar.Rows.Count >= 1)
+             {
+                if ((MessageBox.Show("Seguro que desea eliminar la fila seleccionada", "ADVERTENCIA",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes)
+                  {
+                    string svalor = (dtg_desplegar.SelectedRows[0].Cells[0].Value).ToString();
+                    Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, svalor);
+                    if (Obj_activos_DAL.smsjError == string.Empty)
+                        {
+                         listar();
                     }
                     else
                     {
-                        dtg_desplegar.DataSource = null;
                         MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                        dtg_desplegar.DataSource = null;
                     }
                 }
-
             }
-            
         }
 
         private void tsb_btn_agregar_Click(object sender, EventArgs e)
