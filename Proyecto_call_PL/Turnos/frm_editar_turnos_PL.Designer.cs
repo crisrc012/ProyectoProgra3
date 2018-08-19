@@ -42,6 +42,7 @@
             this.lbl_Estado = new System.Windows.Forms.Label();
             this.cmb_Estado = new System.Windows.Forms.ComboBox();
             this.btn_Aceptar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.gr_Turnos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,6 +103,7 @@
             this.txt_Cant_Horas.Name = "txt_Cant_Horas";
             this.txt_Cant_Horas.Size = new System.Drawing.Size(174, 20);
             this.txt_Cant_Horas.TabIndex = 7;
+            this.txt_Cant_Horas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cant_Horas_KeyPress);
             // 
             // lbl_Hora_Salida
             // 
@@ -166,7 +168,7 @@
             // 
             // btn_Aceptar
             // 
-            this.btn_Aceptar.Location = new System.Drawing.Point(242, 275);
+            this.btn_Aceptar.Location = new System.Drawing.Point(160, 264);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(75, 23);
             this.btn_Aceptar.TabIndex = 8;
@@ -174,16 +176,27 @@
             this.btn_Aceptar.UseVisualStyleBackColor = true;
             this.btn_Aceptar.Click += new System.EventHandler(this.btn_Aceptar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(241, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm_editar_turnos_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 307);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.gr_Turnos);
             this.Controls.Add(this.btn_Aceptar);
             this.Name = "frm_editar_turnos_PL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_editar_turnos_PL";
+            this.Text = "Turnos";
             this.Load += new System.EventHandler(this.frm_editar_turnos_PL_Load);
             this.gr_Turnos.ResumeLayout(false);
             this.gr_Turnos.PerformLayout();
@@ -207,5 +220,6 @@
         private System.Windows.Forms.Label lbl_Estado;
         private System.Windows.Forms.ComboBox cmb_Estado;
         private System.Windows.Forms.Button btn_Aceptar;
+        private System.Windows.Forms.Button button1;
     }
 }

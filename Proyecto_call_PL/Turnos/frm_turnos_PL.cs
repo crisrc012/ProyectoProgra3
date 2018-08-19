@@ -17,6 +17,8 @@ namespace Proyecto_call_PL.Turnos
         #region Variables Globales
         Cls_turnos_DAL Obj_turnos_DAL = new Cls_turnos_DAL();
         Cls_turnos_BLL Obj_turnos_BLL = new Cls_turnos_BLL();
+        Cls_estados_DAL Obj_estados_DAL = new Cls_estados_DAL();
+        Cls_estados_BLL Obj_estados_BLL = new Cls_estados_BLL();
         #endregion
 
         public frm_turnos_PL()
@@ -126,6 +128,8 @@ namespace Proyecto_call_PL.Turnos
 
             if (dtg_desplegar.SelectedRows.Count == 1)
             {
+                frm_editar_turnos_PL frm_editar_estado = new frm_editar_turnos_PL();
+
                 Obj_turnos_DAL = new Cls_turnos_DAL();
                 
                 Obj_turnos_DAL.cId_Turno = Convert.ToChar(dtg_desplegar.SelectedRows[0].Cells[0].Value);
@@ -133,10 +137,10 @@ namespace Proyecto_call_PL.Turnos
                 Obj_turnos_DAL.iCant_Horas = Convert.ToInt16(dtg_desplegar.SelectedRows[0].Cells[2].Value.ToString());
                 Obj_turnos_DAL.sHoraEntrada = dtg_desplegar.SelectedRows[0].Cells[3].Value.ToString();
                 Obj_turnos_DAL.sHoraSalida = dtg_desplegar.SelectedRows[0].Cells[4].Value.ToString();
-                //Obj_turnos_DAL.cId_Estado = Convert.ToChar(dtg_desplegar.SelectedRows[0].Cells[5].Value.ToString());
-                Obj_turnos_DAL.cAxn = 'U';
+                frm_editar_estado._sEstado = dtg_desplegar.SelectedRows[0].Cells[5].Value.ToString();
 
-                frm_editar_turnos_PL frm_editar_estado = new frm_editar_turnos_PL();
+                Obj_turnos_DAL.cAxn = 'U';
+                
                 frm_editar_estado.Obj_turnos_DAL = Obj_turnos_DAL;
 
                 frm_editar_estado.ShowDialog();
@@ -160,18 +164,6 @@ namespace Proyecto_call_PL.Turnos
             {
                 MessageBox.Show("Por favor selecciones una fila.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-            //Declaramos el objeto para pasar la informacion
-            /*Cls_turnos_DAL Obj_turnos_DAL = new Cls_turnos_DAL();
-            Obj_turnos_DAL.cAxn = 'U';
-
-            frm_editar_turnos_PL turnos = new frm_editar_turnos_PL();
-
-            //le asigna la informacion al objeto de la otra pantalla
-            turnos.Obj_turnos_DAL = Obj_turnos_DAL;
-
-            turnos.ShowDialog();*/
         }
 
         private void tsb_btn_actualizar_Click(object sender, EventArgs e)
