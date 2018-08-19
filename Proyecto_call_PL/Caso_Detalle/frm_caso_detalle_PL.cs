@@ -76,21 +76,47 @@ namespace Proyecto_call_PL.Caso_Detalle
 
         private void tsb_btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (Obj_casodetalle_DAL.smsjError == string.Empty)
-            {
-                if (dtg_desplegar.RowCount >=1)
+           if (dtg_desplegar.RowCount >=1)
+             {
+                if ((MessageBox.Show("Seguro que desea eliminar la fila seleccionada", "ADVERTENCIA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes)
                 {
-                    int _ivalor = Convert.ToInt32( dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString());
-                    Obj_casodetalle_BLL.eliminar_casodetalle(ref Obj_casodetalle_DAL,_ivalor);
-                    MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
-                    listar();
+                    string _svalor = dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString();
+                    Obj_casodetalle_BLL.eliminar_casodetalle(ref Obj_casodetalle_DAL, _svalor);
+
+                    if (Obj_casodetalle_DAL.smsjError == string.Empty)
+                    { 
+                        MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
+                        listar();
+                    }
+                    else
+                    {
+                        dtg_desplegar.DataSource = null;
+                        MessageBox.Show(" Se presento el siguiente error " + Obj_casodetalle_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                    }
                 }
                 else
                 {
-                    dtg_desplegar.DataSource = null;
-                    MessageBox.Show(" Se presento el siguiente error " + Obj_casodetalle_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                    this.Close();
                 }
             }
+        }
+
+        private void tsb_btn_agregar_Click(object sender, EventArgs e)
+        {
+            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL();
+            Obj_casodetalle_DAL.cAxn = Convert.ToChar("I");
+            Obj_editar_caso_detalle.Obj_casodetalle_DAL = Obj_casodetalle_DAL;
+            Obj_editar_caso_detalle.ShowDialog();
+        }
+
+        private void tsb_btn_modificar_Click(object sender, EventArgs e)
+        {
+            Obj_casodetalle_DAL.sUsuCreacion = dtg_desplegar.SelectedRows[0].Cells[5].Value.ToString();
+            Obj_casodetalle_DAL.dFecCreacion = Convert.ToDateTime( dtg_desplegar.SelectedRows[0].Cells[4].Value.ToString());
+            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL();
+            Obj_casodetalle_DAL.cAxn = Convert.ToChar("U");
+            Obj_editar_caso_detalle.Obj_casodetalle_DAL = Obj_casodetalle_DAL;
+            Obj_editar_caso_detalle.ShowDialog();
         }
     }
 }

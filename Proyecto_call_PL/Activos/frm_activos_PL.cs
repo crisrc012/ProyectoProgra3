@@ -75,28 +75,32 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (Obj_activos_DAL.smsjError == string.Empty)
-            {
-                if (dtg_desplegar.Rows.Count >= 1)
-                {
-                    string _svalor = dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString();
-                    Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, _svalor);
-                    MessageBox.Show("El dato se borro exitosamente", "Aviso", MessageBoxButtons.OK);
-                    listar();
-                }
-                else
-                {
-                    dtg_desplegar.DataSource = null;
-                    MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
+             if (dtg_desplegar.Rows.Count >= 1)
+             {
+                if ((MessageBox.Show("Seguro que desea eliminar la fila seleccionada", "ADVERTENCIA",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)) == DialogResult.Yes)
+                  {
+                    string svalor = (dtg_desplegar.SelectedRows[0].Cells[0].Value).ToString();
+                    Obj_activos_BLL.eliminar_activos(ref Obj_activos_DAL, svalor);
+                    if (Obj_activos_DAL.smsjError == string.Empty)
+                        {
+                         listar();
+                    }
+                    else
+                    {
+                       MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                       dtg_desplegar.DataSource = null;
+                    }
                 }
             }
-            
         }
 
         private void tsb_btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL();
+            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("I");
+            Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
+            Obj_editar_activos.ShowDialog();
+
 
 
             Obj_editar_activos.ShowDialog();
@@ -104,8 +108,9 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_modificar_Click(object sender, EventArgs e)
         {
-            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL();
+            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("U");
+            Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
 
 
             Obj_editar_activos.ShowDialog();

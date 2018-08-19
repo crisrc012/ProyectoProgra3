@@ -50,8 +50,8 @@
             this.cmb_estado = new System.Windows.Forms.ComboBox();
             this.msk_cread_activo = new System.Windows.Forms.MaskedTextBox();
             this.msk_modf_activo = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_insertar_activo = new System.Windows.Forms.Button();
+            this.btn_salir_activo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -237,31 +237,32 @@
             this.msk_modf_activo.Size = new System.Drawing.Size(100, 20);
             this.msk_modf_activo.TabIndex = 21;
             // 
-            // button1
+            // btn_insertar_activo
             // 
-            this.button1.Location = new System.Drawing.Point(351, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Insertar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_insertar_activo.Location = new System.Drawing.Point(351, 167);
+            this.btn_insertar_activo.Name = "btn_insertar_activo";
+            this.btn_insertar_activo.Size = new System.Drawing.Size(75, 23);
+            this.btn_insertar_activo.TabIndex = 22;
+            this.btn_insertar_activo.Text = "Insertar";
+            this.btn_insertar_activo.UseVisualStyleBackColor = true;
+            this.btn_insertar_activo.Click += new System.EventHandler(this.btn_insertar_activo_Click);
             // 
-            // button2
+            // btn_salir_activo
             // 
-            this.button2.Location = new System.Drawing.Point(459, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_salir_activo.Location = new System.Drawing.Point(459, 167);
+            this.btn_salir_activo.Name = "btn_salir_activo";
+            this.btn_salir_activo.Size = new System.Drawing.Size(75, 23);
+            this.btn_salir_activo.TabIndex = 23;
+            this.btn_salir_activo.Text = "Cancelar";
+            this.btn_salir_activo.UseVisualStyleBackColor = true;
             // 
             // frm_editar_activos_PL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 255);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_salir_activo);
+            this.Controls.Add(this.btn_insertar_activo);
             this.Controls.Add(this.msk_modf_activo);
             this.Controls.Add(this.msk_cread_activo);
             this.Controls.Add(this.cmb_estado);
@@ -290,6 +291,7 @@
             this.Name = "frm_editar_activos_PL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar activos";
+            this.Load += new System.EventHandler(this.frm_editar_activos_PL_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,7 +321,7 @@
         private System.Windows.Forms.ComboBox cmb_estado;
         private System.Windows.Forms.MaskedTextBox msk_cread_activo;
         private System.Windows.Forms.MaskedTextBox msk_modf_activo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_insertar_activo;
+        private System.Windows.Forms.Button btn_salir_activo;
     }
 }
