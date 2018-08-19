@@ -87,8 +87,8 @@ namespace Proyecto_call_PL.Activos
                     }
                     else
                     {
-                        MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
-                        dtg_desplegar.DataSource = null;
+                       MessageBox.Show(" Se presento el siguiente error " + Obj_activos_DAL.smsjError, "Error", MessageBoxButtons.OK);
+                       dtg_desplegar.DataSource = null;
                     }
                 }
             }

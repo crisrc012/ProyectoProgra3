@@ -945,6 +945,55 @@ AS
 DELETE FROM [dbo].[Tbl_Activos] WHERE Id_Caso_Det = @Id_Caso_Det
 GO
 
+use DB_CALL_CENTER_PROGRA_III
+go
+
+CREATE PROCEDURE SP_INSERTAR_ACTIVO
+(
+	  @Placa_Activo INT,
+	  @Id_TipoActivo INT,
+	  @Desc_Activo VARCHAR(265),
+	  @Id_MarcaActivo INT,
+	  @Id_Departamento_Responsable INT,
+	  @Prioridad_SLA DECIMAL(8,2),
+	  @Id_Estado CHAR (1),
+	  @FecCreacion DATETIME,
+	  @UsuCreacion VARCHAR(15),
+	  @FecModificacion DATETIME,
+	  @UsuModificacion VARCHAR(15)
+)
+
+AS
+
+INSERT INTO [dbo].[Tbl_Activos]
+
+		  ([Placa_Activo],
+		   [Id_TipoActivo],
+		   [Desc_Activo],
+		   [Id_MarcaActivo],
+		   [Id_Departamento_Responsable],
+		   [Prioridad_SLA],
+		   [Id_Estado],
+		   [FecCreacion],
+		   [UsuCreacion],
+		   [FecModificacion],
+		   [UsuModificacion]
+		   )
+
+     VALUES
+           (@Placa_Activo,
+			@Id_TipoActivo,
+			@Desc_Activo,
+			@Id_MarcaActivo,
+			@Id_Departamento_Responsable,
+			@Prioridad_SLA,
+			@Id_Estado,
+			@FecCreacion,
+			@UsuCreacion,
+			@FecModificacion,
+			@UsuModificacion)
+GO
+
 
 
 
