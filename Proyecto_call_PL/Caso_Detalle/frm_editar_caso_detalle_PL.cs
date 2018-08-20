@@ -102,13 +102,10 @@ namespace Proyecto_call_PL.Caso_Detalle
                 else
                 {
                     Obj_casodetalle_DAL.bbandera = false;
-                }
-                
-                
+                }             
             }
             else
-            {
-                
+            { 
                 Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
                 if (Obj_casodetalle_DAL.smsjError == string.Empty)
                 {

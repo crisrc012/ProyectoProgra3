@@ -101,9 +101,14 @@ namespace Proyecto_call_PL.Activos
             Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
             Obj_editar_activos.ShowDialog();
 
-
-
-            Obj_editar_activos.ShowDialog();
+            if (Obj_activos_DAL.bandera == true)
+            {
+                MessageBox.Show("El registro se agrego con exito", "Informacion", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("El registro no se pudo agregar" + Obj_activos_DAL.smsjError, "Informacion", MessageBoxButtons.OK);
+            }
         }
 
         private void tsb_btn_modificar_Click(object sender, EventArgs e)
@@ -111,9 +116,16 @@ namespace Proyecto_call_PL.Activos
             frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("U");
             Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
-
-
             Obj_editar_activos.ShowDialog();
+
+            if (Obj_activos_DAL.bandera == true)
+            {
+                MessageBox.Show("El registro se agrego con exito", "Informacion", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("El registro no se pudo agregar" + Obj_activos_DAL.smsjError, "Informacion", MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -72,9 +72,6 @@ namespace Proyecto_call_PL.Activos
 
 
             #endregion
-
-          
-
         }
 
         private void frm_editar_activos_PL_Load(object sender, EventArgs e)
@@ -121,10 +118,28 @@ namespace Proyecto_call_PL.Activos
             if (Obj_activos_DAL.cAxn.ToString().Contains("I"))
             {
                 Obj_activos_BLL.insertar_activos(ref Obj_activos_DAL);
+
+                if (Obj_activos_DAL.smsjError == string.Empty)
+                {
+                    Obj_activos_DAL.bandera = true;
+                }
+                else
+                {
+                    Obj_activos_DAL.bandera = false;
+                }
             }
             else
             {
                 Obj_activos_BLL.modificar_activos(ref Obj_activos_DAL);
+
+                if (Obj_activos_DAL.smsjError == string.Empty)
+                {
+                    Obj_activos_DAL.bandera = true;
+                }
+                else
+                {
+                    Obj_activos_DAL.bandera = false;
+                }
             }
 
             Close();
