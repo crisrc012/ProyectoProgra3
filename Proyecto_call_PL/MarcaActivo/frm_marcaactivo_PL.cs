@@ -28,34 +28,31 @@ namespace Proyecto_call_PL.MarcaActivo
             Obj_marcaactivo_BLL.listar_marcaactivo(ref Obj_marcaactivo_DAL);
             if (Obj_marcaactivo_DAL.smsjError == string.Empty)
             {
-                dtg_desplegar.DataSource = null;
                 dtg_desplegar.DataSource = Obj_marcaactivo_DAL.Ds.Tables[0];
             }
             else
             {
-                dtg_desplegar.DataSource = null;
                 MessageBox.Show(" Se presento el siguiente error " + Obj_marcaactivo_DAL.smsjError, "Error", MessageBoxButtons.OK);
             }
         }
 
         private void filtrar()
         {
+            dtg_desplegar.DataSource = null;
             if (Obj_marcaactivo_DAL.smsjError == string.Empty)
             {
                 Obj_marcaactivo_BLL.filtrar_marcaactivo(ref Obj_marcaactivo_DAL, tstxt_valor_filtrar.Text.ToString());
-                dtg_desplegar.DataSource = null;
                 dtg_desplegar.DataSource = Obj_marcaactivo_DAL.Ds.Tables[0];
             }
             else
             {
-                dtg_desplegar.DataSource = null;
                 MessageBox.Show(" Se presento el siguiente error " + Obj_marcaactivo_DAL.smsjError, "Error", MessageBoxButtons.OK);
             }
         }
 
         private void tstxt_valor_filtrar_TextChanged(object sender, EventArgs e)
         {
-            if (tstxt_valor_filtrar.Text.ToString().Trim() == "")
+            if (tstxt_valor_filtrar.Text.Trim() == string.Empty)
             {
                 listar();
             }
