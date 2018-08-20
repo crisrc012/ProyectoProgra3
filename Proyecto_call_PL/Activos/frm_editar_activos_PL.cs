@@ -28,9 +28,10 @@ namespace Proyecto_call_PL.Activos
 
 
         #endregion
-        public frm_editar_activos_PL()
+        public frm_editar_activos_PL(ref Cls_activos_DAL Obj_activos_DAL)
         {
             InitializeComponent();
+
         }
 
         private void frm_editar_activos_PL_Load(object sender, EventArgs e)
@@ -40,17 +41,47 @@ namespace Proyecto_call_PL.Activos
 
         private void llenar_combos()
         {
+            #region Combo estados
             Obj_estados_BLL.listar_estados(ref Obj_estados_DAL);
             if (Obj_estados_DAL.smsjError == string.Empty)
             {
-                cmb_estado.DisplayMember = "Descripcion";
-                cmb_estado.ValueMember = "Codigo";
+                cmb_estado.DisplayMember = "Descripción";
+                cmb_estado.ValueMember = "Código";
                 cmb_estado.DataSource = Obj_estados_DAL.Ds.Tables[0];
-                }
-            else
-            {
-                MessageBox.Show("Error al cargar el combo de estados" + Obj_estados_DAL.smsjError);
             }
+
+            #endregion
+
+            #region Combo tipos
+            //Obj_tipoactivo_BLL.(ref Obj_tipoactivo_DAL);
+            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            {
+                cmb_marca_activo.DisplayMember = "Descripción";
+                cmb_marca_activo.ValueMember = "Código";
+                cmb_marca_activo.DataSource = Obj_tipoactivo_DAL.Ds.Tables[0];
+            }
+            #endregion
+            #region Combo Marca
+            Obj_marcaactivo_BLL.listar_marcaactivo(ref Obj_marcaactivo_DAL);
+            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            {
+                cmb_marca_activo.DisplayMember = "Descripción";
+                cmb_marca_activo.ValueMember = "Código";
+                cmb_marca_activo.DataSource = Obj_marcaactivo_DAL.Ds.Tables[0];
+            }
+            #endregion
+
+            #region Combo departamentos
+            //Obj_departamento_BLL.listar_(ref Obj_departamento_DAL);
+            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            {
+                cmb_marca_activo.DisplayMember = "Descripción";
+                cmb_marca_activo.ValueMember = "Código";
+                cmb_marca_activo.DataSource = Obj_departamento_DAL.Ds.Tables[0];
+            }
+
+
+            #endregion
         }
     }
 }

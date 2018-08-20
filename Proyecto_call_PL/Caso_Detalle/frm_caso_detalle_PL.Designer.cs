@@ -101,6 +101,7 @@
             this.tsb_btn_agregar.Name = "tsb_btn_agregar";
             this.tsb_btn_agregar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_agregar.Text = "Agregar";
+            this.tsb_btn_agregar.Click += new System.EventHandler(this.tsb_btn_agregar_Click);
             // 
             // toolStripSeparator3
             // 

@@ -96,8 +96,9 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL();
+            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("I");
+            Obj_editar_activos.ShowDialog();
 
 
 
@@ -106,7 +107,7 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_modificar_Click(object sender, EventArgs e)
         {
-            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL();
+            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("U");
 
 

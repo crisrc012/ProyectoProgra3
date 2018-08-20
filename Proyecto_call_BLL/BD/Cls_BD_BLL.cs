@@ -39,6 +39,9 @@ namespace Proyecto_call_BLL.BD
                                 case "3":
                                     Obj_tipo_dato = System.Data.SqlDbType.Int;
                                     break;
+                                case "4":
+                                    Obj_tipo_dato = System.Data.SqlDbType.DateTime;
+                                    break;
                                 default:
                                     break;
                             }

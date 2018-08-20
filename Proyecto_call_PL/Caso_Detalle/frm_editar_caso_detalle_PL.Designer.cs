@@ -65,6 +65,7 @@
             this.bt_insertar_caso_detalle.TabIndex = 46;
             this.bt_insertar_caso_detalle.Text = "Insertar";
             this.bt_insertar_caso_detalle.UseVisualStyleBackColor = true;
+            this.bt_insertar_caso_detalle.Click += new System.EventHandler(this.bt_insertar_caso_detalle_Click);
             // 
             // msk_modf_activo
             // 
@@ -228,6 +229,7 @@
             this.Name = "frm_editar_caso_detalle_PL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar caso detalle";
+            this.Load += new System.EventHandler(this.frm_editar_caso_detalle_PL_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

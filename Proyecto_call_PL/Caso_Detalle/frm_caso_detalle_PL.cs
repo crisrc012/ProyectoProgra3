@@ -100,5 +100,16 @@ namespace Proyecto_call_PL.Caso_Detalle
                 }
             }
         }
+
+        private void tsb_btn_agregar_Click(object sender, EventArgs e)
+        {
+            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL(ref Obj_casodetalle_DAL);
+            Obj_casodetalle_DAL.cAxn = Convert.ToChar("I");
+            Obj_editar_caso_detalle.ShowDialog();
+
+
+
+
+        }
     }
 }
