@@ -116,6 +116,7 @@
             this.tsb_btn_modificar.Name = "tsb_btn_modificar";
             this.tsb_btn_modificar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_modificar.Text = "Modificar";
+            this.tsb_btn_modificar.Click += new System.EventHandler(this.tsb_btn_modificar_Click);
             // 
             // tsb_btn_eliminar
             // 

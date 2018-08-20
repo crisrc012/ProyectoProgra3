@@ -53,10 +53,23 @@ namespace Proyecto_call_PL.Caso_Detalle
 
         private void frm_editar_caso_detalle_PL_Load(object sender, EventArgs e)
         {
-            txt_id_caso_detalle.Enabled = false;
-            msk_modf_activo.Enabled = false;
-            txt_modificadopor.Enabled = false;
-            msk_cread_activo.Enabled = false;
+            if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
+            {
+                txt_id_caso_detalle.Enabled = false;
+                msk_modf_activo.Enabled = false;
+                txt_modificadopor.Enabled = false;
+                msk_cread_activo.Enabled = false;
+            }
+            else
+            {
+                msk_cread_activo.Enabled = false;
+                txt_creadopor.Enabled = false;
+                msk_modf_activo.Enabled = false;
+                txt_id_caso_detalle.Enabled = false;
+                msk_cread_activo.Text = Obj_casodetalle_DAL.dFecCreacion.ToString();
+                txt_creadopor.Text = Obj_casodetalle_DAL.sUsuCreacion.ToString();
+            }
+
         }
 
         private void bt_insertar_caso_detalle_Click(object sender, EventArgs e)
@@ -68,23 +81,23 @@ namespace Proyecto_call_PL.Caso_Detalle
                 txt_observaciones.Clear();
                 return;
             }
-            else
-            {
-                Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
-                Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
-                Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
-                Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
-                Obj_casodetalle_DAL.iId_Caso_Enc = Convert.ToInt32(cmb_id_caso_curso.SelectedValue);
-            }
+            //else
+            //{
+            //    Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
+            //    Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
+            //    Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
+            //    Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue.ToString());
+            //    Obj_casodetalle_DAL.iId_Caso_Enc = Convert.ToInt32(cmb_id_caso_curso.SelectedValue);
+            //}
 
-            if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
-            {
-                Obj_casodetalle_BLL.insertar_casodetalle(ref Obj_casodetalle_DAL);
-            }
-            else
-            {
-                Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
-            }
+            //if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
+            //{
+            //    Obj_casodetalle_BLL.insertar_casodetalle(ref Obj_casodetalle_DAL);
+            //}
+            //else
+            //{
+            //    Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
+            //}
 
             Close();
         }
