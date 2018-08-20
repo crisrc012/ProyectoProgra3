@@ -245,6 +245,7 @@
             this.btn_insertar_activo.TabIndex = 22;
             this.btn_insertar_activo.Text = "Insertar";
             this.btn_insertar_activo.UseVisualStyleBackColor = true;
+            this.btn_insertar_activo.Click += new System.EventHandler(this.btn_insertar_activo_Click);
             // 
             // btn_salir_activo
             // 

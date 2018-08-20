@@ -121,19 +121,6 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
             }
         }
 
-        public decimal dPrioridad_SLA
-        {
-            get
-            {
-                return _dPrioridad_SLA;
-            }
-
-            set
-            {
-                _dPrioridad_SLA = value;
-            }
-        }
-
         public char cId_Estado
         {
             get
@@ -196,6 +183,19 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
             set
             {
                 bandera = value;
+            }
+        }
+
+        public decimal dPrioridad_SLA
+        {
+            get
+            {
+                return _dPrioridad_SLA;
+            }
+
+            set
+            {
+                _dPrioridad_SLA = value;
             }
         }
 

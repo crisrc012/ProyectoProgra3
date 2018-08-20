@@ -98,6 +98,7 @@ namespace Proyecto_call_PL.Activos
         {
             frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("I");
+            Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
             Obj_editar_activos.ShowDialog();
 
 
@@ -109,6 +110,7 @@ namespace Proyecto_call_PL.Activos
         {
             frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
             Obj_activos_DAL.cAxn = Convert.ToChar("U");
+            Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
 
 
             Obj_editar_activos.ShowDialog();

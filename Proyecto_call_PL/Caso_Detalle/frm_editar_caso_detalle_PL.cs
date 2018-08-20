@@ -20,11 +20,11 @@ namespace Proyecto_call_PL.Caso_Detalle
         Cls_activos_BLL Obj_activos_BLL = new Cls_activos_BLL();
         Cls_casoencabezado_DAL Obj_casoencabezado_DAL = new Cls_casoencabezado_DAL();
         Cls_casoencabezado_BLL Obj_casoencabezado_BLL = new Cls_casoencabezado_BLL();
-        Cls_casodetalle_DAL Obj_casodetalle_DAL = new Cls_casodetalle_DAL();
+        public Cls_casodetalle_DAL Obj_casodetalle_DAL;
         Cls_casodetalle_BLL Obj_casodetalle_BLL = new Cls_casodetalle_BLL();
 
         #endregion
-        public frm_editar_caso_detalle_PL(ref Cls_casodetalle_DAL Obj_casodetalle_DAL)
+        public frm_editar_caso_detalle_PL()
         {
             InitializeComponent();
 
@@ -81,23 +81,23 @@ namespace Proyecto_call_PL.Caso_Detalle
                 txt_observaciones.Clear();
                 return;
             }
-            //else
-            //{
-            //    Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
-            //    Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
-            //    Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
-            //    Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue.ToString());
-            //    Obj_casodetalle_DAL.iId_Caso_Enc = Convert.ToInt32(cmb_id_caso_curso.SelectedValue);
-            //}
+            else
+            {
+                Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
+                Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
+                Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
+                Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
+                Obj_casodetalle_DAL.iId_Caso_Enc = Convert.ToInt32(cmb_id_caso_curso.SelectedValue);
+            }
 
-            //if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
-            //{
-            //    Obj_casodetalle_BLL.insertar_casodetalle(ref Obj_casodetalle_DAL);
-            //}
-            //else
-            //{
-            //    Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
-            //}
+            if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
+            {
+                Obj_casodetalle_BLL.insertar_casodetalle(ref Obj_casodetalle_DAL);
+            }
+            else
+            {
+                Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
+            }
 
             Close();
         }

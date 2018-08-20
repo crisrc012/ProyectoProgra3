@@ -42,6 +42,9 @@ namespace Proyecto_call_BLL.BD
                                 case "4":
                                     Obj_tipo_dato = System.Data.SqlDbType.DateTime;
                                     break;
+                                case "5":
+                                    Obj_tipo_dato = System.Data.SqlDbType.Decimal;
+                                    break;
                                 default:
                                     break;
                             }
@@ -95,6 +98,12 @@ namespace Proyecto_call_BLL.BD
                                     break;
                                 case "3":
                                     Obj_tipo_dato = System.Data.SqlDbType.Int;
+                                    break;
+                                case "4":
+                                    Obj_tipo_dato = System.Data.SqlDbType.DateTime;
+                                    break;
+                                case "5":
+                                    Obj_tipo_dato = System.Data.SqlDbType.Decimal;
                                     break;
                                 default:
                                     break;
@@ -151,6 +160,12 @@ namespace Proyecto_call_BLL.BD
                                     break;
                                 case "3":
                                     Obj_tipo_dato = System.Data.SqlDbType.Int;
+                                    break;
+                                case "4":
+                                    Obj_tipo_dato = System.Data.SqlDbType.DateTime;
+                                    break;
+                                case "5":
+                                    Obj_tipo_dato = System.Data.SqlDbType.Decimal;
                                     break;
                                 default:
                                     break;
