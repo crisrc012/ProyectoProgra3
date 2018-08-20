@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace Proyecto_call_DAL.BD
 {
@@ -78,20 +73,13 @@ namespace Proyecto_call_DAL.BD
                 _ivalorscalar = value;
             }
         }
-
         #endregion
-
         #region Objetos sql
-
         public SqlConnection Obj_conexion;
         public SqlCommand Obj_sql_cmnd;
         public SqlDataAdapter Obj_adpt;
         public System.Data.DataSet dst = new System.Data.DataSet();
         public System.Data.DataTable Obj_dtparam = new System.Data.DataTable("Parametros");
-
-
-
-
         #endregion
 
     }
