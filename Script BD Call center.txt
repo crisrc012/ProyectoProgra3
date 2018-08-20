@@ -486,43 +486,223 @@ GO
 -----------------------------------------------------------------------------------------------------------------------------
 -- **************************************************** FIN TABLA # 3 **************************************************** --
 -----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+-- ****************************************************** TABLA # 4 ****************************************************** --
+-----------------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[SP_LISTAR_ENCABEZADO]
+(
+	@Desc nvarchar(265) = '',
+	@Id int = -1
+)
+AS
+BEGIN   
+  IF @Desc IS NULL
+		SET @Desc = '';
+
+  IF @Id < 0
+		SET @Id = -1;
+
+  SELECT [Id_Caso_Enc] as Id
+      ,[Fecha] as FechaCaso
+      ,[Id_Operador] as Operador
+      ,[ComentariosReporte] as Comentarios
+      ,[Id_Estado_SemaforoCaso] as EstadoSemaforo
+      ,[Id_Estado] as Estado
+      ,[FecCreacion] as FechaCreacion
+      ,[UsuCreacion] as CreadoUsuario
+      ,[FecModificacion] as FechaModificacion
+      ,[UsuModificacion] as ModificadoUsuario
+  FROM [dbo].[Tbl_Caso_Encabezado]
+  WHERE [ComentariosReporte] LIKE '%' + @Desc + '%' AND ([Id_Caso_Enc] = @Id OR @Id < 0)
+END
+
+GO
+
+CREATE PROCEDURE [dbo].SP_GET_ESTADOSSEMAFORO
+AS
+BEGIN
+SELECT [Id_Estado_SemaforoCaso] AS "Id"
+      ,[Desc_Estado_SemaforoCaso] AS "Descripcion"      
+  FROM [dbo].[Tbl_SemaforoCasos]
+  ORDER BY "Descripcion" ASC
+END
+GO
+
+CREATE PROCEDURE [dbo].[SP_GET_OPERADORES]
+AS
+BEGIN
+SELECT [Id_Operador] AS "Id"
+      ,[Nombre_Operador] + ' ' + [Apellidos_Operador] AS "Operador"      
+  FROM [dbo].[Tbl_Operadores]
+  ORDER BY Operador ASC
+END
+GO
+
+CREATE PROCEDURE [dbo].[SP_MODIFICAR_ENCABEZADOS]
+(
+	@Descripcion VARCHAR(65),
+	@FechaCaso DATETIME,
+	@FechaModificacion DATETIME,
+	@IdEstado CHAR,
+	@IdSemaforo CHAR,
+	@Id INT,
+	@IdOperador VARCHAR(11)
+)
+AS
+BEGIN
+	UPDATE [dbo].[Tbl_Caso_Encabezado]
+	SET ComentariosReporte = @Descripcion
+	   ,Fecha = @FechaCaso
+	   ,[Id_Estado] = @IdEstado
+	   ,Id_Estado_SemaforoCaso = @IdSemaforo
+	   ,Id_Operador = @IdOperador
+       ,[FecModificacion] = @FechaModificacion
+	   ,[UsuModificacion] = SUBSTRING(ORIGINAL_LOGIN(), CHARINDEX('\', ORIGINAL_LOGIN(), 0) + 1,15)
+	WHERE Id_Caso_Enc = @Id
+END
+GO
+
+CREATE PROCEDURE [dbo].[SP_INSERTAR_ENCABEZADOS]
+(
+	@Descripcion VARCHAR(65),
+	@FechaCaso DATETIME,
+	@IdEstado CHAR,
+	@IdSemaforo CHAR,
+	@IdOperador VARCHAR(11),
+	@FechaCreacion DATETIME
+)
+AS
+BEGIN
+	INSERT INTO [dbo].[Tbl_Caso_Encabezado]
+           (Fecha
+           ,Id_Operador
+           ,ComentariosReporte
+           ,Id_Estado_SemaforoCaso
+		   ,Id_Estado
+		   ,FecCreacion
+		   ,UsuCreacion)
+	VALUES
+           (@FechaCaso
+           ,@IdOperador
+		   ,@Descripcion
+		   ,@IdSemaforo
+		   ,@IdEstado
+           ,@FechaCreacion
+           ,SUBSTRING(ORIGINAL_LOGIN(), CHARINDEX('\', ORIGINAL_LOGIN(), 0) + 1,15)           )
+
+	SELECT SCOPE_IDENTITY()
+END
+GO
+
+
+CREATE PROCEDURE [dbo].SP_BORRAR_ENCABEZADOS
+(
+	@Id INT
+)
+AS
+BEGIN
+	DELETE FROM [dbo].[Tbl_Caso_Encabezado]
+    WHERE Id_Caso_Enc = @Id
+END
+GO
+
+-----------------------------------------------------------------------------------------------------------------------------
+-- **************************************************** FIN TABLA # 4 **************************************************** --
+-----------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------------
 -- ****************************************************** TABLA # 5 ****************************************************** --
 -----------------------------------------------------------------------------------------------------------------------------
 
--- Consultar
-CREATE PROCEDURE SP_LISTAR_DEPARTAMENTOS
-AS
-SELECT [Id_Departamento] AS "Código"
-      ,[Desc_Departamento] AS "Descripción"
-      ,td.[Id_Estado] AS Estado
-      ,td.[FecCreacion] AS "Fecha de Creación"
-      ,td.[UsuCreacion] AS "Creado por"
-      ,td.[FecModificacion] AS "Fecha de Modificación"
-      ,td.[UsuModificacion] AS "Modificado por"
-  FROM [dbo].[Tbl_Departamentos] td
-  INNER JOIN [dbo].[Tbl_Estados] te ON td.Id_Estado = te.Id_Estado
-GO
-
 -- Filtrar
-CREATE PROCEDURE SP_FILTRAR_DEPARTAMENTOS
+CREATE PROCEDURE [dbo].[SP_LISTAR_DEPARTAMENTOS]
 (
-	@Desc_Departamento varchar(65)
+	@Desc nvarchar(265) = '',
+	@Id int = -1
 )
 AS
-SELECT [Id_Departamento] AS "Código"
-      ,[Desc_Departamento] AS "Descripción"
+BEGIN   
+  IF @Desc IS NULL
+		SET @Desc = '';
+
+  IF @Id < 0
+		SET @Id = -1;
+
+  SELECT [Id_Departamento] AS "Id"
+      ,[Desc_Departamento] AS "Descripcion"
       ,td.[Id_Estado] AS Estado
-      ,td.[FecCreacion] AS "Fecha de Creación"
-      ,td.[UsuCreacion] AS "Creado por"
-      ,td.[FecModificacion] AS "Fecha de Modificación"
-      ,td.[UsuModificacion] AS "Modificado por"
+      ,td.[FecCreacion] AS "FechaCreacion"
+      ,td.[UsuCreacion] AS "CreadoUsuario"
+      ,td.[FecModificacion] AS "FechaModificacion"
+      ,td.[UsuModificacion] AS "ModificadoUsuario"
   FROM [dbo].[Tbl_Departamentos] td
   INNER JOIN [dbo].[Tbl_Estados] te ON td.Id_Estado = te.Id_Estado
-  WHERE [Desc_Departamento] LIKE '%' + @Desc_Departamento + '%'
+  WHERE [Desc_Departamento] LIKE '%' + @Desc + '%' AND (Id_Departamento = @Id OR @Id < 0)
+END
 GO
 
+CREATE PROCEDURE [dbo].[SP_MODIFICAR_DEPARTAMENTO]
+(
+	@Descripcion VARCHAR(65),
+	@FechaModificacion DATETIME,
+	@IdEstado CHAR,
+	@Id INT
+)
+AS
+BEGIN
+	UPDATE [dbo].[Tbl_Departamentos]
+	SET [Desc_Departamento] = @Descripcion
+	   ,[Id_Estado] = @IdEstado
+       ,[FecModificacion] = @FechaModificacion
+	   ,[UsuModificacion] = SUBSTRING(ORIGINAL_LOGIN(), CHARINDEX('\', ORIGINAL_LOGIN(), 0) + 1,15)
+	WHERE Id_Departamento = @Id
+END
+GO
+
+CREATE PROCEDURE [dbo].[SP_INSERTAR_DEPARTAMENTO]
+(
+	@Descripcion VARCHAR(65),
+	@FechaCreacion DATETIME,
+	@IdEstado CHAR
+)
+AS
+BEGIN
+	INSERT INTO [dbo].[Tbl_Departamentos]
+           ([Desc_Departamento]
+           ,[Id_Estado]
+           ,[FecCreacion]
+           ,[UsuCreacion])
+	VALUES
+           (@Descripcion
+           ,@IdEstado
+           ,@FechaCreacion
+           ,SUBSTRING(ORIGINAL_LOGIN(), CHARINDEX('\', ORIGINAL_LOGIN(), 0) + 1,15)           )
+
+	SELECT SCOPE_IDENTITY()
+END
+GO
+
+CREATE PROCEDURE [dbo].[SP_GET_ESTADOS]
+AS
+BEGIN
+	SELECT [Id_Estado] AS "Id"
+      ,[Desc_Estado] AS "Descripcion"      
+	FROM [dbo].[Tbl_Estados]
+	ORDER BY Desc_Estado ASC
+END
+GO
+
+CREATE PROCEDURE [dbo].SP_BORRAR_DEPARTAMENTOS
+(
+	@Id INT
+)
+AS
+BEGIN
+	DELETE FROM [dbo].[Tbl_Departamentos]
+    WHERE Id_Departamento = @Id
+END
+GO
 -----------------------------------------------------------------------------------------------------------------------------
 -- **************************************************** FIN TABLA # 5 **************************************************** --
 -----------------------------------------------------------------------------------------------------------------------------

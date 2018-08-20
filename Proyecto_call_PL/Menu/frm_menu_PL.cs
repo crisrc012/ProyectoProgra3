@@ -1,17 +1,25 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using Proyecto_call_BLL.Interfaces;
 using Proyecto_call_PL.Activos;
+using Proyecto_call_PL.CasoEncabezadoForms;
 using Proyecto_call_PL.Caso_Detalle;
+using Proyecto_call_PL.DepartamentoForms;
 using Proyecto_call_PL.Formularios;
 using Proyecto_call_PL.Estados;
 using Proyecto_call_PL.MarcaActivo;
 using Proyecto_call_PL.Turnos;
+using StructureMap;
+using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.Menu
 {
     public partial class frm_menu_PL : Form
     {
-        public static frm_operadores_PL Operadores_PL=new frm_operadores_PL();
         public frm_menu_PL()
         {
             InitializeComponent();
@@ -22,7 +30,7 @@ namespace Proyecto_call_PL.Menu
         {
             frm_activos_PL activos = new frm_activos_PL();
             activos.ShowDialog();
-           
+
         }
         #endregion
         private void tsm_ver_casodetalle_Click(object sender, EventArgs e)
@@ -30,17 +38,19 @@ namespace Proyecto_call_PL.Menu
             frm_caso_detalle_PL activos = new frm_caso_detalle_PL();
             activos.ShowDialog();
         }
+
         #region Operadores
         private void tsm_ver_operadores_Click(object sender, EventArgs e)
         {
-            Operadores_PL.ShowDialog();
+            var operadoresPl = new frm_operadores_PL();
+            operadoresPl.ShowDialog();
         }
         #endregion
 
         #region Semaforo
         private void tsm_ver_semaforo_Click(object sender, EventArgs e)
         {
-            frm_Semaforo_PL Semaforo_PL  = new frm_Semaforo_PL();
+            frm_Semaforo_PL Semaforo_PL = new frm_Semaforo_PL();
             Semaforo_PL.ShowDialog();
         }
         #endregion
@@ -72,5 +82,17 @@ namespace Proyecto_call_PL.Menu
             estados.ShowDialog();
         }
         #endregion
+
+        private void tsm_ver_departamento_Click(object sender, EventArgs e)
+        {
+            var repository = Bootstrap.GetInstance<IRepository<Uam.Programacion.Proyecto.Models.Departamentos, int>>();
+            new VerDepartamentosForm(repository).ShowDialog();
+        }
+
+        private void tsm_ver_casoencabezado_Click(object sender, EventArgs e)
+        {
+            var repository = Bootstrap.GetInstance<IRepository<Encabezado, int>>();
+            new VerEncabezadoForm(repository).ShowDialog();
+        }
     }
 }

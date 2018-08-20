@@ -105,12 +105,14 @@
             this.tsm_ver_casoencabezado.Name = "tsm_ver_casoencabezado";
             this.tsm_ver_casoencabezado.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_casoencabezado.Text = "Casos encabezado";
+            this.tsm_ver_casoencabezado.Click += new System.EventHandler(this.tsm_ver_casoencabezado_Click);
             // 
             // tsm_ver_departamento
             // 
             this.tsm_ver_departamento.Name = "tsm_ver_departamento";
             this.tsm_ver_departamento.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_departamento.Text = "Departamento";
+            this.tsm_ver_departamento.Click += new System.EventHandler(this.tsm_ver_departamento_Click);
             // 
             // tsm_ver_estado
             // 
