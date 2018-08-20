@@ -63,7 +63,7 @@ INSERT INTO [dbo].[Tbl_Turnos]
 			@HoraSalida, @Id_Estado, GETDATE(), 
 			SUBSTRING(ORIGINAL_LOGIN(), CHARINDEX('\', ORIGINAL_LOGIN(), 0) + 1,15),
 			null, null
-	FROM [dbo].[Tbl_Turnos]
+	SELECT SCOPE_IDENTITY()
 GO
 ------------------------------Eliminar------------------------------
 create procedure SP_ELIMINAR_TURNOS
