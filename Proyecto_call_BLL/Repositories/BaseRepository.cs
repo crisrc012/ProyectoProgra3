@@ -94,6 +94,9 @@ namespace Proyecto_call_BLL.Repositories
         {
             string procedureName;
 
+            if (filterObject == null)
+                filterObject = new T();
+
             if (_defaultObject.Mappings.ContainsKey(Command.Select))
                 procedureName = _defaultObject.Mappings[Command.Select];
             else

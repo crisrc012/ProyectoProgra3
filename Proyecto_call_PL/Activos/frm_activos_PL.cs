@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_call_BLL.Catalogos_Mantenimientos;
+using Proyecto_call_BLL.Interfaces;
+using Proyecto_call_BLL.Repositories;
 using Proyecto_call_DAL.Catalogos_Mantenimientos;
+using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.Activos
 {
@@ -96,7 +99,7 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
+            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL, Bootstrap.GetInstance<IRepository<Departamentos, int>>());
             Obj_activos_DAL.cAxn = Convert.ToChar("I");
             Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
             Obj_editar_activos.ShowDialog();
@@ -113,7 +116,7 @@ namespace Proyecto_call_PL.Activos
 
         private void tsb_btn_modificar_Click(object sender, EventArgs e)
         {
-            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL);
+            frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL, Bootstrap.GetInstance<IRepository<Departamentos, int>>());
             Obj_activos_DAL.cAxn = Convert.ToChar("U");
             Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
             Obj_editar_activos.ShowDialog();
