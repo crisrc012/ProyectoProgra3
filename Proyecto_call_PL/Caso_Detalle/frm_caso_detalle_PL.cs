@@ -107,7 +107,18 @@ namespace Proyecto_call_PL.Caso_Detalle
             Obj_casodetalle_DAL.cAxn = Convert.ToChar("I");
             Obj_editar_caso_detalle.Obj_casodetalle_DAL = Obj_casodetalle_DAL;
             Obj_editar_caso_detalle.ShowDialog();
+
+            if (Obj_casodetalle_DAL.bbandera == true)
+            {
+                MessageBox.Show("El registro se agrego con exito", "Informacion", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("El registro no se pudo agregar" + Obj_casodetalle_DAL.smsjError, "Informacion", MessageBoxButtons.OK);
+            }
         }
+
+        
 
         private void tsb_btn_modificar_Click(object sender, EventArgs e)
         {
@@ -117,6 +128,16 @@ namespace Proyecto_call_PL.Caso_Detalle
             Obj_casodetalle_DAL.cAxn = Convert.ToChar("U");
             Obj_editar_caso_detalle.Obj_casodetalle_DAL = Obj_casodetalle_DAL;
             Obj_editar_caso_detalle.ShowDialog();
+
+            if (Obj_casodetalle_DAL.bbandera == true)
+            {
+                MessageBox.Show("El registro se agrego con exito", "Informacion", MessageBoxButtons.OK);
+                listar();
+            }
+            else
+            {
+                MessageBox.Show("El registro no se pudo agregar", "Informacion", MessageBoxButtons.OK);
+            }
         }
     }
 }

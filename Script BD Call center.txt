@@ -965,7 +965,7 @@ CREATE PROCEDURE SP_INSERTAR_ACTIVO
 
 AS
 
-INSERT INTO [dbo].[Tbl_Activos]
+INSERT INTO [Tbl_Activos]
 
 		  ([Placa_Activo],
 		   [Id_TipoActivo],

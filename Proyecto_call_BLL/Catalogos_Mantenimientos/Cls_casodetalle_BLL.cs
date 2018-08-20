@@ -72,8 +72,6 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.ssentencia = "SP_INSERTAR_CASO_DETALLE";
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
 
-            Obj_casodetalle_DAL.iId_Caso_Enc = Obj_bd_DAL.ivalorscalar;
-
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Caso_Enc",3,Obj_casodetalle_DAL.iId_Caso_Enc);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo",3,Obj_casodetalle_DAL.iPlaca_Activo);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Observaciones",1,Obj_casodetalle_DAL.sObservaciones);
@@ -82,6 +80,21 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecModificacion",1,"");
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuModificacion",1,"");
 
+            Obj_bd_BLL.Exe_Scalar(ref Obj_bd_DAL);
+
+            if (Obj_bd_DAL.smsjerror == string.Empty)
+            {    
+                Obj_casodetalle_DAL.iId_Caso_Enc = Obj_bd_DAL.ivalorscalar;
+                Obj_casodetalle_DAL.smsjError = string.Empty;
+                Obj_casodetalle_DAL.Ds = Obj_bd_DAL.dst;
+                Obj_casodetalle_DAL.bbandera = false;
+            }
+            else
+            {
+                Obj_casodetalle_DAL.smsjError = Obj_bd_DAL.smsjerror;
+                Obj_casodetalle_DAL.Ds = null;
+                Obj_casodetalle_DAL.bbandera = false;
+            }
         }
 
         public void eliminar_casodetalle(ref Cls_casodetalle_DAL Obj_casodetalle_DAL, string valor)

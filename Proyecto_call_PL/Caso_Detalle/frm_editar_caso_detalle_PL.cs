@@ -86,17 +86,38 @@ namespace Proyecto_call_PL.Caso_Detalle
                 Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
                 Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
                 Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
-                Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
-                Obj_casodetalle_DAL.iId_Caso_Enc = Convert.ToInt32(cmb_id_caso_curso.SelectedValue);
+                //Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
+                Obj_casodetalle_DAL.iPlaca_Activo = 1;
+                Obj_casodetalle_DAL.iId_Caso_Enc = 1;
             }
 
             if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
             {
                 Obj_casodetalle_BLL.insertar_casodetalle(ref Obj_casodetalle_DAL);
+
+                if (Obj_casodetalle_DAL.smsjError == string.Empty)
+                {
+                    Obj_casodetalle_DAL.bbandera = true;
+                }
+                else
+                {
+                    Obj_casodetalle_DAL.bbandera = false;
+                }
+                
+                
             }
             else
             {
+                
                 Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
+                if (Obj_casodetalle_DAL.smsjError == string.Empty)
+                {
+                    Obj_casodetalle_DAL.bbandera = true;
+                }
+                else
+                {
+                    Obj_casodetalle_DAL.bbandera = false;
+                }
             }
 
             Close();
