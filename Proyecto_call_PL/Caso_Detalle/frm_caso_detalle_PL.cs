@@ -37,7 +37,6 @@ namespace Proyecto_call_PL.Caso_Detalle
             {
                 dtg_desplegar.DataSource = null;
                 dtg_desplegar.DataSource = Obj_casodetalle_DAL.Ds.Tables[0];
-
             }
             else
             {

@@ -87,8 +87,8 @@ namespace Proyecto_call_PL.Caso_Detalle
                 Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
                 Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
                 //Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
-                Obj_casodetalle_DAL.iPlaca_Activo = 1;
-                Obj_casodetalle_DAL.iId_Caso_Enc = 1;
+                Obj_casodetalle_DAL.iPlaca_Activo = 3;
+                Obj_casodetalle_DAL.iId_Caso_Enc = 4;
             }
 
             if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
