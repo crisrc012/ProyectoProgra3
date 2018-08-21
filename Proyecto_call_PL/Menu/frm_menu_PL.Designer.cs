@@ -147,6 +147,7 @@
             this.tsm_ver_tipoactivo.Name = "tsm_ver_tipoactivo";
             this.tsm_ver_tipoactivo.Size = new System.Drawing.Size(171, 22);
             this.tsm_ver_tipoactivo.Text = "Tipo de activo";
+            this.tsm_ver_tipoactivo.Click += new System.EventHandler(this.tsm_ver_tipoactivo_Click);
             // 
             // tsm_ver_turnos
             // 
