@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_call_BLL.Catalogos_Mantenimientos;
+using Proyecto_call_BLL.Interfaces;
 using Proyecto_call_DAL.Catalogos_Mantenimientos;
 using Proyecto_call_PL.Activos;
+using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.Activos
 {
@@ -17,6 +19,7 @@ namespace Proyecto_call_PL.Activos
     {
         #region Globales para combos
 
+        private readonly IRepository<Departamentos, int> _departamentosRepository;
         Cls_estados_DAL Obj_estados_DAL = new Cls_estados_DAL();
         Cls_estados_BLL Obj_estados_BLL = new Cls_estados_BLL();
         Cls_departamentos_DAL Obj_departamento_DAL = new Cls_departamentos_DAL();
@@ -29,10 +32,10 @@ namespace Proyecto_call_PL.Activos
 
 
         #endregion
-        public frm_editar_activos_PL(ref Cls_activos_DAL Obj_activos_DAL)
+        public frm_editar_activos_PL(ref Cls_activos_DAL Obj_activos_DAL, IRepository<Departamentos, int> repository)
         {
             InitializeComponent();
-
+            _departamentosRepository = repository;
             #region Combo estados
             Obj_estados_BLL.listar_estados(ref Obj_estados_DAL);
             if (Obj_estados_DAL.smsjError == string.Empty)
@@ -44,7 +47,7 @@ namespace Proyecto_call_PL.Activos
 
             #endregion
             #region Combo tipos
-            //Obj_tipoactivo_BLL(ref Obj_tipoactivo_DAL);
+            //Obj_tipoactivo_BLL.(ref Obj_tipoactivo_DAL);
             if (Obj_marcaactivo_DAL.smsjError == string.Empty)
             {
                 cmb_marca_activo.DisplayMember = "Descripción";
@@ -63,17 +66,13 @@ namespace Proyecto_call_PL.Activos
             #endregion
             #region Combo departamentos
             //Obj_departamento_BLL.listar_(ref Obj_departamento_DAL);
-            //if (Obj_marcaactivo_DAL.smsjError == string.Empty)
-            //{
-            //    var mockObject = new Cls_departamentos_DAL {sDesc_Departamento = txtFiltro.Text, iId_Departamento = -1 };
-            //    cmb_departamento.DataSource = _repository.List(mockObject);
-
-                
-
-            //    cmb_departamento.DisplayMember = "Descripción";
-            //    cmb_departamento.ValueMember = "Código";
-                
-            //}
+            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            {
+                var mockObject = new Departamentos { Id = -1 };
+                cmb_departamento.DisplayMember = "Descripcion";
+                cmb_departamento.ValueMember = "Id";
+                cmb_departamento.DataSource = _departamentosRepository.List(mockObject);
+            }
 
 
             #endregion

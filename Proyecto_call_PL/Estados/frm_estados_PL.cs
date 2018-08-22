@@ -27,34 +27,31 @@ namespace Proyecto_call_PL.Estados
             Obj_estados_BLL.listar_estados(ref Obj_estados_DAL);
             if (Obj_estados_DAL.smsjError == string.Empty)
             {
-                dtg_desplegar.DataSource = null;
                 dtg_desplegar.DataSource = Obj_estados_DAL.Ds.Tables[0];
             }
             else
             {
-                dtg_desplegar.DataSource = null;
                 MessageBox.Show(" Se presento el siguiente error " + Obj_estados_DAL.smsjError, "Error", MessageBoxButtons.OK);
             }
         }
 
         private void filtrar()
         {
+            dtg_desplegar.DataSource = null;
             if (Obj_estados_DAL.smsjError == string.Empty)
             {
-                Obj_estados_BLL.filtrar_estados(ref Obj_estados_DAL, tstxt_valor_filtrar.Text.ToString());
-                dtg_desplegar.DataSource = null;
+                Obj_estados_BLL.filtrar_estados(ref Obj_estados_DAL, tstxt_valor_filtrar.Text.Trim());
                 dtg_desplegar.DataSource = Obj_estados_DAL.Ds.Tables[0];
             }
             else
             {
-                dtg_desplegar.DataSource = null;
                 MessageBox.Show(" Se presento el siguiente error " + Obj_estados_DAL.smsjError, "Error", MessageBoxButtons.OK);
             }
         }
 
         private void tstxt_valor_filtrar_TextChanged(object sender, EventArgs e)
         {
-            if (tstxt_valor_filtrar.Text.ToString().Trim() == string.Empty)
+            if (tstxt_valor_filtrar.Text.Trim() == string.Empty)
             {
                 listar();
             }

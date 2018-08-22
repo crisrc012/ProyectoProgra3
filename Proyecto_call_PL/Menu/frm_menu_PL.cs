@@ -85,7 +85,7 @@ namespace Proyecto_call_PL.Menu
 
         private void tsm_ver_departamento_Click(object sender, EventArgs e)
         {
-            var repository = Bootstrap.GetInstance<IRepository<Uam.Programacion.Proyecto.Models.Departamentos, int>>();
+            var repository = Bootstrap.GetInstance<IRepository<Departamentos, int>>();
             new VerDepartamentosForm(repository).ShowDialog();
         }
 
