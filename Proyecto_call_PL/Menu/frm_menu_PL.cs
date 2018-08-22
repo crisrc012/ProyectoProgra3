@@ -13,6 +13,7 @@ using Proyecto_call_PL.Formularios;
 using Proyecto_call_PL.Estados;
 using Proyecto_call_PL.MarcaActivo;
 using Proyecto_call_PL.Turnos;
+using Proyecto_call_PL.TipoActivo;
 using StructureMap;
 using Uam.Programacion.Proyecto.Models;
 
@@ -93,6 +94,12 @@ namespace Proyecto_call_PL.Menu
         {
             var repository = Bootstrap.GetInstance<IRepository<Encabezado, int>>();
             new VerEncabezadoForm(repository).ShowDialog();
+        }
+
+        private void tsm_ver_tipoactivo_Click(object sender, EventArgs e)
+        {
+            frm_TipoActivo TipoActivo = new frm_TipoActivo();
+            TipoActivo.ShowDialog();
         }
     }
 }
