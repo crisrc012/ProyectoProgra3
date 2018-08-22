@@ -44,7 +44,7 @@ namespace Proyecto_call_PL.Activos
 
             #endregion
             #region Combo tipos
-            //Obj_tipoactivo_BLL.(ref Obj_tipoactivo_DAL);
+            //Obj_tipoactivo_BLL(ref Obj_tipoactivo_DAL);
             if (Obj_marcaactivo_DAL.smsjError == string.Empty)
             {
                 cmb_marca_activo.DisplayMember = "Descripción";
@@ -63,12 +63,17 @@ namespace Proyecto_call_PL.Activos
             #endregion
             #region Combo departamentos
             //Obj_departamento_BLL.listar_(ref Obj_departamento_DAL);
-            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
-            {
-                cmb_marca_activo.DisplayMember = "Descripción";
-                cmb_marca_activo.ValueMember = "Código";
-                cmb_marca_activo.DataSource = Obj_departamento_DAL.Ds.Tables[0];
-            }
+            //if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            //{
+            //    var mockObject = new Cls_departamentos_DAL {sDesc_Departamento = txtFiltro.Text, iId_Departamento = -1 };
+            //    cmb_departamento.DataSource = _repository.List(mockObject);
+
+                
+
+            //    cmb_departamento.DisplayMember = "Descripción";
+            //    cmb_departamento.ValueMember = "Código";
+                
+            //}
 
 
             #endregion

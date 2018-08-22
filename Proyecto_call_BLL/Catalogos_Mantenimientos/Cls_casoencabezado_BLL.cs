@@ -8,24 +8,24 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
     {
         public void listar_casoencabezado(ref Cls_casoencabezado_DAL Obj_casoencabezado_DAL)
         {
-            Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
-            Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
+            //Cls_BD_DAL Obj_bd_DAL = new Cls_BD_DAL();
+            //Cls_BD_BLL Obj_bd_BLL = new Cls_BD_BLL();
 
-            Obj_bd_DAL.snombretabla = "Encabezado del caso";
-            Obj_bd_DAL.ssentencia = "SP_LISTAR_CASO_ENCABEZADO";
+            //Obj_bd_DAL.snombretabla = "Encabezado del caso";
+            //Obj_bd_DAL.ssentencia = "SP_LISTAR_CASO_ENCABEZADO";
 
-            Obj_bd_BLL.Adapt(ref Obj_bd_DAL);
+            //Obj_bd_BLL.Adapt(ref Obj_bd_DAL);
 
-            if (Obj_bd_DAL.smsjerror == string.Empty)
-            {
-                Obj_casoencabezado_DAL.smsjError = Obj_bd_DAL.smsjerror;
-                Obj_casoencabezado_DAL.Ds = Obj_bd_DAL.dst;
-            }
-            else
-            {
-                Obj_casoencabezado_DAL.smsjError = Obj_bd_DAL.smsjerror;
-                Obj_bd_DAL.dst = null;
-            }
+            //if (Obj_bd_DAL.smsjerror == string.Empty)
+            //{
+            //    Obj_casoencabezado_DAL.smsjError = Obj_bd_DAL.smsjerror;
+            //    Obj_casoencabezado_DAL.Ds = Obj_bd_DAL.dst;
+            //}
+            //else
+            //{
+            //    Obj_casoencabezado_DAL.smsjError = Obj_bd_DAL.smsjerror;
+            //    Obj_bd_DAL.dst = null;
+            //}
 
         }
 

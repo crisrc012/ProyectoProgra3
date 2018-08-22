@@ -135,7 +135,7 @@ namespace Proyecto_call_PL.Caso_Detalle
             }
             else
             {
-                MessageBox.Show("El registro no se pudo agregar", "Informacion", MessageBoxButtons.OK);
+                MessageBox.Show("El registro no se pudo agregar" + Obj_casodetalle_DAL.smsjError, "Informacion", MessageBoxButtons.OK);
             }
         }
     }

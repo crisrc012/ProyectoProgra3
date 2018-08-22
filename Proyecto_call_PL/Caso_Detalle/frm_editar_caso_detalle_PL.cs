@@ -68,6 +68,7 @@ namespace Proyecto_call_PL.Caso_Detalle
                 txt_id_caso_detalle.Enabled = false;
                 msk_cread_activo.Text = Obj_casodetalle_DAL.dFecCreacion.ToString();
                 txt_creadopor.Text = Obj_casodetalle_DAL.sUsuCreacion.ToString();
+                txt_id_caso_detalle.Text = Obj_casodetalle_DAL.iId_Caso_Det.ToString();
             }
 
         }
