@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_call_BLL.Catalogos_Mantenimientos;
+using Proyecto_call_BLL.Interfaces;
 using Proyecto_call_DAL.Catalogos_Mantenimientos;
+using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.Caso_Detalle
 {
@@ -24,7 +19,7 @@ namespace Proyecto_call_PL.Caso_Detalle
         Cls_casodetalle_BLL Obj_casodetalle_BLL = new Cls_casodetalle_BLL();
 
         #endregion
-        public frm_editar_caso_detalle_PL()
+        public frm_editar_caso_detalle_PL(IRepository<Encabezado, int> repository)
         {
             InitializeComponent();
 
@@ -51,13 +46,10 @@ namespace Proyecto_call_PL.Caso_Detalle
 
 
 
-            Obj_casoencabezado_BLL.listar_casoencabezado(ref Obj_casoencabezado_DAL);
-            if (Obj_casoencabezado_DAL.smsjError == string.Empty)
-            {
-                cmb_id_caso_curso.DisplayMember = "Descripción";
-                cmb_id_caso_curso.ValueMember = "Código";
-                cmb_id_caso_curso.DataSource = Obj_casoencabezado_DAL.Ds.Tables[0];
-            }
+            cmb_id_caso_curso.DisplayMember = "Id";
+            cmb_id_caso_curso.ValueMember = "Id";
+            var mockObject = new Encabezado { Id = -1 };
+            cmb_id_caso_curso.DataSource = repository.List(mockObject);
             #endregion
 
         }
@@ -80,14 +72,15 @@ namespace Proyecto_call_PL.Caso_Detalle
                 msk_cread_activo.Text = Obj_casodetalle_DAL.dFecCreacion.ToString();
                 txt_creadopor.Text = Obj_casodetalle_DAL.sUsuCreacion.ToString();
                 txt_id_caso_detalle.Text = Obj_casodetalle_DAL.iId_Caso_Enc.ToString();
-                
+
             }
 
         }
 
         private void bt_insertar_caso_detalle_Click(object sender, EventArgs e)
         {
-            if ((txt_observaciones.Text == string.Empty)||(txt_creadopor.Text == string.Empty))
+            var id = cmb_id_caso_curso.SelectedValue; // LECTURA DEL COMBO BOX DE CASO ENCABEZADO
+            if ((txt_observaciones.Text == string.Empty) || (txt_creadopor.Text == string.Empty))
             {
                 MessageBox.Show("Debe seleccionar alguna opcion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_creadopor.Clear();
@@ -116,7 +109,7 @@ namespace Proyecto_call_PL.Caso_Detalle
                 else
                 {
                     Obj_casodetalle_DAL.bbandera = false;
-                }             
+                }
             }
             else
             {
@@ -124,7 +117,7 @@ namespace Proyecto_call_PL.Caso_Detalle
                 Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
                 Obj_casodetalle_DAL.dFecModificacion = DateTime.Now;
                 Obj_casodetalle_DAL.sUsuModificacion = txt_modificadopor.Text.Trim();
-                
+
 
 
 

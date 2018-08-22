@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_call_BLL.Catalogos_Mantenimientos;
+using Proyecto_call_BLL.Interfaces;
 using Proyecto_call_DAL.Catalogos_Mantenimientos;
+using Uam.Programacion.Proyecto.Models;
 
 namespace Proyecto_call_PL.Caso_Detalle
 {
@@ -102,7 +104,8 @@ namespace Proyecto_call_PL.Caso_Detalle
 
         private void tsb_btn_agregar_Click(object sender, EventArgs e)
         {
-            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL();
+            var repository = Bootstrap.GetInstance<IRepository<Encabezado, int>>();
+            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL(repository);
             Obj_casodetalle_DAL.cAxn = Convert.ToChar("I");
             Obj_editar_caso_detalle.Obj_casodetalle_DAL = Obj_casodetalle_DAL;
             Obj_editar_caso_detalle.ShowDialog();
@@ -125,8 +128,8 @@ namespace Proyecto_call_PL.Caso_Detalle
             Obj_casodetalle_DAL.sUsuCreacion = dtg_desplegar.SelectedRows[0].Cells[5].Value.ToString();
             Obj_casodetalle_DAL.dFecCreacion = Convert.ToDateTime( dtg_desplegar.SelectedRows[0].Cells[4].Value.ToString());
 
-
-            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL();
+            var repository = Bootstrap.GetInstance<IRepository<Encabezado, int>>();
+            frm_editar_caso_detalle_PL Obj_editar_caso_detalle = new frm_editar_caso_detalle_PL(repository);
             Obj_casodetalle_DAL.cAxn = Convert.ToChar("U");
             Obj_editar_caso_detalle.Obj_casodetalle_DAL = Obj_casodetalle_DAL;
             Obj_editar_caso_detalle.ShowDialog();
