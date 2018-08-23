@@ -47,7 +47,7 @@ namespace Proyecto_call_PL.Activos
 
             #endregion
             #region Combo tipos
-            //Obj_tipoactivo_BLL.(ref Obj_tipoactivo_DAL);
+            Obj_tipoactivo_BLL.listar_Tipoactivo(ref Obj_tipoactivo_DAL);
             if (Obj_marcaactivo_DAL.smsjError == string.Empty)
             {
                 cmb_marca_activo.DisplayMember = "Descripción";

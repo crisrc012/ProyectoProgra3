@@ -40,6 +40,17 @@ namespace Proyecto_call_PL.Caso_Detalle
             #endregion
 
             #region Combo caso
+
+            //if (Obj_casoencabezado_DAL.smsjError == string.Empty)
+            //{
+            //    var mockObject = new Cls_casoencabezado_DAL { iId_Caso_Enc = -1 };
+            //    cmb_id_caso_curso.DisplayMember = "Descripcion";
+            //    cmb_id_caso_curso.ValueMember = "Id";
+            //    cmb_id_caso_curso.DataSource = _casoencabezadoRepository.List(mockObject);
+            //}
+
+
+
             Obj_casoencabezado_BLL.listar_casoencabezado(ref Obj_casoencabezado_DAL);
             if (Obj_casoencabezado_DAL.smsjError == string.Empty)
             {
@@ -68,7 +79,8 @@ namespace Proyecto_call_PL.Caso_Detalle
                 txt_id_caso_detalle.Enabled = false;
                 msk_cread_activo.Text = Obj_casodetalle_DAL.dFecCreacion.ToString();
                 txt_creadopor.Text = Obj_casodetalle_DAL.sUsuCreacion.ToString();
-                txt_id_caso_detalle.Text = Obj_casodetalle_DAL.iId_Caso_Det.ToString();
+                txt_id_caso_detalle.Text = Obj_casodetalle_DAL.iId_Caso_Enc.ToString();
+                
             }
 
         }
@@ -84,16 +96,17 @@ namespace Proyecto_call_PL.Caso_Detalle
             }
             else
             {
-                Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
-                Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
-                Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
-                //Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
-                Obj_casodetalle_DAL.iPlaca_Activo = 3;
-                Obj_casodetalle_DAL.iId_Caso_Enc = 4;
+                MessageBox.Show("Procedemos con la ejecucion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             if (Obj_casodetalle_DAL.cAxn.ToString().Contains("I"))
             {
+                Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
+                Obj_casodetalle_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
+                Obj_casodetalle_DAL.dFecCreacion = DateTime.Now;
+                Obj_casodetalle_DAL.iPlaca_Activo = Convert.ToInt32(cmb_placa_activo.SelectedValue);
+                Obj_casodetalle_DAL.iId_Caso_Enc = 4;
+
                 Obj_casodetalle_BLL.insertar_casodetalle(ref Obj_casodetalle_DAL);
 
                 if (Obj_casodetalle_DAL.smsjError == string.Empty)
@@ -106,7 +119,15 @@ namespace Proyecto_call_PL.Caso_Detalle
                 }             
             }
             else
-            { 
+            {
+                Obj_casodetalle_DAL.iId_Caso_Enc = Convert.ToInt32(txt_id_caso_detalle.Text.ToString());
+                Obj_casodetalle_DAL.sObservaciones = txt_observaciones.Text.ToString().Trim();
+                Obj_casodetalle_DAL.dFecModificacion = DateTime.Now;
+                Obj_casodetalle_DAL.sUsuModificacion = txt_modificadopor.Text.Trim();
+                
+
+
+
                 Obj_casodetalle_BLL.modificar_casodetalle(ref Obj_casodetalle_DAL);
                 if (Obj_casodetalle_DAL.smsjError == string.Empty)
                 {

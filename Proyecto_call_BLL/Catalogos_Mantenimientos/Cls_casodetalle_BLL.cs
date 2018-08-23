@@ -73,6 +73,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuCreacion", 1, Obj_casodetalle_DAL.sUsuCreacion);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecModificacion", 1, "");
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuModificacion", 1, "");
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Caso_Enc", 3, Obj_casodetalle_DAL.iId_Caso_Enc);
 
             Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
 
