@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proyecto_call_PL.Activos.frm_activos_PL));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_activos_PL));
             this.dtg_desplegar = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -100,6 +100,7 @@
             this.tsb_btn_actualizar.Name = "tsb_btn_actualizar";
             this.tsb_btn_actualizar.Size = new System.Drawing.Size(23, 22);
             this.tsb_btn_actualizar.Text = "Actualizar";
+            this.tsb_btn_actualizar.Click += new System.EventHandler(this.tsb_btn_actualizar_Click);
             // 
             // toolStripSeparator2
             // 

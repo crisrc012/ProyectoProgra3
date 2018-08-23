@@ -41,12 +41,13 @@ namespace Proyecto_call_PL.Caso_Detalle
 
             #region Combo caso
 
-            if (Obj_casoencabezado_DAL.smsjError == string.Empty)
-            {
-                cmb_id_caso_curso.DisplayMember = "Descripcion";
-                cmb_id_caso_curso.ValueMember = "Id";
-                cmb_id_caso_curso.DataSource = IRepository<CasoEncabezado,char>>.List(null);
-            }
+            //if (Obj_casoencabezado_DAL.smsjError == string.Empty)
+            //{
+            //    var mockObject = new Cls_casoencabezado_DAL {iId_Caso_Enc = -1 };
+            //    cmb_id_caso_curso.DisplayMember = "Descripcion";
+            //    cmb_id_caso_curso.ValueMember = "Id";
+            //    cmb_id_caso_curso.DataSource = _encabezadoRepository.List(mockObject);
+            //}
 
 
 

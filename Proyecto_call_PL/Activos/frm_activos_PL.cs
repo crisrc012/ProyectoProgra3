@@ -138,5 +138,10 @@ namespace Proyecto_call_PL.Activos
                 MessageBox.Show("El registro no se pudo agregar" + Obj_activos_DAL.smsjError, "Informacion", MessageBoxButtons.OK);
             }
         }
+
+        private void tsb_btn_actualizar_Click(object sender, EventArgs e)
+        {
+            listar();
+        }
     }
 }

@@ -118,11 +118,11 @@ namespace Proyecto_call_PL.Activos
 
             if (Obj_activos_DAL.cAxn.ToString().Contains("I"))
             {
-                //Obj_activos_DAL.sDesc_Activo = txt_desc_activo.Text.ToString().Trim();
+                Obj_activos_DAL.sDesc_Activo = txt_desc_activo.Text.ToString().Trim();
                 Obj_activos_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
                 Obj_activos_DAL.dFecCreacion = DateTime.Now;
                 Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal(txt_prioridad_activo.Text.ToString().Trim());
-                Obj_activos_DAL.iPlaca_Activo = Obj_activos_DAL.iPlaca_Activo;
+                //Obj_activos_DAL.iPlaca_Activo = Obj_activos_DAL.iPlaca_Activo;
                 Obj_activos_DAL.iId_Departamento_Responsable = Convert.ToInt32(cmb_departamento.SelectedValue);
                 Obj_activos_DAL.iId_MarcaActivo = Convert.ToInt32(cmb_marca_activo.SelectedValue);
                 Obj_activos_DAL.iId_TipoActivo = Convert.ToInt32(cmb_tipo_activo.SelectedValue);
@@ -142,7 +142,7 @@ namespace Proyecto_call_PL.Activos
             }
             else
             {
-                Obj_activos_DAL.iPlaca_Activo = Convert.ToInt32(txt_placa_activo.Text.ToString()); ;
+                Obj_activos_DAL.iPlaca_Activo = Convert.ToInt32(txt_placa_activo.Text.ToString());
                 Obj_activos_DAL.dFecModificacion = DateTime.Now;
                 Obj_activos_DAL.sUsuModificacion = txt_modificadopor.Text.ToString().Trim();
                 Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal(txt_prioridad_activo.Text.ToString().Trim());
