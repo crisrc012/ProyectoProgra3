@@ -1,0 +1,47 @@
+CREATE PROCEDURE SP_INSERTAR_ACTIVO
+(
+	 
+	  @Id_TipoActivo INT,
+	  @Desc_Activo VARCHAR(265),
+	  @Id_MarcaActivo INT,
+	  @Id_Departamento_Responsable INT,
+	  @Prioridad_SLA DECIMAL(8,2),
+	  @Id_Estado CHAR (1),
+	  @FecCreacion DATETIME,
+	  @UsuCreacion VARCHAR(15),
+	  @FecModificacion DATETIME,
+	  @UsuModificacion VARCHAR(15)
+)
+
+AS
+
+INSERT INTO [Tbl_Activos]
+
+		  (
+		   [Id_TipoActivo],
+		   [Desc_Activo],
+		   [Id_MarcaActivo],
+		   [Id_Departamento_Responsable],
+		   [Prioridad_SLA],
+		   [Id_Estado],
+		   [FecCreacion],
+		   [UsuCreacion],
+		   [FecModificacion],
+		   [UsuModificacion]
+		   )
+
+     VALUES
+           (
+			@Id_TipoActivo,
+			@Desc_Activo,
+			@Id_MarcaActivo,
+			@Id_Departamento_Responsable,
+			@Prioridad_SLA,
+			@Id_Estado,
+			@FecCreacion,
+			@UsuCreacion,
+			@FecModificacion,
+			@UsuModificacion)
+
+			select max ([Placa_Activo]) from [Tbl_Activos]
+GO
