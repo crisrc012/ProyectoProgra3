@@ -88,6 +88,7 @@
             // txt_modificadopor
             // 
             this.txt_modificadopor.Location = new System.Drawing.Point(157, 229);
+            this.txt_modificadopor.MaxLength = 15;
             this.txt_modificadopor.Name = "txt_modificadopor";
             this.txt_modificadopor.Size = new System.Drawing.Size(100, 20);
             this.txt_modificadopor.TabIndex = 40;
@@ -95,6 +96,7 @@
             // txt_creadopor
             // 
             this.txt_creadopor.Location = new System.Drawing.Point(156, 177);
+            this.txt_creadopor.MaxLength = 15;
             this.txt_creadopor.Name = "txt_creadopor";
             this.txt_creadopor.Size = new System.Drawing.Size(100, 20);
             this.txt_creadopor.TabIndex = 39;
@@ -102,6 +104,7 @@
             // txt_observaciones
             // 
             this.txt_observaciones.Location = new System.Drawing.Point(185, 80);
+            this.txt_observaciones.MaxLength = 450;
             this.txt_observaciones.Name = "txt_observaciones";
             this.txt_observaciones.Size = new System.Drawing.Size(100, 20);
             this.txt_observaciones.TabIndex = 37;

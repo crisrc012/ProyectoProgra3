@@ -157,8 +157,6 @@ namespace Proyecto_call_PL.Activos
                 {
                     Obj_activos_DAL.bbandera = false;
                 }
-
-             
             }
 
             Close();

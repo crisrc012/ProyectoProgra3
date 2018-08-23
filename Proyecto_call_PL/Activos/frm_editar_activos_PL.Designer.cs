@@ -171,6 +171,7 @@
             // txt_desc_activo
             // 
             this.txt_desc_activo.Location = new System.Drawing.Point(173, 89);
+            this.txt_desc_activo.MaxLength = 265;
             this.txt_desc_activo.Name = "txt_desc_activo";
             this.txt_desc_activo.Size = new System.Drawing.Size(100, 20);
             this.txt_desc_activo.TabIndex = 13;
@@ -178,6 +179,7 @@
             // txt_prioridad_activo
             // 
             this.txt_prioridad_activo.Location = new System.Drawing.Point(173, 164);
+            this.txt_prioridad_activo.MaxLength = 5;
             this.txt_prioridad_activo.Name = "txt_prioridad_activo";
             this.txt_prioridad_activo.Size = new System.Drawing.Size(100, 20);
             this.txt_prioridad_activo.TabIndex = 14;
@@ -185,6 +187,7 @@
             // txt_creadopor
             // 
             this.txt_creadopor.Location = new System.Drawing.Point(458, 59);
+            this.txt_creadopor.MaxLength = 15;
             this.txt_creadopor.Name = "txt_creadopor";
             this.txt_creadopor.Size = new System.Drawing.Size(100, 20);
             this.txt_creadopor.TabIndex = 15;
@@ -192,6 +195,7 @@
             // txt_modificadopor
             // 
             this.txt_modificadopor.Location = new System.Drawing.Point(459, 111);
+            this.txt_modificadopor.MaxLength = 15;
             this.txt_modificadopor.Name = "txt_modificadopor";
             this.txt_modificadopor.Size = new System.Drawing.Size(100, 20);
             this.txt_modificadopor.TabIndex = 16;
