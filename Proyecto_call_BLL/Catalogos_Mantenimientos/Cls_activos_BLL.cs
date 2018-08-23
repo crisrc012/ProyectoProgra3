@@ -77,10 +77,8 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado", 2, Obj_activos_DAL.cId_Estado);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecCreacion", 4, Obj_activos_DAL.dFecCreacion);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuCreacion", 1, Obj_activos_DAL.sUsuCreacion);
-            //los deje vacios por si dan error recordar y el date lo puse string
-
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecModificacion", 1, "");
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuModificacion", 1, "");
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecModificacion", 4, Obj_activos_DAL.dFecModificacion);
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuModificacion", 1, Obj_activos_DAL.sUsuModificacion);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo", 3, Obj_activos_DAL.iPlaca_Activo);
 
             Obj_bd_BLL.Exe_NonQuery(ref Obj_bd_DAL);
@@ -106,7 +104,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.ssentencia = "SP_INSERTAR_ACTIVO";
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
 
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo",3,Obj_activos_DAL.iPlaca_Activo);
+            //Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo",3,Obj_activos_DAL.iPlaca_Activo);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_TipoActivo",3,Obj_activos_DAL.iId_TipoActivo);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Desc_Activo",1,Obj_activos_DAL.sDesc_Activo);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_MarcaActivo",3,Obj_activos_DAL.iId_MarcaActivo);
@@ -115,8 +113,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Estado",2,Obj_activos_DAL.cId_Estado);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecCreacion",4,Obj_activos_DAL.dFecCreacion);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuCreacion",1,Obj_activos_DAL.sUsuCreacion);
-            //los deje vacios por si dan error recordar
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecModificacion",4,"");
+            Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecModificacion",4,Obj_activos_DAL.dFecModificacion);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuModificacion",1,"");
 
             Obj_bd_BLL.Exe_Scalar(ref Obj_bd_DAL);

@@ -48,7 +48,7 @@ namespace Proyecto_call_PL.Activos
             #endregion
             #region Combo tipos
             Obj_tipoactivo_BLL.listar_Tipoactivo(ref Obj_tipoactivo_DAL);
-            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            if (Obj_tipoactivo_DAL.smsjError == string.Empty)
             {
                 cmb_tipo_activo.DisplayMember = "Descripción";
                 cmb_tipo_activo.ValueMember = "Código";
@@ -65,14 +65,13 @@ namespace Proyecto_call_PL.Activos
             }
             #endregion
             #region Combo departamentos
-            ////Obj_departamento_BLL.listar_(ref Obj_departamento_DAL);
-            //if (Obj_marcaactivo_DAL.smsjError == string.Empty)
-            //{
-            //    var mockObject = new Departamentos { Id = -1 };
-            //    cmb_departamento.DisplayMember = "Descripcion";
-            //    cmb_departamento.ValueMember = "Id";
-            //    cmb_departamento.DataSource = _departamentosRepository.List(mockObject);
-            //}
+            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            {
+                var mockObject = new Departamentos { Id = -1 };
+                cmb_departamento.DisplayMember = "Descripcion";
+                cmb_departamento.ValueMember = "Id";
+                cmb_departamento.DataSource = _departamentosRepository.List(mockObject);
+            }
 
 
             #endregion
@@ -119,7 +118,7 @@ namespace Proyecto_call_PL.Activos
 
             if (Obj_activos_DAL.cAxn.ToString().Contains("I"))
             {
-                Obj_activos_DAL.sDesc_Activo = txt_desc_activo.Text.ToString().Trim();
+                //Obj_activos_DAL.sDesc_Activo = txt_desc_activo.Text.ToString().Trim();
                 Obj_activos_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
                 Obj_activos_DAL.dFecCreacion = DateTime.Now;
                 Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal(txt_prioridad_activo.Text.ToString().Trim());
@@ -127,6 +126,8 @@ namespace Proyecto_call_PL.Activos
                 Obj_activos_DAL.iId_Departamento_Responsable = Convert.ToInt32(cmb_departamento.SelectedValue);
                 Obj_activos_DAL.iId_MarcaActivo = Convert.ToInt32(cmb_marca_activo.SelectedValue);
                 Obj_activos_DAL.iId_TipoActivo = Convert.ToInt32(cmb_tipo_activo.SelectedValue);
+                Obj_activos_DAL.dFecModificacion = DateTime.Now;
+                Obj_activos_DAL.cId_Estado = Convert.ToChar(cmb_estado.SelectedValue);
 
                 Obj_activos_BLL.insertar_activos(ref Obj_activos_DAL);
 
@@ -137,15 +138,18 @@ namespace Proyecto_call_PL.Activos
                 else
                 {
                     Obj_activos_DAL.bbandera = false;
-                }
-
-                
+                }       
             }
             else
             {
                 Obj_activos_DAL.iPlaca_Activo = Convert.ToInt32(txt_placa_activo.Text.ToString()); ;
                 Obj_activos_DAL.dFecModificacion = DateTime.Now;
                 Obj_activos_DAL.sUsuModificacion = txt_modificadopor.Text.ToString().Trim();
+                Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal(txt_prioridad_activo.Text.ToString().Trim());
+                Obj_activos_DAL.iId_Departamento_Responsable = Convert.ToInt32(cmb_departamento.SelectedValue);
+                Obj_activos_DAL.iId_MarcaActivo = Convert.ToInt32(cmb_marca_activo.SelectedValue);
+                Obj_activos_DAL.iId_TipoActivo = Convert.ToInt32(cmb_tipo_activo.SelectedValue);
+                Obj_activos_DAL.cId_Estado = Convert.ToChar(cmb_estado.SelectedValue);
 
                 Obj_activos_BLL.modificar_activos(ref Obj_activos_DAL);
 
@@ -165,6 +169,22 @@ namespace Proyecto_call_PL.Activos
         private void btn_salir_activo_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txt_prioridad_activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((txt_prioridad_activo.Text.Trim().Length == 0) && (e.KeyChar == '.'))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                if ((e.KeyChar == '.') && (txt_prioridad_activo.Text.Trim().Contains(".")))
+                {
+                    e.Handled = true;
+                }
+            }
+
         }
     }
 }

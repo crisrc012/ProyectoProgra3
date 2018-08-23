@@ -179,10 +179,11 @@
             // txt_prioridad_activo
             // 
             this.txt_prioridad_activo.Location = new System.Drawing.Point(173, 164);
-            this.txt_prioridad_activo.MaxLength = 5;
+            this.txt_prioridad_activo.MaxLength = 4;
             this.txt_prioridad_activo.Name = "txt_prioridad_activo";
             this.txt_prioridad_activo.Size = new System.Drawing.Size(100, 20);
             this.txt_prioridad_activo.TabIndex = 14;
+            this.txt_prioridad_activo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_prioridad_activo_KeyPress);
             // 
             // txt_creadopor
             // 

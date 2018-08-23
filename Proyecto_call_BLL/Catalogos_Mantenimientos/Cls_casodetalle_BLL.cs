@@ -102,7 +102,7 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             Obj_bd_BLL.crear_tabla(ref Obj_bd_DAL);
 
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Id_Caso_Enc",3,Obj_casodetalle_DAL.iId_Caso_Enc);
-            Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo",3,Obj_casodetalle_DAL.iPlaca_Activo);
+            //Obj_bd_DAL.Obj_dtparam.Rows.Add("@Placa_Activo",3,Obj_casodetalle_DAL.iPlaca_Activo);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@Observaciones",1,Obj_casodetalle_DAL.sObservaciones);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@FecCreacion", 4, Obj_casodetalle_DAL.dFecCreacion);
             Obj_bd_DAL.Obj_dtparam.Rows.Add("@UsuCreacion",1,Obj_casodetalle_DAL.sUsuCreacion);
