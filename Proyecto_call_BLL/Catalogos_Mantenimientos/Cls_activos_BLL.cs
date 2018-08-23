@@ -120,7 +120,6 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
 
             if (Obj_bd_DAL.smsjerror == string.Empty)
             {
-                Obj_activos_DAL.iPlaca_Activo = Obj_bd_DAL.ivalorscalar;
                 Obj_activos_DAL.smsjError = string.Empty;
                 Obj_activos_DAL.Ds = Obj_bd_DAL.dst;
             }
