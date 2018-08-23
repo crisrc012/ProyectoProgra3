@@ -104,7 +104,7 @@ namespace Proyecto_call_PL.Activos
             Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
             Obj_editar_activos.ShowDialog();
 
-            if (Obj_activos_DAL.bandera == true)
+            if (Obj_activos_DAL.bbandera == true)
             {
                 MessageBox.Show("El registro se agrego con exito", "Informacion", MessageBoxButtons.OK);
             }
@@ -119,9 +119,17 @@ namespace Proyecto_call_PL.Activos
             frm_editar_activos_PL Obj_editar_activos = new frm_editar_activos_PL(ref Obj_activos_DAL, Bootstrap.GetInstance<IRepository<Departamentos, int>>());
             Obj_activos_DAL.cAxn = Convert.ToChar("U");
             Obj_editar_activos.Obj_activos_DAL = Obj_activos_DAL;
+
+            Obj_activos_DAL.iPlaca_Activo = Convert.ToInt32(dtg_desplegar.SelectedRows[0].Cells[0].Value.ToString());
+            Obj_activos_DAL.sDesc_Activo = dtg_desplegar.SelectedRows[0].Cells[2].Value.ToString();
+            Obj_activos_DAL.sUsuCreacion = dtg_desplegar.SelectedRows[0].Cells[8].Value.ToString();
+            Obj_activos_DAL.dFecCreacion = Convert.ToDateTime(dtg_desplegar.SelectedRows[0].Cells[7].Value.ToString());
+            Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal(dtg_desplegar.SelectedRows[0].Cells[5].Value);
+
+
             Obj_editar_activos.ShowDialog();
 
-            if (Obj_activos_DAL.bandera == true)
+            if (Obj_activos_DAL.bbandera == true)
             {
                 MessageBox.Show("El registro se agrego con exito", "Informacion", MessageBoxButtons.OK);
             }

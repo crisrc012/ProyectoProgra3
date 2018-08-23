@@ -56,6 +56,7 @@
             this.btn_salir_caso_detalle.TabIndex = 47;
             this.btn_salir_caso_detalle.Text = "Cancelar";
             this.btn_salir_caso_detalle.UseVisualStyleBackColor = true;
+            this.btn_salir_caso_detalle.Click += new System.EventHandler(this.btn_salir_caso_detalle_Click);
             // 
             // bt_insertar_caso_detalle
             // 

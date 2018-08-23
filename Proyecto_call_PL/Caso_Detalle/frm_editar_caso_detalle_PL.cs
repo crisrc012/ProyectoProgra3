@@ -141,5 +141,10 @@ namespace Proyecto_call_PL.Caso_Detalle
 
             Close();
         }
+
+        private void btn_salir_caso_detalle_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

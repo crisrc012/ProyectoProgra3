@@ -173,19 +173,6 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
             }
         }
 
-        public bool bandera
-        {
-            get
-            {
-                return bandera;
-            }
-
-            set
-            {
-                bandera = value;
-            }
-        }
-
         public decimal dPrioridad_SLA
         {
             get
@@ -196,6 +183,19 @@ namespace Proyecto_call_DAL.Catalogos_Mantenimientos
             set
             {
                 _dPrioridad_SLA = value;
+            }
+        }
+
+        public bool bbandera
+        {
+            get
+            {
+                return _bbandera;
+            }
+
+            set
+            {
+                _bbandera = value;
             }
         }
 

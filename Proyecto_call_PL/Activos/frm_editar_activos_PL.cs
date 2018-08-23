@@ -50,9 +50,9 @@ namespace Proyecto_call_PL.Activos
             Obj_tipoactivo_BLL.listar_Tipoactivo(ref Obj_tipoactivo_DAL);
             if (Obj_marcaactivo_DAL.smsjError == string.Empty)
             {
-                cmb_marca_activo.DisplayMember = "Descripción";
-                cmb_marca_activo.ValueMember = "Código";
-                cmb_marca_activo.DataSource = Obj_tipoactivo_DAL.Ds.Tables[0];
+                cmb_tipo_activo.DisplayMember = "Descripción";
+                cmb_tipo_activo.ValueMember = "Código";
+                cmb_tipo_activo.DataSource = Obj_tipoactivo_DAL.Ds.Tables[0];
             }
             #endregion
             #region Combo Marca
@@ -65,14 +65,14 @@ namespace Proyecto_call_PL.Activos
             }
             #endregion
             #region Combo departamentos
-            //Obj_departamento_BLL.listar_(ref Obj_departamento_DAL);
-            if (Obj_marcaactivo_DAL.smsjError == string.Empty)
-            {
-                var mockObject = new Departamentos { Id = -1 };
-                cmb_departamento.DisplayMember = "Descripcion";
-                cmb_departamento.ValueMember = "Id";
-                cmb_departamento.DataSource = _departamentosRepository.List(mockObject);
-            }
+            ////Obj_departamento_BLL.listar_(ref Obj_departamento_DAL);
+            //if (Obj_marcaactivo_DAL.smsjError == string.Empty)
+            //{
+            //    var mockObject = new Departamentos { Id = -1 };
+            //    cmb_departamento.DisplayMember = "Descripcion";
+            //    cmb_departamento.ValueMember = "Id";
+            //    cmb_departamento.DataSource = _departamentosRepository.List(mockObject);
+            //}
 
 
             #endregion
@@ -89,12 +89,16 @@ namespace Proyecto_call_PL.Activos
             }
             else
             {
+                txt_placa_activo.Text = Obj_activos_DAL.iPlaca_Activo.ToString();
                 msk_cread_activo.Enabled = false;
                 txt_creadopor.Enabled = false;
                 msk_modf_activo.Enabled = false;
                 txt_placa_activo.Enabled = false;
-                msk_cread_activo.Text = Obj_estados_DAL.dFecCreacion.ToString();
-                txt_creadopor.Text = Obj_estados_DAL.sUsuCreacion.ToString();
+                msk_cread_activo.Text = Obj_activos_DAL.dFecCreacion.ToString();
+                txt_creadopor.Text = Obj_activos_DAL.sUsuCreacion.ToString();
+                txt_desc_activo.Text = Obj_activos_DAL.sDesc_Activo.ToString();
+                txt_prioridad_activo.Text = Obj_activos_DAL.dPrioridad_SLA.ToString();
+                
             }
         }
 
@@ -109,44 +113,60 @@ namespace Proyecto_call_PL.Activos
             }
             else
             {
-                Obj_activos_DAL.sDesc_Activo = txt_desc_activo.Text.ToString().Trim();
-                Obj_activos_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
-                Obj_activos_DAL.dFecCreacion = DateTime.Now;
-                Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal( txt_prioridad_activo.Text.ToString().Trim());
-                Obj_activos_DAL.iPlaca_Activo = Obj_activos_DAL.iPlaca_Activo;
-                Obj_activos_DAL.iId_Departamento_Responsable = Convert.ToInt32(cmb_departamento.SelectedValue);
-                Obj_activos_DAL.iId_MarcaActivo = Convert.ToInt32(cmb_marca_activo.SelectedValue);
-                Obj_activos_DAL.iId_TipoActivo = Convert.ToInt32(cmb_tipo_activo.SelectedValue);     
+                MessageBox.Show("Se procede con la ejecucion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+ 
 
             if (Obj_activos_DAL.cAxn.ToString().Contains("I"))
             {
+                Obj_activos_DAL.sDesc_Activo = txt_desc_activo.Text.ToString().Trim();
+                Obj_activos_DAL.sUsuCreacion = txt_creadopor.Text.ToString().Trim();
+                Obj_activos_DAL.dFecCreacion = DateTime.Now;
+                Obj_activos_DAL.dPrioridad_SLA = Convert.ToDecimal(txt_prioridad_activo.Text.ToString().Trim());
+                Obj_activos_DAL.iPlaca_Activo = Obj_activos_DAL.iPlaca_Activo;
+                Obj_activos_DAL.iId_Departamento_Responsable = Convert.ToInt32(cmb_departamento.SelectedValue);
+                Obj_activos_DAL.iId_MarcaActivo = Convert.ToInt32(cmb_marca_activo.SelectedValue);
+                Obj_activos_DAL.iId_TipoActivo = Convert.ToInt32(cmb_tipo_activo.SelectedValue);
+
                 Obj_activos_BLL.insertar_activos(ref Obj_activos_DAL);
 
                 if (Obj_activos_DAL.smsjError == string.Empty)
                 {
-                    Obj_activos_DAL.bandera = true;
+                    Obj_activos_DAL.bbandera = true;
                 }
                 else
                 {
-                    Obj_activos_DAL.bandera = false;
+                    Obj_activos_DAL.bbandera = false;
                 }
+
+                
             }
             else
             {
+                Obj_activos_DAL.iPlaca_Activo = Convert.ToInt32(txt_placa_activo.Text.ToString()); ;
+                Obj_activos_DAL.dFecModificacion = DateTime.Now;
+                Obj_activos_DAL.sUsuModificacion = txt_modificadopor.Text.ToString().Trim();
+
                 Obj_activos_BLL.modificar_activos(ref Obj_activos_DAL);
 
                 if (Obj_activos_DAL.smsjError == string.Empty)
                 {
-                    Obj_activos_DAL.bandera = true;
+                    Obj_activos_DAL.bbandera = true;
                 }
                 else
                 {
-                    Obj_activos_DAL.bandera = false;
+                    Obj_activos_DAL.bbandera = false;
                 }
+
+             
             }
 
             Close();
+        }
+
+        private void btn_salir_activo_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

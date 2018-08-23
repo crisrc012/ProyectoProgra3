@@ -255,6 +255,7 @@
             this.btn_salir_activo.TabIndex = 23;
             this.btn_salir_activo.Text = "Cancelar";
             this.btn_salir_activo.UseVisualStyleBackColor = true;
+            this.btn_salir_activo.Click += new System.EventHandler(this.btn_salir_activo_Click);
             // 
             // frm_editar_activos_PL
             // 

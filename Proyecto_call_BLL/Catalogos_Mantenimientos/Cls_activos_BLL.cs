@@ -87,13 +87,11 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
             {
                 Obj_activos_DAL.smsjError = string.Empty;
                 Obj_activos_DAL.Ds = Obj_bd_DAL.dst;
-                Obj_activos_DAL.bandera = true;
             }
             else
             {
                 Obj_activos_DAL.smsjError = Obj_bd_DAL.smsjerror;
                 Obj_bd_DAL.dst = null;
-                Obj_activos_DAL.bandera = false;
             }
         }
 
@@ -126,13 +124,11 @@ namespace Proyecto_call_BLL.Catalogos_Mantenimientos
                 Obj_activos_DAL.iPlaca_Activo = Obj_bd_DAL.ivalorscalar;
                 Obj_activos_DAL.smsjError = string.Empty;
                 Obj_activos_DAL.Ds = Obj_bd_DAL.dst;
-                Obj_activos_DAL.bandera = true;
             }
             else
             {
                 Obj_activos_DAL.smsjError = Obj_bd_DAL.smsjerror;
                 Obj_bd_DAL.dst = null;
-                Obj_activos_DAL.bandera = false;
             }
         }
 
