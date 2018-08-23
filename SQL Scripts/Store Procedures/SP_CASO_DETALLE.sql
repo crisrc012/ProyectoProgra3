@@ -1,3 +1,36 @@
+-- Consultar
+create PROCEDURE [dbo].[SP_LISTAR_CASO_DETALLE]
+AS
+SELECT [Id_Caso_Det] AS "Código"
+      ,tce.ComentariosReporte AS "Encabezado"
+      ,[Placa_Activo] AS "Placa"
+      ,[Observaciones]
+      ,tcd.[FecCreacion] AS "Fecha de Creación"
+      ,tcd.[UsuCreacion] AS "Creado por"
+      ,tcd.[FecModificacion] AS "Fecha de Modificación"
+      ,tcd.[UsuModificacion] AS "Modificado por"
+  FROM [dbo].[Tbl_Caso_Detalle] tcd
+  INNER JOIN [dbo].[Tbl_Caso_Encabezado] tce ON tcd.Id_Caso_Enc = tce.Id_Caso_Enc
+
+-- Filtrar
+create PROCEDURE [dbo].[SP_FILTRAR_CASO_DETALLE]
+(
+	@Observaciones varchar(450)
+)
+AS
+SELECT [Id_Caso_Det] AS "Código"
+      ,tce.ComentariosReporte AS "Encabezado"
+      ,[Placa_Activo] AS "Placa"
+      ,[Observaciones]
+      ,tcd.[FecCreacion] AS "Fecha de Creación"
+      ,tcd.[UsuCreacion] AS "Creado por"
+      ,tcd.[FecModificacion] AS "Fecha de Modificación"
+      ,tcd.[UsuModificacion] AS "Modificado por"
+  FROM [dbo].[Tbl_Caso_Detalle] tcd
+  INNER JOIN [dbo].[Tbl_Caso_Encabezado] tce ON tcd.Id_Caso_Enc = tce.Id_Caso_Enc
+  WHERE [Observaciones] LIKE '%' + @Observaciones + '%'
+
+
 create procedure SP_ELIMINAR_CASO_DETALLE
 (
 	@Id_Caso_Det int
@@ -70,93 +103,6 @@ UPDATE [dbo].[Tbl_Caso_Detalle]
  WHERE [Id_Caso_Enc] = @Id_Caso_Enc
 GO
 
-create procedure SP_ELIMINAR_ACTIVOS
-(
-	@Placa_Activo INT
-)
-AS
-DELETE FROM [dbo].[Tbl_Activos] WHERE Placa_Activo = @Placa_Activo
-GO
-
-CREATE PROCEDURE SP_INSERTAR_ACTIVO
-(
-	  @Placa_Activo INT,
-	  @Id_TipoActivo INT,
-	  @Desc_Activo VARCHAR(265),
-	  @Id_MarcaActivo INT,
-	  @Id_Departamento_Responsable INT,
-	  @Prioridad_SLA DECIMAL(8,2),
-	  @Id_Estado CHAR (1),
-	  @FecCreacion DATETIME,
-	  @UsuCreacion VARCHAR(15),
-	  @FecModificacion DATETIME,
-	  @UsuModificacion VARCHAR(15)
-)
-
-AS
-
-INSERT INTO [Tbl_Activos]
-
-		  ([Placa_Activo],
-		   [Id_TipoActivo],
-		   [Desc_Activo],
-		   [Id_MarcaActivo],
-		   [Id_Departamento_Responsable],
-		   [Prioridad_SLA],
-		   [Id_Estado],
-		   [FecCreacion],
-		   [UsuCreacion],
-		   [FecModificacion],
-		   [UsuModificacion]
-		   )
-
-     VALUES
-           (@Placa_Activo,
-			@Id_TipoActivo,
-			@Desc_Activo,
-			@Id_MarcaActivo,
-			@Id_Departamento_Responsable,
-			@Prioridad_SLA,
-			@Id_Estado,
-			@FecCreacion,
-			@UsuCreacion,
-			@FecModificacion,
-			@UsuModificacion)
-GO
-
-Create procedure SP_MODIFICAR_ACTIVO
-
-(
-	  @Placa_Activo INT,
-	  @Id_TipoActivo INT,
-	  @Desc_Activo VARCHAR(265),
-	  @Id_MarcaActivo INT,
-	  @Id_Departamento_Responsable INT,
-	  @Prioridad_SLA DECIMAL(8,2),
-	  @Id_Estado CHAR (1),
-	  @FecCreacion DATETIME,
-	  @UsuCreacion VARCHAR(15),
-	  @FecModificacion DATETIME,
-	  @UsuModificacion VARCHAR(15)
-)
-
-AS
-UPDATE [dbo].[Tbl_Activos]
-
-	SET
-		   [Id_TipoActivo] = @Id_TipoActivo,
-		   [Desc_Activo] = @Desc_Activo,
-		   [Id_MarcaActivo] = @Id_MarcaActivo,
-		   [Id_Departamento_Responsable] = @Id_Departamento_Responsable,
-		   [Prioridad_SLA] = @Prioridad_SLA,
-		   [Id_Estado] = @Id_Estado,
-		   [FecCreacion] = @FecCreacion,
-		   [UsuCreacion] = @UsuCreacion,
-		   [FecModificacion] = @FecModificacion,
-		   [UsuModificacion] = @UsuModificacion
-
- WHERE [Placa_Activo] = @Placa_Activo
-GO
 
 
 
