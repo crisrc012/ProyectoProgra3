@@ -50,7 +50,7 @@ namespace Proyecto_call_BLL.BD
                             }
                             Obj_bd_DAL.Obj_adpt.SelectCommand.Parameters.Add(dr[0].ToString(), Obj_tipo_dato).Value = dr[2].ToString();
                         }
-                    }
+                    } 
                     Obj_bd_DAL.Obj_adpt.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
                     Obj_bd_DAL.Obj_adpt.Fill(Obj_bd_DAL.dst, Obj_bd_DAL.snombretabla);
                 }
